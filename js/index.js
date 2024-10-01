@@ -63,19 +63,19 @@ $(document).ready(function () {
         autoplay: true,        // Enables autoplay
         autoplayTimeout: 3000, // Time between slides (in milliseconds)
         autoplayHoverPause: true, // Pause on hover
-        // responsive: {          // Custom settings for different screen sizes
-        //     0: {
-        //         items: 1,      // 1 item on small screens
-        //         dots: true     // Enable dots on mobile
-        //     },
-        //     600: {
-        //         items: 2,      // 2 items on medium screens
-        //         dots: true     // Keep dots on tablets
-        //     },
-        //     1000: {
-        //         items: 3,      // 3 items on large screens
-        //         dots: true     // Keep dots on larger screens
-        //     }
-        // }
+        responsive: {          // Custom settings for different screen sizes
+            0: {
+                items: 1,      // 1 item on small screens
+                nav: true,     // Enable dots on mobile
+            },
+            600: {
+                items: 2,      // 2 items on medium screens
+                nav: true,     // Keep dots on tablets
+            },
+            1000: {
+                items: 3,      // 3 items on large screens
+                nav: true,     // Keep dots on larger screens
+            }
+        }
     });
 });
