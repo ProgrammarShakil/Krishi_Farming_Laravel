@@ -53,6 +53,21 @@ function type() {
 
 type();
 
+// PORTFOLIO MODAL CONTROL
+
+function openModal(imageSrc) {
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+
+    modalImage.src = imageSrc; // Set the modal image source
+    modal.classList.remove('hidden'); // Show the modal
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.classList.add('hidden'); // Hide the modal
+}
+
 // OWL CAROUSEL WITH JQUERY 
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
