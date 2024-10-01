@@ -1,3 +1,11 @@
+.main-bg-color {
+    background: rgb(25 83 69);
+}
+
+.main-color {
+    color: rgb(25 83 69);
+}
+
 .mb-20 {
     margin-bottom: 20px;
 }
@@ -13,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgb(0, 0, 0);
+    background: rgb(25 83 69);
     z-index: -1;
 }
 
@@ -214,24 +222,25 @@
     transition: background-color 0.3s ease;
     position: relative;
     overflow: hidden;
- }
- 
- .animated-button .arrow {
+}
+
+.animated-button .arrow {
     display: inline-block;
     transition: transform 0.3s ease;
     font-size: 16px;
     position: relative;
- }
- 
- .animated-button:hover {
+}
+
+.animated-button:hover {
     background-color: #3498db;
- }
- 
- .animated-button:hover .arrow {
-    transform: translateX(8px); /* Move arrow 8px to the right on hover */
- }
- 
- .animated-button::before {
+}
+
+.animated-button:hover .arrow {
+    transform: translateX(8px);
+    /* Move arrow 8px to the right on hover */
+}
+
+.animated-button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -243,16 +252,17 @@
     transform-origin: left;
     transition: transform 0.3s ease-in-out;
     z-index: 0;
- }
- 
- .animated-button:hover::before {
+}
+
+.animated-button:hover::before {
     transform: scaleX(1);
- }
- 
- .animated-button span {
-    z-index: 1; /* Make sure the arrow stays above the background effect */
- }
- 
+}
+
+.animated-button span {
+    z-index: 1;
+    /* Make sure the arrow stays above the background effect */
+}
+
 
 
 
