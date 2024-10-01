@@ -1,0 +1,220 @@
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* PARTICLE JS  */
+.particle-relative {
+    position: relative;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    z-index: -1;
+}
+
+/* CIRCLE ANIMATION CSS */
+.pie-chart {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    /* background: conic-gradient(#f39c12 0% 14.29%,
+            #e74c3c 14.29% 28.57%,
+            #2ecc71 28.57% 42.86%,
+            #f1c40f 42.86% 57.14%,
+            #9b59b6 57.14% 71.43%,
+            #3498db 71.43% 85.71%,
+            #e67e22 85.71% 100%); */
+
+    background: conic-gradient(#f39c12 0% 14.29%,
+            #80CBC4 14.29% 28.57%,
+            #E57373 28.57% 42.86%,
+            #FFA726 42.86% 57.14%,
+            #388E3C 57.14% 71.43%,
+            #CE93D8 71.43% 85.71%,
+            #1976D2 85.71% 100%);
+    animation: rotateChart 25s linear infinite;
+}
+
+@keyframes rotateChart {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pie-chart::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    border-radius: 50%;
+}
+
+.label {
+    position: absolute;
+    font-size: 1.2rem;
+    color: white;
+    transform-origin: center center;
+}
+
+/* Rotating Text on Each Segment */
+.label-1 {
+    top: 19%;
+    left: 29%;
+    transform: rotate(65deg);
+}
+
+.label-2 {
+    top: 20%;
+    right: 28%;
+    transform: rotate(116deg);
+}
+
+.label-3 {
+    top: 37%;
+    right: 6%;
+    transform: rotate(168deg);
+}
+
+.label-4 {
+    bottom: 22%;
+    right: 19%;
+    transform: rotate(221deg);
+}
+
+.label-5 {
+    bottom: 19%;
+    left: 46%;
+    transform: rotate(273deg);
+}
+
+.label-6 {
+    bottom: 22%;
+    left: 12%;
+    transform: rotate(328deg);
+}
+
+.label-7 {
+    top: 35%;
+    left: 6%;
+    transform: rotate(369deg);
+}
+
+.center-text-relative {
+    position: relative;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
+/* TYPING ANIMATION CSS  */
+.typing-container {
+    border-right: 2px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    width: fit-content;
+    font-size: 24px;
+    color: #333;
+}
+
+.typing-text {
+    display: inline-block;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.typing-container {
+    animation: blink 0.75s step-end infinite alternate;
+}
+
+/* CUSTOM CSS  */
+.ml-90 {
+    margin-left: 90px;
+}
+
+/* OWL CAROUSEL CSS  */
+.owl-carousel .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Optional styling for the image container */
+.slider-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Custom styling for arrows */
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    font-size: 40px;
+    margin-top: 0 !important;
+
+}
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    background-color: #d21e1e;
+    color: rgb(40, 201, 113) !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin: -30px !important;
+}
+
+.owl-nav button.owl-prev:hover,
+.owl-nav button.owl-next:hover {
+    background-color: transparent !important;
+}
+
+/* RESPONSIVE CSS */
+@media (max-width: 576px) {
+    .ml-90 {
+        margin-left: 0px;
+    }
+
+    .mb-20 {
+        margin-bottom: 0;
+    }
+
+    #particles-js {
+        height: 80vh;
+    }
+
+    .center-text {
+        left: 49%;
+    }
+}
