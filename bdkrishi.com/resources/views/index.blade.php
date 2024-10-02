@@ -443,7 +443,7 @@
 
             <!-- Image 1 -->
             <div class="relative group">
-                <img src="{{ asset('/gallery/istockphoto-1349772438-612x612.webp') }}" alt="Ecommerce Product Ads Edit"
+                <img src="{{ asset('images/gallery/istockphoto-1349772438-612x612.webp') }}" alt="Ecommerce Product Ads Edit"
                     class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
