@@ -136,14 +136,14 @@
 
 
 /* TYPING ANIMATION CSS  */
-.typing-container {
+/* .typing-container {
     border-right: 2px solid black;
     white-space: nowrap;
     overflow: hidden;
     width: fit-content;
     font-size: 24px;
     color: #333;
-}
+} */
 
 .typing-text {
     display: inline-block;

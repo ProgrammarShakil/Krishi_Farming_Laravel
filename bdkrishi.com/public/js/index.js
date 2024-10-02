@@ -25,7 +25,7 @@ dropdownButton.addEventListener('click', () => {
 
 // TYPING ANIMATION JS 
 const textElement = document.querySelector('.typing-text');
-const names = ["Digital", "Smarter"];
+const names = ["Farming", "Solution"];
 let nameIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

@@ -156,8 +156,10 @@
                         <!-- Left Section -->
                         <div class=" text-center p-8">
                             <div class="typing-container">
-                                <span class="text-3xl md:text-5xl font-bold text-white">Make Your Business</span>
-                                <p class="typing-text font-bold md:text-5xl text-3xl text-white"></p>
+                                <div class="text-3xl md:text-5xl font-bold text-white text-left">Harvest Fresh Crops: <br>
+                                    <div class="text-left">Sustainable <p class="typing-text font-bold md:text-5xl text-3xl text-white"></p></div>
+                                </div>
+                                
                             </div>
                             <div class="text-left pt-5 text-xl mt-3 text-white">
                                 We value the user experience prior to offering our service. This moment presents to
@@ -222,8 +224,9 @@
 
                 <!-- Card 1 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer" src="{{ asset('images/portfolio/portfolio (1).jpg') }}"
-                        alt="Newtech Ecommerce" onclick="openModal(this.src)">
+                    <img class="w-full h-48 object-cover cursor-pointer"
+                        src="{{ asset('images/portfolio/portfolio (1).jpg') }}" alt="Newtech Ecommerce"
+                        onclick="openModal(this.src)">
                     <div class="p-5">
                         <h3 class="text-lg font-bold">Innovative Farming Techniques for Sustainable Agriculture</h3>
                     </div>
@@ -231,8 +234,9 @@
 
                 <!-- Card 2 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer" src="{{ asset('images/portfolio/portfolio (2).jpg') }}"
-                        alt="HomePix Real Estate Service" onclick="openModal(this.src)">
+                    <img class="w-full h-48 object-cover cursor-pointer"
+                        src="{{ asset('images/portfolio/portfolio (2).jpg') }}" alt="HomePix Real Estate Service"
+                        onclick="openModal(this.src)">
                     <div class="p-5">
                         <h3 class="text-lg font-bold">Harvesting Success: Advanced Farming and Agri-Solutions</h3>
                     </div>
@@ -240,8 +244,9 @@
 
                 <!-- Card 3 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer" src="{{ asset('images/portfolio/portfolio (3).jpg') }}"
-                        alt="Ozuaz Ecommerce Shop" onclick="openModal(this.src)">
+                    <img class="w-full h-48 object-cover cursor-pointer"
+                        src="{{ asset('images/portfolio/portfolio (3).jpg') }}" alt="Ozuaz Ecommerce Shop"
+                        onclick="openModal(this.src)">
                     <div class="p-5">
                         <h3 class="text-lg font-bold">Empowering Agriculture with Modern Farming Practices</h3>
                     </div>
@@ -249,8 +254,9 @@
 
                 <!-- Card 4 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer" src="{{ asset('images/portfolio/portfolio (4).jpg') }}"
-                        alt="Newtech Ecommerce" onclick="openModal(this.src)">
+                    <img class="w-full h-48 object-cover cursor-pointer"
+                        src="{{ asset('images/portfolio/portfolio (4).jpg') }}" alt="Newtech Ecommerce"
+                        onclick="openModal(this.src)">
                     <div class="p-5">
                         <h3 class="text-lg font-bold">Sustainable Farming Solutions for a Greener Future</h3>
                     </div>
@@ -258,8 +264,9 @@
 
                 <!-- Card 5 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer" src="{{ asset('images/portfolio/portfolio (5).jpg') }}"
-                        alt="HomePix Real Estate Service" onclick="openModal(this.src)">
+                    <img class="w-full h-48 object-cover cursor-pointer"
+                        src="{{ asset('images/portfolio/portfolio (5).jpg') }}" alt="HomePix Real Estate Service"
+                        onclick="openModal(this.src)">
                     <div class="p-5">
                         <h3 class="text-lg font-bold">Revolutionizing Agriculture: From Farm to Future</h3>
                     </div>
@@ -267,8 +274,9 @@
 
                 <!-- Card 6 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer" src="{{ asset('images/portfolio/portfolio (6).jpg') }}"
-                        alt="Ozuaz Ecommerce Shop" onclick="openModal(this.src)">
+                    <img class="w-full h-48 object-cover cursor-pointer"
+                        src="{{ asset('images/portfolio/portfolio (6).jpg') }}" alt="Ozuaz Ecommerce Shop"
+                        onclick="openModal(this.src)">
                     <div class="p-5">
                         <h3 class="text-lg font-bold">Driving Innovation in Farming for Sustainable Growth</h3>
                     </div>
@@ -312,7 +320,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <!-- Card 1 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (1).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (1).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
                     <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
@@ -325,7 +334,8 @@
 
             <!-- Card 2 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
                     <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
@@ -339,7 +349,8 @@
 
             <!-- Card 3 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
                     <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
@@ -351,7 +362,8 @@
             </div>
             <!-- Card 4 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
                     <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
@@ -364,7 +376,8 @@
 
             <!-- Card 5 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
                     <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
@@ -378,7 +391,8 @@
 
             <!-- Card 6 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
                     <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
@@ -443,8 +457,8 @@
 
             <!-- Image 1 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-1349772438-612x612.webp') }}" alt="Ecommerce Product Ads Edit"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-1349772438-612x612.webp') }}"
+                    alt="Ecommerce Product Ads Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Ecommerce Product Ads Edit</a>
@@ -453,8 +467,8 @@
 
             <!-- Image 2 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-168351414-612x612.webp') }}" alt="Car Racing Video Edit"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-168351414-612x612.webp') }}"
+                    alt="Car Racing Video Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>
@@ -463,8 +477,8 @@
 
             <!-- Image 3 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-649730320-612x612.webp') }}" alt="Almonds Pouch Design"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-649730320-612x612.webp') }}"
+                    alt="Almonds Pouch Design" class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Almonds Pouch Design</a>
@@ -473,8 +487,8 @@
 
             <!-- Image 4 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-965148388-612x612.webp') }}" alt="Ecommerce Product Ads Edit"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-965148388-612x612.webp') }}"
+                    alt="Ecommerce Product Ads Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Ecommerce Product Ads Edit</a>
@@ -483,8 +497,8 @@
 
             <!-- Image 5 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/photo-1692369194934-e3e2dc0d8d0d.jpg') }}" alt="Car Racing Video Edit"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/photo-1692369194934-e3e2dc0d8d0d.jpg') }}"
+                    alt="Car Racing Video Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>
@@ -493,8 +507,8 @@
 
             <!-- Image 6 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/premium_photo-1661909621192-98cd04208d8e.jpg') }}" alt="Almonds Pouch Design"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/premium_photo-1661909621192-98cd04208d8e.jpg') }}"
+                    alt="Almonds Pouch Design" class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Almonds Pouch Design</a>
@@ -530,7 +544,8 @@
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
             <!-- Logo and tagline -->
             <div>
-                <img src="{{ asset('images/logo.png') }}" alt="Farming Future Bangladesh" class="mb-3 mx-auto w-24 w-32 lg:w-96">
+                <img src="{{ asset('images/logo.png') }}" alt="Farming Future Bangladesh"
+                    class="mb-3 mx-auto w-24 w-32 lg:w-96">
                 <p class="uppercase tracking-wide">Evidence • Engage • Empower</p>
             </div>
 
