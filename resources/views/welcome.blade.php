@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BD Krishi - Home</title>
+    <title>BD Krishi - Dashboard</title>
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -235,7 +235,7 @@
                 <!-- Card 2 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     <img class="w-full h-48 object-cover cursor-pointer"
-                        src="{{ asset('images/portfolio/portfolio (2).jpg') }}" alt="HomePix Real Estate Service"
+                        src="{{ asset('images/portfolio/portfolio (2).jpg') }}" alt="DashboardPix Real Estate Service"
                         onclick="openModal(this.src)">
                     <div class="p-5">
                         <h3 class="text-lg font-bold">Harvesting Success: Advanced Farming and Agri-Solutions</h3>
@@ -265,7 +265,7 @@
                 <!-- Card 5 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     <img class="w-full h-48 object-cover cursor-pointer"
-                        src="{{ asset('images/portfolio/portfolio (5).jpg') }}" alt="HomePix Real Estate Service"
+                        src="{{ asset('images/portfolio/portfolio (5).jpg') }}" alt="DashboardPix Real Estate Service"
                         onclick="openModal(this.src)">
                     <div class="p-5">
                         <h3 class="text-lg font-bold">Revolutionizing Agriculture: From Farm to Future</h3>
