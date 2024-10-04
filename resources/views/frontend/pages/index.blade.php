@@ -65,7 +65,7 @@
         </div>
     </div>
 
-
+    
     <!-- PORTFOLIO  -->
     <div class="pt-20 pb-10">
         <!-- Portfolio Grid -->
@@ -189,7 +189,8 @@
 
             <!-- Card 2 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
                     <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
@@ -203,7 +204,8 @@
 
             <!-- Card 3 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
                     <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
@@ -215,7 +217,8 @@
             </div>
             <!-- Card 4 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
                     <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
@@ -228,7 +231,8 @@
 
             <!-- Card 5 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
                     <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
@@ -242,7 +246,8 @@
 
             <!-- Card 6 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image"
+                    class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
                     <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
@@ -262,26 +267,30 @@
         </div>
         <div class="owl-carousel owl-theme">
             <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
+                <iframe width="430" height="315"
+                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
+                <iframe width="430" height="315"
+                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
+                <iframe width="430" height="315"
+                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
+                <iframe width="430" height="315"
+                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -313,8 +322,8 @@
 
             <!-- Image 2 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-168351414-612x612.webp') }}" alt="Car Racing Video Edit"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-168351414-612x612.webp') }}"
+                    alt="Car Racing Video Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>
@@ -323,8 +332,8 @@
 
             <!-- Image 3 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-649730320-612x612.webp') }}" alt="Almonds Pouch Design"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-649730320-612x612.webp') }}"
+                    alt="Almonds Pouch Design" class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Almonds Pouch Design</a>
@@ -343,8 +352,8 @@
 
             <!-- Image 5 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/photo-1692369194934-e3e2dc0d8d0d.jpg') }}" alt="Car Racing Video Edit"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/photo-1692369194934-e3e2dc0d8d0d.jpg') }}"
+                    alt="Car Racing Video Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>

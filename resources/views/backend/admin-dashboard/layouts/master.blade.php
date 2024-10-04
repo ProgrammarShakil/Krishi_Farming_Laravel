@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>Dashboard</title>
-
+    <link rel="shortcut icon" href="{{ asset('images/icon.png') }}" type="image/x-icon">
+    
     <!-- Custom fonts for this template-->
     <link href="{{ asset('backend/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link

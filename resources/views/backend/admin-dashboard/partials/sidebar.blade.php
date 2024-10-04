@@ -1,9 +1,9 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-    
-    <!-- Sidebar - Brand -->
+
+    <!-- Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
         <div class="sidebar-brand-icon">
-            <img width="70px" src="{{ asset('images/favicon.ico') }}" alt="">
+            <img width="35px" src="{{ asset('images/icon.png') }}" alt="">
         </div>
         <div class="sidebar-brand-text mx-3">BD KRISHI</div>
     </a>
@@ -11,9 +11,9 @@
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
 
-    <!-- Nav Item - Dashboard -->
+    <!-- Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ route('admin.dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -22,86 +22,94 @@
     <hr class="sidebar-divider">
 
     <!-- Heading -->
-    <div class="sidebar-heading">
+    {{-- <div class="sidebar-heading">
         Interface
-    </div>
+    </div> --}}
 
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Intern Application -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Components</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#InternApplication"
+            aria-expanded="true" aria-controls="InternApplication">
+            <i class="fas fa-fw fa-user-graduate"></i>
+            <span>Intern Application</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="InternApplication" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <a class="collapse-item" href="buttons.html">Intern Application List</a>
             </div>
         </div>
     </li>
 
-    <!-- Nav Item - Utilities Collapse Menu -->
+    <!-- Job Application -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-            aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Utilities</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#JobApplication"
+            aria-expanded="true" aria-controls="JobApplication">
+            <i class="fas fa-fw fa-id-badge"></i>
+            <span>Job Application</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-            data-parent="#accordionSidebar">
+        <div id="JobApplication" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="utilities-color.html">Colors</a>
-                <a class="collapse-item" href="utilities-border.html">Borders</a>
-                <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                <a class="collapse-item" href="utilities-other.html">Other</a>
+                <a class="collapse-item" href="utilities-color.html">Job Application List</a>
             </div>
         </div>
     </li>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider">
-
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Addons
-    </div>
-
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Investment Proposal -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-            aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#InvestmentProposal"
+            aria-expanded="true" aria-controls="InvestmentProposal">
+            <i class="fas fa-fw fa-coins"></i>
+            <span>Investment Proposal</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="InvestmentProposal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Login Screens:</h6>
-                <a class="collapse-item" href="login.html">Login</a>
-                <a class="collapse-item" href="register.html">Register</a>
-                <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Other Pages:</h6>
-                <a class="collapse-item" href="404.html">404 Page</a>
-                <a class="collapse-item" href="blank.html">Blank Page</a>
+                <a class="collapse-item" href="login.html">Investment Proposal List</a>
             </div>
         </div>
     </li>
 
-    <!-- Nav Item - Charts -->
+    <!-- Business Proposal -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#BusinessProposal"
+            aria-expanded="true" aria-controls="BusinessProposal">
+            <i class="fas fa-fw fa-briefcase"></i>
+            <span>Business Proposal</span>
+        </a>
+        <div id="BusinessProposal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="login.html">Business Proposal List</a>
+            </div>
+        </div>
     </li>
 
-    <!-- Nav Item - Tables -->
+    <!-- Website Settings -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#WebsiteSettings"
+            aria-expanded="true" aria-controls="WebsiteSettings">
+            <i class="fas fa-fw fa-tools"></i>
+            <span>Website Settings</span>
+        </a>
+        <div id="WebsiteSettings" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="login.html">Change Logo</a>
+                <a class="collapse-item" href="login.html">Change Password</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Blogs -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Blogs" aria-expanded="true"
+            aria-controls="Blogs">
+            <i class="fas fa-fw fa-blog"></i>
+            <span>Blog Manage</span>
+        </a>
+        <div id="Blogs" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="login.html">Create Blog</a>
+                <a class="collapse-item" href="login.html">Blog List</a>
+            </div>
+        </div>
     </li>
 
     <!-- Divider -->
@@ -110,16 +118,6 @@
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
-    </div>
-
-    <!-- Sidebar Message -->
-    <div class="sidebar-card d-none d-lg-flex">
-        <img class="sidebar-card-illustration mb-2" src="{{ asset('backend/img/undraw_rocket.svg') }}"
-            alt="...">
-        <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components,
-            and more!</p>
-        <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to
-            Pro!</a>
     </div>
 
 </ul>
