@@ -3,7 +3,7 @@
         <div class="flex justify-between items-center">
             <!-- Logo -->
             <div>
-                <a href="index.html"><img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-20 inline"></a>
+                <a href="{{route('frontend.pages.index')}}"><img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-20 inline"></a>
             </div>
 
             <!-- Dropdown Menu for Desktop -->
@@ -22,7 +22,7 @@
                     <ul class="py-2 text-gray-600">
                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Intern Application</a>
                         </li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Job Application</a></li>
+                        <li><a href="{{route('job-applications.create')}}" class="block px-4 py-2 hover:bg-gray-100">Job Application</a></li>
                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Investment Proposal</a>
                         </li>
                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Business Proposal</a>
