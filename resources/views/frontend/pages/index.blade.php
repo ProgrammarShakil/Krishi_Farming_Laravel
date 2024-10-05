@@ -1,214 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('frontend.layouts.master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BD Krishi - Home</title>
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+@section('title', 'Home')
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+@section('content')
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <!-- HERO AREA  -->
+    <div class="w-full">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Column 1 -->
+                <div class="p-4">
+                    <!-- Left Section -->
+                    <div class=" text-center p-8">
+                        <div class="typing-container">
+                            <div class="text-3xl md:text-5xl font-bold text-white text-left">Harvest Fresh Crops: <br>
+                                <div class="text-left">Sustainable <p
+                                        class="typing-text font-bold md:text-5xl text-3xl text-white"></p>
+                                </div>
+                            </div>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- EXTERNAL CSS  -->
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-</head>
-
-<body>
-    <!-- NAV TO HERO AREA WITH PARTICLE JS -->
-    <div id="particles-js">
-    </div>
-
-    <div>
-        <!-- NAVBAR -->
-        <nav class="bg-white shadow-lg">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center">
-                    <!-- Logo -->
-                    <div>
-                        <a href="index.html"><img src="{{ asset('images/logo.png') }}" alt="Logo"
-                                class="h-20 inline"></a>
-                    </div>
-
-                    <!-- Dropdown Menu for Desktop -->
-                    <div class="relative hidden md:block">
-                        <button id="dropdownButton" class="text-gray-600 hover:text-gray-900 focus:outline-none">
-                            <span class="font-bold">Opportunities</span>
-                            <svg class="w-5 h-5 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7">
-                                </path>
-                            </svg>
-                        </button>
-
-                        <!-- Dropdown Content -->
-                        <div id="dropdownContent"
-                            class="hidden absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg z-10">
-                            <ul class="py-2 text-gray-600">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Intern Application</a>
-                                </li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Job Application</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Investment Proposal</a>
-                                </li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Business Proposal</a>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
-
-                    <!-- Menu Links for Desktop -->
-                    <div class="hidden md:flex space-x-6">
-                        <a href="#" class="font-bold text-gray-600 hover:text-gray-900">EDP</a>
-                        <a href="#" class="font-bold text-gray-600 hover:text-gray-900">Brand Franchise
-                            Proposal</a>
-                        <a href="#" class="font-bold text-gray-600 hover:text-gray-900">News & Media</a>
-                        <a href="#" class="font-bold text-gray-600 hover:text-gray-900">Our Impacts</a>
-                        <a href="pages/team.html" class="font-bold text-gray-600 hover:text-gray-900">Team</a>
-                    </div>
-
-                    <!-- CTA Buttons for Desktop -->
-                    <div class="hidden md:flex space-x-4">
-                        <a href="#" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Contact</a>
-                        <a href="#"
-                            class="bg-white border border-red-500 text-red-500 px-4 py-2 rounded hover:bg-red-500 hover:text-white">Join
-                            Us</a>
-                    </div>
-
-                    <!-- Mobile Menu Button -->
-                    <div class="md:hidden">
-                        <button id="mobileMenuButton" class="focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mobile Menu Links -->
-            <div id="mobileMenu" class="hidden md:hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">What We
-                        Do</a>
-                    <a href="#"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Our
-                        Impacts</a>
-                    <a href="#"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">News &
-                        Media</a>
-                    <a href="#"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Our
-                        Impacts</a>
-                    <a href="#"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Team</a>
-                    <a href="#"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">About
-                        Us</a>
-                    <a href="#"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Join
-                        Us</a>
-
-                    <!-- Mobile Dropdown -->
-                    <div class="relative">
-                        <button id="mobileDropdownButton"
-                            class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 focus:outline-none">
-                            <span>What We Do</span>
-                            <svg class="w-5 h-5 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7">
-                                </path>
-                            </svg>
-                        </button>
-                        <div id="mobileDropdownContent" class="hidden px-3 py-2 bg-gray-50 rounded-md">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Policy Advocacy</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Research And Extension</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Scientists And Academia</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Media Professionals</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Faith Communities</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Health And Nutrition</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Youth</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">End User</a>
+                        <div class="text-left pt-5 text-xl mt-3 text-white">
+                            We value the user experience prior to offering our service. This moment presents to
+                            collaborate with us and elevate your brand to new heights. Let's seize this opportunity
+                            and
+                            propel your business forward together
+                        </div>
+                        <div class="mt-10 text-left">
+                            <button
+                                class="bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
+                                Contact Us
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+                <!-- Column 2 -->
+                <div class="p-4">
+                    <!-- Right Section -->
+                    <div class=" center-text-relative text-white text-center p-8">
+                        <div class="ml-90 pie-chart">
+                            <!-- Rotating labels in each segment -->
+                            <div class="label label-1"><a href="https://bdkrishi.com" target="_blank">Products</a>
+                            </div>
+                            <div class="label label-2"><a href="https://bdkrishi.com" target="_blank">Services</a>
+                            </div>
+                            <div class="label label-3"><a href="https://bdkrishi.com" target="_blank">Agriculture
+                                    <br> Segments</a></div>
+                            <div class="label label-4"><a href="https://bdkrishi.com" target="_blank">Krishi <br>
+                                    Market</a></div>
+                            <div class="label label-5"><a href="https://bdkrishi.com" target="_blank">EDP</a>
+                            </div>
+                            <div class="label label-6"><a href="https://bdkrishi.com" target="_blank">Agriculture
+                                    <br> Info</a></div>
+                            <div class="label label-7"><a href="https://bdkrishi.com" target="_blank">Farmer <br>
+                                    Connector</a></div>
 
-        <!-- HERO AREA  -->
-        <div class="w-full">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Column 1 -->
-                    <div class="p-4">
-                        <!-- Left Section -->
-                        <div class=" text-center p-8">
-                            <div class="typing-container">
-                                <div class="text-3xl md:text-5xl font-bold text-white text-left">Harvest Fresh Crops: <br>
-                                    <div class="text-left">Sustainable <p class="typing-text font-bold md:text-5xl text-3xl text-white"></p></div>
-                                </div>
-                                
-                            </div>
-                            <div class="text-left pt-5 text-xl mt-3 text-white">
-                                We value the user experience prior to offering our service. This moment presents to
-                                collaborate with us and elevate your brand to new heights. Let's seize this opportunity
-                                and
-                                propel your business forward together
-                            </div>
-                            <div class="mt-10 text-left">
-                                <button
-                                    class="bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
-                                    Contact Us
-                                </button>
-                            </div>
+                            <!-- Center text -->
                         </div>
-                    </div>
-                    <!-- Column 2 -->
-                    <div class="p-4">
-                        <!-- Right Section -->
-                        <div class=" center-text-relative text-white text-center p-8">
-                            <div class="ml-90 pie-chart">
-                                <!-- Rotating labels in each segment -->
-                                <div class="label label-1"><a href="https://bdkrishi.com"
-                                        target="_blank">Products</a>
-                                </div>
-                                <div class="label label-2"><a href="https://bdkrishi.com"
-                                        target="_blank">Services</a>
-                                </div>
-                                <div class="label label-3"><a href="https://bdkrishi.com" target="_blank">Agriculture
-                                        <br> Segments</a></div>
-                                <div class="label label-4"><a href="https://bdkrishi.com" target="_blank">Krishi <br>
-                                        Market</a></div>
-                                <div class="label label-5"><a href="https://bdkrishi.com" target="_blank">EDP</a>
-                                </div>
-                                <div class="label label-6"><a href="https://bdkrishi.com" target="_blank">Agriculture
-                                        <br> Info</a></div>
-                                <div class="label label-7"><a href="https://bdkrishi.com" target="_blank">Farmer <br>
-                                        Connector</a></div>
-
-                                <!-- Center text -->
-                            </div>
-                            <div class="center-text"><a href="https://bdkrishi.com" target="_blank">BD Krishi </a>
-                            </div>
+                        <div class="center-text"><a href="https://bdkrishi.com" target="_blank">BD Krishi </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /NAV TO HERO AREA WITH PARTICLE JS -->
+
 
     <!-- PORTFOLIO  -->
     <div class="pt-20 pb-10">
@@ -320,8 +176,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <!-- Card 1 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (1).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (1).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
                     <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
@@ -334,8 +189,7 @@
 
             <!-- Card 2 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
                     <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
@@ -349,8 +203,7 @@
 
             <!-- Card 3 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
                     <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
@@ -362,8 +215,7 @@
             </div>
             <!-- Card 4 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
                     <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
@@ -376,8 +228,7 @@
 
             <!-- Card 5 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
                     <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
@@ -391,8 +242,7 @@
 
             <!-- Card 6 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
                     <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
@@ -412,30 +262,26 @@
         </div>
         <div class="owl-carousel owl-theme">
             <div class="item border-2">
-                <iframe width="430" height="315"
-                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
-                    frameborder="0"
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="item border-2">
-                <iframe width="430" height="315"
-                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
-                    frameborder="0"
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="item border-2">
-                <iframe width="430" height="315"
-                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
-                    frameborder="0"
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="item border-2">
-                <iframe width="430" height="315"
-                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
-                    frameborder="0"
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -467,8 +313,8 @@
 
             <!-- Image 2 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-168351414-612x612.webp') }}"
-                    alt="Car Racing Video Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-168351414-612x612.webp') }}" alt="Car Racing Video Edit"
+                    class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>
@@ -477,8 +323,8 @@
 
             <!-- Image 3 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-649730320-612x612.webp') }}"
-                    alt="Almonds Pouch Design" class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-649730320-612x612.webp') }}" alt="Almonds Pouch Design"
+                    class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Almonds Pouch Design</a>
@@ -497,8 +343,8 @@
 
             <!-- Image 5 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/photo-1692369194934-e3e2dc0d8d0d.jpg') }}"
-                    alt="Car Racing Video Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/photo-1692369194934-e3e2dc0d8d0d.jpg') }}" alt="Car Racing Video Edit"
+                    class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>
@@ -600,20 +446,4 @@
             </div>
         </div>
     </footer>
-
-    <!-- JAVASCRIPT CDN -->
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- EXTERNAL JS  -->
-    <!-- Particle JS  -->
-    <script src="{{ asset('js/particles/particles.js') }}"></script>
-    <script src="{{ asset('js/particles/app.js') }}"></script>
-    <script src="{{ asset('js/index.js') }}"></script>
-    <!-- Script for Menu Toggles -->
-
-</body>
-
-</html>
+@endsection
