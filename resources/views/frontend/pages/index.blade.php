@@ -5,6 +5,8 @@
 @section('content')
 
     <!-- HERO AREA  -->
+    <div id="particles-js" class="particle-home">
+    </div>
     <div class="w-full">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

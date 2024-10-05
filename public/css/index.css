@@ -20,11 +20,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
     background: rgb(25 83 69);
     z-index: -1;
 }
-
+.particle-home{
+    height: 100vh;
+}
 /* CIRCLE ANIMATION CSS */
 .pie-chart {
     position: relative;

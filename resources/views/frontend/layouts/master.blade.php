@@ -33,8 +33,8 @@
 
 <body>
     <!-- NAV TO HERO AREA WITH PARTICLE JS -->
-    <div id="particles-js">
-    </div>
+    {{-- <div id="particles-js">
+    </div> --}}
 
     <!-- NAVBAR -->
     @include('frontend.partials.navbar')
