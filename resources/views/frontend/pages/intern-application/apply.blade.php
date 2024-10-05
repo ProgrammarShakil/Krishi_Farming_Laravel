@@ -1,12 +1,12 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Job Apply')
+@section('title', 'Intern Apply')
 
 @section('content')
 <div class="max-w-2xl mx-auto bg-transparent shadow-2xl rounded-lg border border-green-700 p-8 mt-5">
-    <h1 class="text-4xl font-bold text-white mb-8 text-center">Job Application</h1>
+    <h1 class="text-4xl font-bold text-white mb-8 text-center">Intern Application</h1>
 
-    <form action="{{ route('job-applications.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('intern-applications.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">

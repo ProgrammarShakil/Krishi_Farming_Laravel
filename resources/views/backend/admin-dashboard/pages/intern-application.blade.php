@@ -1,6 +1,6 @@
 @extends('backend.admin-dashboard.layouts.master')
 
-@section('title', 'Job Application')
+@section('title', 'Intern Application')
 
 @section('content')
 
@@ -24,7 +24,7 @@
 
                 <!-- Content Row -->
                 <div class="row">
-                    <div>Job Application</div>
+                    <div>Intern Application</div>
                 </div>
 
             </div>

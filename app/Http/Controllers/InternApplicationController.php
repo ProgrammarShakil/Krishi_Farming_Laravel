@@ -3,18 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\JobApplication;
+use App\Models\InternApplication;
 use Illuminate\Support\Facades\Storage;
 
-class JobApplicationController extends Controller
+class InternApplicationController extends Controller
 {
-    // Show the form to create a new job application
+    // Show the form to create a new intern application
     public function create()
     {
-        return view('frontend.pages.job-application.apply');
+        return view('frontend.pages.intern-application.apply');
     }
 
-    // Store the newly created job application
+    // Store the newly created intern application
     public function store(Request $request)
     {
         // Validate the request
@@ -30,8 +30,8 @@ class JobApplicationController extends Controller
             $resumePath = $request->file('resume')->store('resumes', 'public');
             $photoPath = $request->file('photo')->store('photos', 'public');
 
-            // Create a new Job Application
-            JobApplication::create([
+            // Create a new Intern Application
+            InternApplication::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'resume' => $resumePath,

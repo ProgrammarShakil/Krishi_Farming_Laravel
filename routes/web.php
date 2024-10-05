@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\JobApplicationController;
+use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,9 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // JOB APPLICATION 
-    Route::get('/job-applications/apply', [JobApplicationController::class, 'create'])->name('job-applications.create');
-    Route::post('/job-applications', [JobApplicationController::class, 'store'])->name('job-applications.store');
+    // INTERN APPLICATION 
+    Route::get('/intern-applications/apply', [InternApplicationController::class, 'create'])->name('intern-applications.create');
+    Route::post('/intern-applications', [InternApplicationController::class, 'store'])->name('intern-applications.store');
 });
 
 

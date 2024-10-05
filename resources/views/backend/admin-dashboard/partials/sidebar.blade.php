@@ -40,16 +40,16 @@
         </div>
     </li>
 
-    <!-- Job Application -->
+    <!-- Intern Application -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#JobApplication"
-            aria-expanded="true" aria-controls="JobApplication">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#InternApplication"
+            aria-expanded="true" aria-controls="InternApplication">
             <i class="fas fa-fw fa-id-badge"></i>
-            <span>Job Application</span>
+            <span>Intern Application</span>
         </a>
-        <div id="JobApplication" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="InternApplication" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="utilities-color.html">Job Application List</a>
+                <a class="collapse-item" href="utilities-color.html">Intern Application List</a>
             </div>
         </div>
     </li>
