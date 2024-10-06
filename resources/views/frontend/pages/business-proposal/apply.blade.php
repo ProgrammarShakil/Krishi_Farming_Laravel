@@ -91,9 +91,19 @@
                 <!-- Attachments -->
                 <div class="col-span-2">
                     <label for="attachments" class="block text-lg font-semibold text-white mb-2">Attachments (PDF, Excel, DOCX, Photos, Zip)</label>
-                    <input type="file"
-                        class="block w-full border border-gray-300 rounded-lg py-3 px-4 text-white bg-transparent leading-tight focus:outline-none focus:border-green-500 transition duration-300"
-                        id="attachments" name="attachments[]" multiple accept=".pdf,.docx,.xlsx,.zip,.jpg,.jpeg,.png,.gif">
+                    
+                    <!-- File Input Container for dynamic addition of new file inputs -->
+                    <div id="file-input-container">
+                        <input type="file"
+                            class="block w-full border border-gray-300 rounded-lg py-3 px-4 text-white bg-transparent leading-tight focus:outline-none focus:border-green-500 transition duration-300 mb-4"
+                            name="attachments[]" accept=".pdf,.docx,.xlsx,.zip,.jpg,.jpeg,.png,.gif">
+                    </div>
+                    
+                    <!-- Add More Button -->
+                    <button type="button" id="add-more-files" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-lg shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300">
+                        Add More Files
+                    </button>
+
                     @error('attachments')
                         <div class="text-yellow-500 text-sm mt-1">{{ $message }}</div>
                     @enderror
@@ -112,11 +122,23 @@
 </div>
 
 <script>
+    document.getElementById('add-more-files').addEventListener('click', function() {
+        // Create a new input element for file upload
+        const newFileInput = document.createElement('input');
+        newFileInput.type = 'file';
+        newFileInput.name = 'attachments[]';
+        newFileInput.accept = '.pdf,.docx,.xlsx,.zip,.jpg,.jpeg,.png,.gif';
+        newFileInput.className = 'block w-full border border-gray-300 rounded-lg py-3 px-4 text-white bg-transparent leading-tight focus:outline-none focus:border-green-500 transition duration-300 mb-4';
+
+        // Append the new file input to the container
+        document.getElementById('file-input-container').appendChild(newFileInput);
+    });
+
     $(document).ready(function() {
         @if (session('success'))
             toastr.success('{{ session('success') }}', 'Success', {
                 closeButton: true,
-                progressBar: true,
+                progressBar: false,
                 timeOut: 5000 // 5 seconds timeout
             });
         @endif
@@ -124,7 +146,7 @@
         @if (session('error'))
             toastr.error('{{ session('error') }}', 'Error', {
                 closeButton: true,
-                progressBar: true,
+                progressBar: false,
                 timeOut: 5000
             });
         @endif

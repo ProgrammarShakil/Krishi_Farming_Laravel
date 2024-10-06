@@ -1,3 +1,8 @@
+/* TOASTR CSS  */
+.toast {
+    opacity: 1 !important;
+}
+
 .main-bg-color {
     background: rgb(25 83 69);
 }
@@ -26,6 +31,7 @@
 .particle-home{
     height: 100vh;
 }
+
 /* CIRCLE ANIMATION CSS */
 .pie-chart {
     position: relative;
