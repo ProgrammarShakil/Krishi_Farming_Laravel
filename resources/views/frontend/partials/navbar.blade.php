@@ -25,7 +25,7 @@
                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Job Application</a></li>
                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Investment Proposal</a>
                         </li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Business Proposal</a>
+                        <li><a href="{{route('business-proposal.create')}}" class="block px-4 py-2 hover:bg-gray-100">Business Proposal</a>
                         </li>
                     </ul>
                 </div>

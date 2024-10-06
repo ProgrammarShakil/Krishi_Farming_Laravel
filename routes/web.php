@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InternApplicationController;
+use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,10 @@ Route::middleware('auth')->group(function () {
     // INTERN APPLICATION 
     Route::get('/intern-applications/apply', [InternApplicationController::class, 'create'])->name('intern-applications.create');
     Route::post('/intern-applications', [InternApplicationController::class, 'store'])->name('intern-applications.store');
+
+    // BUSINESS PROPOSAL 
+    Route::get('/business-proposal/apply', [BusinessProposalController::class, 'create'])->name('business-proposal.create');
+    Route::post('/business-proposal', [BusinessProposalController::class, 'store'])->name('business-proposal.store');
 });
 
 
