@@ -30,20 +30,6 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#InternApplication"
             aria-expanded="true" aria-controls="InternApplication">
-            <i class="fas fa-fw fa-user-graduate"></i>
-            <span>Intern Application</span>
-        </a>
-        <div id="InternApplication" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Intern Application List</a>
-            </div>
-        </div>
-    </li>
-
-    <!-- Intern Application -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#InternApplication"
-            aria-expanded="true" aria-controls="InternApplication">
             <i class="fas fa-fw fa-id-badge"></i>
             <span>Intern Application</span>
         </a>
@@ -108,6 +94,21 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="login.html">Create Blog</a>
                 <a class="collapse-item" href="login.html">Blog List</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Team -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Teams" aria-expanded="true"
+            aria-controls="Teams">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Team Manage</span>
+        </a>
+        <div id="Teams" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('admin.teams.create')}}">Create Team</a>
+                <a class="collapse-item" href="{{route('admin.teams.list')}}">Team List</a>
             </div>
         </div>
     </li>
