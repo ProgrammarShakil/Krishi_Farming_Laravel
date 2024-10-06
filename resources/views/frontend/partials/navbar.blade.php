@@ -34,7 +34,7 @@
             <!-- Menu Links for Desktop -->
             <div class="hidden md:flex space-x-6">
                 <a href="#" class="font-bold text-gray-600 hover:text-gray-900">EDP</a>
-                <a href="#" class="font-bold text-gray-600 hover:text-gray-900">Brand Franchise
+                <a href="{{route('brand-franchise-proposal.create')}}" class="font-bold text-gray-600 hover:text-gray-900">Brand Franchise
                     Proposal</a>
                 <a href="#" class="font-bold text-gray-600 hover:text-gray-900">News & Media</a>
                 <a href="#" class="font-bold text-gray-600 hover:text-gray-900">Our Impacts</a>

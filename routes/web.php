@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\BusinessProposalController;
+use App\Http\Controllers\BrandFranchiseProposalController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +39,10 @@ Route::middleware('auth')->group(function () {
     // BUSINESS PROPOSAL 
     Route::get('/business-proposal/apply', [BusinessProposalController::class, 'create'])->name('business-proposal.create');
     Route::post('/business-proposal', [BusinessProposalController::class, 'store'])->name('business-proposal.store');
+
+    // BRAND FRANCHISE PROPOSAL 
+    Route::get('/brand-franchise-proposal/apply', [BrandFranchiseProposalController::class, 'create'])->name('brand-franchise-proposal.create');
+    Route::post('/brand-franchise-proposal', [BrandFranchiseProposalController::class, 'store'])->name('brand-franchise-proposal.store');
 });
 
 
