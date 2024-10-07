@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="bg-gray-100 py-10">
-        <h1 class="text-4xl font-bold text-center mb-8">Meet Our Team</h1>
+        <h1 class="text-4xl mt-20 font-bold text-center mb-8">Meet Our Team</h1>
 
         <div class=" px-4 lg:px-12  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Babysitter 1 -->
