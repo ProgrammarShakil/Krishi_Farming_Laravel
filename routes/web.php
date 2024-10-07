@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\BrandFranchiseProposalController;
@@ -63,6 +64,13 @@ Route::middleware('auth')->group(function () {
     Route::put('/admin/teams/{id}', [TeamController::class, 'update'])->name('admin.teams.update');
 
     Route::delete('/admin/teams/{id}', [TeamController::class, 'destroy'])->name('admin.teams.destroy');
+
+
+    //Intern Application
+    
+    Route::get('/intern/application-list', [InternController::class, 'index'])->name('admin.intern.list');
+    Route::delete('/intern/application-list/{id}', [InternController::class, 'destroy'])->name('admin.intern.destroy');
+
 });
 
 

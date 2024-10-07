@@ -1,63 +1,71 @@
 @extends('backend.admin-dashboard.layouts.master')
 
-@section('title', 'Intern Application')
+@section('title', 'Dashboard')
 
 @section('content')
 
-    <div id="content-wrapper" class="d-flex flex-column">
+    <div class="">
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
 
-        <!-- Main Content -->
-        <div id="content">
+            <div id="content">
+                <!-- Content -->
+                <div class="container-fluid">
 
-            <!-- Topbar -->
-            @include('backend.admin-dashboard.partials.navbar')
+                    <!-- Page Heading -->
+                    {{-- <h1 class="h3 mb-2 text-gray-800">Intern  List</h1> --}}
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Manage Intern Application List</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone Number</th>
+                                            <th>Education</th>
+                                            <th>Skills</th>
+                                            <th>Resume</th>
+                                            <th>Photo</th>
+                                            <th>Actions</th> <!-- Add Actions column -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($internApplications as $application)
+                                        <tr>
+                                            <td>{{ $application->name }}</td>
+                                            <td>{{ $application->email }}</td>
+                                            <td>{{ $application->phone_number }}</td>
+                                            <td>{{ $application->education }}</td>
+                                            <td>{{ $application->skills }}</td>
+                                            <td><a href="{{ asset('storage/' . $application->resume) }}" target="_blank">View Resume</a></td>
+                                            <td><img src="{{ asset('storage/' . $application->photo) }}" alt="Photo" width="50"></td>
+                                            <td>
+                                                <!-- Add Delete Form -->
+                                                <form action="{{ route('admin.intern.destroy', $application->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this application?');">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
 
-            <!-- Content -->
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                </div>
-
-                <!-- Content Row -->
-                <div class="row">
-                    <div>Intern Application</div>
                 </div>
 
             </div>
-
-            <!-- Footer -->
-            @include('backend.admin-dashboard.partials.footer')
-            <!-- End of Footer -->
-
         </div>
+    </div>
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    @endsection
+@endsection
