@@ -7,7 +7,7 @@
     <!-- HERO AREA  -->
     <div id="particles-js" class="particle-home">
     </div>
-    <div class="w-full">
+    <div class="w-full overflow-hidden h-screen">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Column 1 -->
@@ -28,7 +28,7 @@
                             and
                             propel your business forward together
                         </div>
-                        <div class="mt-10 text-left">
+                        <div class="md:mt-10 mt-5 text-left">
                             <button
                                 class="bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
                                 Contact Us
@@ -67,110 +67,116 @@
         </div>
     </div>
 
-    
+
     <!-- PORTFOLIO  -->
-    <div class="pt-20 pb-10">
-        <!-- Portfolio Grid -->
-        <div class="container mx-auto px-5">
-            <h1 class="text-4xl font-bold text-center mb-8">Our Portfolio</h1>
-            <div class="text-center mb-8">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
-                    View All Projects
-                </button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-
-                <!-- Card 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer"
-                        src="{{ asset('images/portfolio/portfolio (1).jpg') }}" alt="Newtech Ecommerce"
-                        onclick="openModal(this.src)">
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold">Innovative Farming Techniques for Sustainable Agriculture</h3>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer"
-                        src="{{ asset('images/portfolio/portfolio (2).jpg') }}" alt="DashboardPix Real Estate Service"
-                        onclick="openModal(this.src)">
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold">Harvesting Success: Advanced Farming and Agri-Solutions</h3>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer"
-                        src="{{ asset('images/portfolio/portfolio (3).jpg') }}" alt="Ozuaz Ecommerce Shop"
-                        onclick="openModal(this.src)">
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold">Empowering Agriculture with Modern Farming Practices</h3>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer"
-                        src="{{ asset('images/portfolio/portfolio (4).jpg') }}" alt="Newtech Ecommerce"
-                        onclick="openModal(this.src)">
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold">Sustainable Farming Solutions for a Greener Future</h3>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer"
-                        src="{{ asset('images/portfolio/portfolio (5).jpg') }}" alt="DashboardPix Real Estate Service"
-                        onclick="openModal(this.src)">
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold">Revolutionizing Agriculture: From Farm to Future</h3>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover cursor-pointer"
-                        src="{{ asset('images/portfolio/portfolio (6).jpg') }}" alt="Ozuaz Ecommerce Shop"
-                        onclick="openModal(this.src)">
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold">Driving Innovation in Farming for Sustainable Growth</h3>
-                    </div>
-                </div>
-
-            </div>
+    <div class="container mx-auto px-5">
+        <div class=" text-center mb-8">
+            <h1 class="text-4xl font-bold">What we do?</h1>
+            <p class="py-3 text-lg">We share evidence, engage stakeholders, and empower communities <br> for a more
+                dignified and prosperous future.
+            </p>
         </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-3">
+            <!-- Card 1 -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <div
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="{{ asset('images/portfolio/portfolio (1).png') }}" alt="Food Security Icon"
+                            class="h-12 w-12">
+                        <p class="text-white font-semibold text-center mt-2">Agriculture <br> Segments</p>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Modal Structure -->
-        <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-            <div class="bg-white rounded-lg p-5">
-                <span class="cursor-pointer text-xl" onclick="closeModal()">✖️</span>
-                <img id="modalImage" class="w-full h-auto">
+            <!-- Card 2 -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <div
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="{{ asset('images/portfolio/portfolio (2).png') }}" alt="Food Security Icon"
+                            class="h-12 w-12">
+                        <p class="text-white font-semibold text-center mt-2">Food Security</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <div
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="{{ asset('images/portfolio/portfolio (3).png') }}" alt="Food Security Icon"
+                            class="h-12 w-12">
+                        <p class="text-white font-semibold text-center mt-2">Krishi Market</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <div
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="{{ asset('images/portfolio/portfolio (4).png') }}" alt="Food Security Icon"
+                            class="h-12 w-12">
+                        <p class="text-white font-semibold text-center mt-2">EDP</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 5 -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <div
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="{{ asset('images/portfolio/portfolio (5).png') }}" alt="Food Security Icon"
+                            class="h-12 w-12">
+                        <p class="text-white font-semibold text-center mt-2">Agriculture Info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <div
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="{{ asset('images/portfolio/portfolio (6).png') }}" alt="Food Security Icon"
+                            class="h-12 w-12">
+                        <p class="text-white font-semibold text-center mt-2">Farmer Connector</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <div
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="{{ asset('images/portfolio/portfolio (7).png') }}" alt="Food Security Icon"
+                            class="h-12 w-12">
+                        <p class="text-white font-semibold text-center mt-2">Services</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <div
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="{{ asset('images/portfolio/portfolio (8).png') }}" alt="Food Security Icon"
+                            class="h-12 w-12">
+                        <p class="text-white font-semibold text-center mt-2">Products</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-
-    <!-- Modal Background -->
-    <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
-        <!-- Modal Content -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-lg">
-            <div class="relative">
-                <!-- Modal Close Button -->
-                <button class="absolute top-2 right-2 text-gray-700" onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-
-                </button>
-                <!-- Modal Image -->
-                <img id="modalImage" src="" alt="Modal Image" class="w-full h-96 object-cover">
-            </div>
-        </div>
-    </div>
 
     <!-- BLOGS  -->
     <div class="container mx-auto px-4 py-10">
@@ -191,8 +197,7 @@
 
             <!-- Card 2 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
                     <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
@@ -206,8 +211,7 @@
 
             <!-- Card 3 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
                     <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
@@ -219,8 +223,7 @@
             </div>
             <!-- Card 4 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
                     <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
@@ -233,8 +236,7 @@
 
             <!-- Card 5 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
                     <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
@@ -248,8 +250,7 @@
 
             <!-- Card 6 -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image"
-                    class="w-full h-48 object-cover">
+                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
                     <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
@@ -260,6 +261,10 @@
                 </div>
             </div>
         </div>
+        <div class="text-center">
+            <a href="#"
+                class="inline-block mt-4 px-4 py-3 text-white bg-green-700 hover:bg-green-800 rounded-md">More Blogs →</a>
+        </div>
     </div>
 
     <!-- VIDEO STORIES  -->
@@ -269,39 +274,36 @@
         </div>
         <div class="owl-carousel owl-theme">
             <div class="item border-2">
-                <iframe width="430" height="315"
-                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
-                    frameborder="0"
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="item border-2">
-                <iframe width="430" height="315"
-                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
-                    frameborder="0"
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="item border-2">
-                <iframe width="430" height="315"
-                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
-                    frameborder="0"
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="item border-2">
-                <iframe width="430" height="315"
-                    src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q" title="YouTube video player"
-                    frameborder="0"
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
         <div class="text-center">
-            <button class="animated-button mt-5">
-                <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                <span class="ml-3">More Video</span>
-            </button>
+            <div class="text-center">
+                <a href="#"
+                    class="inline-block mt-4 px-4 py-3 text-white bg-green-700 hover:bg-green-800 rounded-md">More Videos
+                    →</a>
+            </div>
         </div>
     </div>
 
@@ -324,8 +326,8 @@
 
             <!-- Image 2 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-168351414-612x612.webp') }}"
-                    alt="Car Racing Video Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-168351414-612x612.webp') }}" alt="Car Racing Video Edit"
+                    class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>
@@ -334,8 +336,8 @@
 
             <!-- Image 3 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-649730320-612x612.webp') }}"
-                    alt="Almonds Pouch Design" class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/istockphoto-649730320-612x612.webp') }}" alt="Almonds Pouch Design"
+                    class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Almonds Pouch Design</a>
@@ -354,8 +356,8 @@
 
             <!-- Image 5 -->
             <div class="relative group">
-                <img src="{{ asset('images/gallery/photo-1692369194934-e3e2dc0d8d0d.jpg') }}"
-                    alt="Car Racing Video Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
+                <img src="{{ asset('images/gallery/photo-1692369194934-e3e2dc0d8d0d.jpg') }}" alt="Car Racing Video Edit"
+                    class="object-cover w-full h-full rounded-lg shadow-lg">
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
                     <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>
@@ -372,6 +374,9 @@
                 </div>
             </div>
 
+        </div>
+        <div class="text-center">
+            <a href="#" class="inline-block mt-4 px-4 py-3 text-white bg-green-700 hover:bg-green-800 rounded-md">More Photos →</a>
         </div>
     </div>
 
