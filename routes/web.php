@@ -23,6 +23,11 @@ Route::get('/', function () {
     return view('frontend.pages.index');
 })->name('frontend.pages.index');
 
+Route::get('/team', function () {
+    return view('frontend.pages.team.list');
+})->name('frontend.pages.team');
+
+
 // Intern Application 
 Route::get('/intern-applications/apply', [InternApplicationController::class, 'create'])->name('intern-applications.create');
 Route::post('/intern-applications', [InternApplicationController::class, 'store'])->name('intern-applications.store');

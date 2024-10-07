@@ -42,7 +42,7 @@
                     Proposal</a>
                 <a href="#" class="font-bold text-gray-600 hover:text-gray-900">News & Media</a>
                 <a href="#" class="font-bold text-gray-600 hover:text-gray-900">Our Impacts</a>
-                <a href="pages/team.html" class="font-bold text-gray-600 hover:text-gray-900">Team</a>
+                <a href="{{route('frontend.pages.team')}}" class="font-bold text-gray-600 hover:text-gray-900">Team</a>
             </div>
 
             <!-- CTA Buttons for Desktop -->
@@ -101,7 +101,7 @@
             <a href="#"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Our
                 Impacts</a>
-            <a href="#"
+            <a href="{{route('frontend.pages.team')}}"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Team</a>
             <a href="#"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">About
