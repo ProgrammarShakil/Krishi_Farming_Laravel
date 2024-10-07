@@ -16,22 +16,15 @@
 }
 
 /* PARTICLE JS  */
-.particle-relative {
-    position: relative;
-}
-
 #particles-js {
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    background: rgb(25 83 69);
-    z-index: -1;
-}
-.particle-home{
-    height: 100vh;
-}
-
+    background-color: rgb(25 83 69);
+  }
+  
 /* CIRCLE ANIMATION CSS */
 .pie-chart {
     position: relative;
@@ -135,7 +128,7 @@
 .center-text {
     position: absolute;
     top: 50%;
-    left: 55%;
+    left: 58%;
     transform: translate(-50%, -50%);
     font-size: 1.5rem;
     color: #fff;
@@ -272,13 +265,6 @@
 
 
 
-
-
-
-
-
-
-
 /* RESPONSIVE CSS */
 @media (max-width: 576px) {
     .ml-90 {
@@ -293,7 +279,25 @@
         height: 80vh;
     }
 
+    .pie-chart::before {
+        width: 60px;
+        height: 60px;
+    }
+
+    .pie-chart {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    .label {
+        font-size: .6rem;
+    }
+    
+
     .center-text {
-        left: 49%;
+        left: 50%;
+        font-size: .7rem;
     }
 }

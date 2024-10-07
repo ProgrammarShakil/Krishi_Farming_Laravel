@@ -5,61 +5,63 @@
 @section('content')
 
     <!-- HERO AREA  -->
-    <div id="particles-js" class="particle-home">
-    </div>
-    <div class="w-full overflow-hidden h-screen">
+    <div id="particles-js" class="pb-20"></div>
+    <div class="pt-20 relative flex flex-col items-center justify-center md:h-screen text-center text-white overflow-hidden">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 justify-items-center">
                 <!-- Column 1 -->
-                <div class="p-4">
+                <div class="pt-2 md:p-4">
                     <!-- Left Section -->
-                    <div class=" text-center p-8">
+                    <div class=" text-center  md:p-8">
                         <div class="typing-container">
-                            <div class="text-3xl md:text-5xl font-bold text-white text-left">Harvest Fresh Crops: <br>
+                            <div class="text-lg md:text-5xl font-bold text-white text-left">Harvest Fresh Crops:
+
                                 <div class="text-left">Sustainable <p
-                                        class="typing-text font-bold md:text-5xl text-3xl text-white"></p>
+                                        class="typing-text font-bold text-lg md:text-5xl text-white"></p>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="text-left pt-5 text-xl mt-3 text-white">
+                        <div class="text-left pt-1 md:pt-5 text-sm md:text-xl mt-3 text-white">
                             We value the user experience prior to offering our service. This moment presents to
                             collaborate with us and elevate your brand to new heights. Let's seize this opportunity
                             and
                             propel your business forward together
                         </div>
-                        <div class="md:mt-10 mt-5 text-left">
+                        <div class="md:mt-10 mt-3 text-left">
                             <button
-                                class="bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
+                                class="bg-green-600 hover:bg-red-600 text-white font-semibold py-1 px-2 md:py-2 md:px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
                                 Contact Us
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Column 2 -->
-                <div class="p-4">
+                <div class="md:p-4">
                     <!-- Right Section -->
-                    <div class=" center-text-relative text-white text-center p-8">
-                        <div class="ml-90 pie-chart">
-                            <!-- Rotating labels in each segment -->
-                            <div class="label label-1"><a href="https://bdkrishi.com" target="_blank">Products</a>
+                    <div class="center-text-relative text-white md:text-center p-0 md:p-8">
+                        <div class="w-full mx-auto">
+                            <div class="ml-90 pie-chart">
+                                <!-- Rotating labels in each segment -->
+                                <div class="label label-1"><a href="https://bdkrishi.com" target="_blank">Products</a>
+                                </div>
+                                <div class="label label-2"><a href="https://bdkrishi.com" target="_blank">Services</a>
+                                </div>
+                                <div class="label label-3"><a href="https://bdkrishi.com" target="_blank">Agriculture
+                                        <br> Segments</a></div>
+                                <div class="label label-4"><a href="https://bdkrishi.com" target="_blank">Krishi <br>
+                                        Market</a></div>
+                                <div class="label label-5"><a href="https://bdkrishi.com" target="_blank">EDP</a>
+                                </div>
+                                <div class="label label-6"><a href="https://bdkrishi.com" target="_blank">Agriculture
+                                        <br> Info</a></div>
+                                <div class="label label-7"><a href="https://bdkrishi.com" target="_blank">Farmer <br>
+                                        Connector</a></div>
+    
+                                <!-- Center text -->
                             </div>
-                            <div class="label label-2"><a href="https://bdkrishi.com" target="_blank">Services</a>
+                            <div class="center-text"><a href="https://bdkrishi.com" target="_blank">BD Krishi </a>
                             </div>
-                            <div class="label label-3"><a href="https://bdkrishi.com" target="_blank">Agriculture
-                                    <br> Segments</a></div>
-                            <div class="label label-4"><a href="https://bdkrishi.com" target="_blank">Krishi <br>
-                                    Market</a></div>
-                            <div class="label label-5"><a href="https://bdkrishi.com" target="_blank">EDP</a>
-                            </div>
-                            <div class="label label-6"><a href="https://bdkrishi.com" target="_blank">Agriculture
-                                    <br> Info</a></div>
-                            <div class="label label-7"><a href="https://bdkrishi.com" target="_blank">Farmer <br>
-                                    Connector</a></div>
-
-                            <!-- Center text -->
-                        </div>
-                        <div class="center-text"><a href="https://bdkrishi.com" target="_blank">BD Krishi </a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +71,7 @@
 
 
     <!-- PORTFOLIO  -->
-    <div class="container mx-auto px-5">
+    <div class="container mx-auto px-5 py-10">
         <div class=" text-center mb-8">
             <h1 class="text-4xl font-bold">What we do?</h1>
             <p class="py-3 text-lg">We share evidence, engage stakeholders, and empower communities <br> for a more
