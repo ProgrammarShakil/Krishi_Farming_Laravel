@@ -49,9 +49,9 @@ class JobCircularController extends Controller
 
         try {
             JobCircular::create($validatedData);
-            return redirect()->back()->with('success', 'Job Circular created successfully!');
+            return redirect()->route('admin.job.circular.index')->with('success', 'Job Circular created successfully!');
         } catch (\Throwable $e) {
-            return redirect()->back()->with('error', 'Failed to submit application: ' . $e->getMessage());
+            return redirect()->route('admin.job.circular.index')->with('error', 'Failed to submit application: ' . $e->getMessage());
         }
     }
 
@@ -84,9 +84,9 @@ class JobCircularController extends Controller
         try {
             $circular = JobCircular::findOrFail($id);
             $circular->update($request->all());
-            return redirect()->back()->with('success', 'Job Circular Updated Successfully');
+            return redirect()->route('admin.job.circular.index')->with('success', 'Job Circular Updated Successfully');
         } catch (\Throwable $e) {
-            return redirect()->back()->with('error', 'Faile to Update Job Circular' . $e->getMessage());
+            return redirect()->route('admin.job.circular.index')->with('error', 'Faile to Update Job Circular' . $e->getMessage());
         }
     }
 
