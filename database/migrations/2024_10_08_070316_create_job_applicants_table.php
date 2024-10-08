@@ -17,16 +17,15 @@ return new class extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('educational_qualification');
-            $table->string('special_skills');
-            $table->string('expected_salary');
-            $table->text('problem_solving_in_agriculture');
-            $table->text('help_bdkrishi_succeed');
-            $table->text('career_goals');
-            $table->text('past_projects');
-            $table->string('cv')->nullable();
-            $table->string('photo')->nullable();
-            $table->unsignedBigInteger('job_circular_id');
-            $table->foreign('job_circular_id')->references('id')->on('job_circulars')->onDelete('cascade');
+            $table->text('special_skills');
+            $table->decimal('expected_salary', 10, 2); // Change as needed
+            $table->text('q1');
+            $table->text('q2');
+            $table->text('q3');
+            $table->text('q4');
+            $table->string('cv'); // File path or name
+            $table->string('photo'); // File path or name
+            $table->foreignId('job_circular_id')->constrained()->onDelete('cascade'); // Foreign key to JobCircular
             $table->timestamps();
         });
     }

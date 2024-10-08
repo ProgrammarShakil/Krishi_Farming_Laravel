@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class JobCircular extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'position_name', 
         'vacancy_number', 
@@ -24,8 +24,8 @@ class JobCircular extends Model
         'circular_closing_date'
     ];
 
-    protected $dates = [
-        'published_date',
-        'circular_closing_date',
+   protected $casts = [
+        'published_date' => 'datetime',
+        'circular_closing_date' => 'datetime',
     ];
 }

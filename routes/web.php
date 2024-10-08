@@ -32,20 +32,21 @@ Route::get('/team', function () {
 
 
 // Intern Application 
-Route::get('/intern-applications/apply', [InternApplicationController::class, 'create'])->name('intern-applications.create');
-Route::post('/intern-applications', [InternApplicationController::class, 'store'])->name('intern-applications.store');
+Route::get('/intern-applications/apply', [InternApplicationController::class, 'create'])->name('frontend.pages.intern-applications.create');
+Route::post('/intern-applications', [InternApplicationController::class, 'store'])->name('frontend.pages.intern-applications.store');
 
 // Business Proposal
-Route::get('/business-proposal/apply', [BusinessProposalController::class, 'create'])->name('business-proposal.create');
-Route::post('/business-proposal', [BusinessProposalController::class, 'store'])->name('business-proposal.store');
+Route::get('/business-proposal/apply', [BusinessProposalController::class, 'create'])->name('frontend.pages.business-proposal.create');
+Route::post('/business-proposal', [BusinessProposalController::class, 'store'])->name('frontend.pages.business-proposal.store');
 
 // Brand Franchise Proposal 
-Route::get('/brand-franchise-proposal/apply', [BrandFranchiseProposalController::class, 'create'])->name('brand-franchise-proposal.create');
-Route::post('/brand-franchise-proposal', [BrandFranchiseProposalController::class, 'store'])->name('brand-franchise-proposal.store');
+Route::get('/brand-franchise-proposal/apply', [BrandFranchiseProposalController::class, 'create'])->name('frontend.pages.brand-franchise-proposal.create');
+Route::post('/brand-franchise-proposal', [BrandFranchiseProposalController::class, 'store'])->name('frontend.pages.brand-franchise-proposal.store');
 
-// Job Application
-Route::get('/job-application/{id}', [JobApplicantController::class, 'index'])->name('job.circular.index');
-Route::post('/job-application/apply', [JobApplicantController::class, 'store'])->name('job.applicants.store');
+// Job Applicants
+Route::get('/job-application', [JobApplicantController::class, 'index'])->name('frontend.pages.job.circular.index');
+Route::get('job-application/form/{id}', [JobApplicantController::class, 'create'])->name('frontend.pages.job.applicants.create');
+Route::post('job-application/apply', [JobApplicantController::class, 'store'])->name('frontend.pages.job.applicants.store');
 
 // ADMIN DASHBOARD
 Route::get('/dashboard', function () {

@@ -10,9 +10,24 @@ class JobApplicant extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'phone', 'email', 'educational_qualification', 
-        'special_skills', 'expected_salary', 'problem_solving_in_agriculture', 
-        'help_bdkrishi_succeed', 'career_goals', 'past_projects', 'cv', 'photo', 
+        'name', 
+        'phone', 
+        'email', 
+        'educational_qualification', 
+        'special_skills', 
+        'expected_salary', 
+        'q1', 
+        'q2', 
+        'q3', 
+        'q4', 
+        'cv', 
+        'photo', 
         'job_circular_id'
     ];
+
+    // Define the inverse relationship with JobCircular
+    public function jobCircular()
+    {
+        return $this->belongsTo(JobCircular::class, 'job_circular_id');
+    }
 }

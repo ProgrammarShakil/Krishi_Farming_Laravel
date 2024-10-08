@@ -21,13 +21,13 @@
                 <!-- Dropdown Content -->
                 <div id="dropdownContent" class="hidden absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg z-10">
                     <ul class="py-2 text-gray-600">
-                        <li><a href="{{ route('intern-applications.create') }}"
+                        <li><a href="{{ route('frontend.pages.intern-applications.create') }}"
                                 class="block px-4 py-2 hover:bg-gray-100">Intern Application</a>
                         </li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Job Application</a></li>
+                        <li><a href="{{route('frontend.pages.job.circular.index')}}" class="block px-4 py-2 hover:bg-gray-100">Job Application</a></li>
                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Investment Proposal</a>
                         </li>
-                        <li><a href="{{ route('business-proposal.create') }}"
+                        <li><a href="{{ route('frontend.pages.business-proposal.create') }}"
                                 class="block px-4 py-2 hover:bg-gray-100">Business Proposal</a>
                         </li>
                     </ul>
@@ -37,7 +37,7 @@
             <!-- Menu Links for Desktop -->
             <div class="hidden md:flex space-x-6">
                 <a href="#" class="font-bold text-gray-600 hover:text-gray-900">EDP</a>
-                <a href="{{ route('brand-franchise-proposal.create') }}"
+                <a href="{{ route('frontend.pages.brand-franchise-proposal.create') }}"
                     class="font-bold text-gray-600 hover:text-gray-900">Brand Franchise
                     Proposal</a>
                 <a href="#" class="font-bold text-gray-600 hover:text-gray-900">News & Media</a>
@@ -81,18 +81,18 @@
                     </svg>
                 </button>
                 <div id="mobileDropdownContent" class="hidden px-3 py-2 bg-gray-50 rounded-md">
-                    <a href="{{ route('intern-applications.create') }}" class="block px-4 py-2 hover:bg-gray-200">Intern
+                    <a href="{{ route('frontend.pages.intern-applications.create') }}" class="block px-4 py-2 hover:bg-gray-200">Intern
                         Application</a>
                     <a href="#"
                         class="block px-4 py-2 hover:bg-gray-200">job Application</a>
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200">Investment Proposal</a>
-                    <a href="{{ route('business-proposal.create') }}" class="block px-4 py-2 hover:bg-gray-200">Business
+                    <a href="{{ route('frontend.pages.business-proposal.create') }}" class="block px-4 py-2 hover:bg-gray-200">Business
                         Proposal</a>
                 </div>
             </div>
             <a href="#"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">EDP</a>
-            <a href="{{ route('brand-franchise-proposal.create') }}"
+            <a href="{{ route('frontend.pages.brand-franchise-proposal.create') }}"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Brand Franchise
                 Proposal</a>
             <a href="#"
