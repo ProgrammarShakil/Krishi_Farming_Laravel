@@ -1,0 +1,17 @@
+/* OVERWRITE TOASTR CSS  */
+
+.toast-success {
+    background-color: #28a745; /* Bootstrap green */
+}
+
+.toast-error {
+    background-color: #dc3545; /* Bootstrap red */
+}
+
+.toast-warning {
+    background-color: #ffc107; /* Bootstrap yellow */
+}
+
+.toast-info {
+    background-color: #17a2b8; /* Bootstrap info */
+}

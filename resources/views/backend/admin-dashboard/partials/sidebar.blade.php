@@ -26,6 +26,21 @@
         Interface
     </div> --}}
 
+    <!-- Job Circular -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#JobCircular"
+            aria-expanded="true" aria-controls="JobCircular">
+            <i class="fas fa-fw fa-briefcase"></i>
+            <span>Job Circular</span>
+        </a>
+        <div id="JobCircular" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.job.circular.create') }}">Create Job Circular</a>
+                <a class="collapse-item" href="{{ route('admin.job.circular.index') }}">Job Circular List</a>
+            </div>
+        </div>
+    </li>
+
     <!-- Intern Application -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#InternApplication"
@@ -35,7 +50,7 @@
         </a>
         <div id="InternApplication" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('admin.intern.list')}}">Intern Application List</a>
+                <a class="collapse-item" href="{{ route('admin.intern.index') }}">Intern Application List</a>
             </div>
         </div>
     </li>
@@ -100,15 +115,15 @@
 
     <!-- Team -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Teams" aria-expanded="true"
-            aria-controls="Teams">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Teams"
+            aria-expanded="true" aria-controls="Teams">
             <i class="fas fa-fw fa-users"></i>
             <span>Team Manage</span>
         </a>
         <div id="Teams" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('admin.teams.create')}}">Create Team</a>
-                <a class="collapse-item" href="{{route('admin.teams.list')}}">Team List</a>
+                <a class="collapse-item" href="{{ route('admin.teams.create') }}">Create Team</a>
+                <a class="collapse-item" href="{{ route('admin.teams.list') }}">Team List</a>
             </div>
         </div>
     </li>

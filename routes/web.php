@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\InternController;
+use App\Http\Controllers\Admin\JobCircularController;
+use App\Http\Controllers\JobApplicantController;
 use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\BrandFranchiseProposalController;
@@ -41,7 +43,9 @@ Route::post('/business-proposal', [BusinessProposalController::class, 'store'])-
 Route::get('/brand-franchise-proposal/apply', [BrandFranchiseProposalController::class, 'create'])->name('brand-franchise-proposal.create');
 Route::post('/brand-franchise-proposal', [BrandFranchiseProposalController::class, 'store'])->name('brand-franchise-proposal.store');
 
-
+// Job Application
+Route::get('/job-application/{id}', [JobApplicantController::class, 'index'])->name('job.circular.index');
+Route::post('/job-application/apply', [JobApplicantController::class, 'store'])->name('job.applicants.store');
 
 // ADMIN DASHBOARD
 Route::get('/dashboard', function () {
@@ -56,7 +60,7 @@ Route::middleware('auth')->group(function () {
 
     // Team 
     Route::get('/admin/teams', [TeamController::class, 'index'])->name('admin.teams.list');
-    
+
     Route::get('/admin/teams/create', [TeamController::class, 'create'])->name('admin.teams.create');
     Route::post('/admin/teams', [TeamController::class, 'store'])->name('admin.teams.store');
 
@@ -67,10 +71,17 @@ Route::middleware('auth')->group(function () {
 
 
     //Intern Application
-    
-    Route::get('/intern/application-list', [InternController::class, 'index'])->name('admin.intern.list');
+
+    Route::get('/intern/application-list', [InternController::class, 'index'])->name('admin.intern.index');
     Route::delete('/intern/application-list/{id}', [InternController::class, 'destroy'])->name('admin.intern.destroy');
 
+    // Job Circular
+    Route::get('/job-circular-create', [JobCircularController::class, 'create'])->name('admin.job.circular.create');
+    Route::post('/job-circular-store', [JobCircularController::class, 'store'])->name('admin.job.circular.store');
+    Route::get('/job-circular-list', [JobCircularController::class, 'index'])->name('admin.job.circular.index');
+    Route::get('/job-circular-edit/{id}', [JobCircularController::class, 'edit'])->name('admin.job.circular.edit');
+    Route::put('/job-circular-update/{id}', [JobCircularController::class, 'update'])->name('admin.job.circular.update');
+    Route::delete('/job-circular-delete/{id}', [JobCircularController::class, 'destroy'])->name('admin.job.circular.destroy');
 });
 
 
