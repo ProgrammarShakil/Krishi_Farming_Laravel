@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\JobApplicant;
 use App\Models\JobCircular;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class JobCircularController extends Controller
 {
@@ -97,5 +99,37 @@ class JobCircularController extends Controller
         $circular->delete();
 
         return redirect()->back()->with('success', 'Job Circular Deleted Successfully');
+    }
+
+
+    // Applicants List 
+    public function applicants(Request $request)
+    {
+        $applicants = JobApplicant::all();
+
+        return view('backend.admin-dashboard.pages.job-circular.applicants', compact('applicants'));
+    }
+
+    // Applicants Remove
+    public function applicant_destroy($id)
+    {
+        try {
+            $applicant = JobApplicant::findOrFail($id);
+
+            // Delete files if they exist
+            if ($applicant->cv) {
+                Storage::delete($applicant->cv);
+            }
+
+            if ($applicant->photo) {
+                Storage::delete($applicant->photo);
+            }
+
+            $applicant->delete();
+
+            return redirect()->back()->with('success', 'Applicant deleted successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Failed to delete applicant: ' . $e->getMessage());
+        }
     }
 }

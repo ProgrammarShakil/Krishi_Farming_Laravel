@@ -83,6 +83,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/job-circular-edit/{id}', [JobCircularController::class, 'edit'])->name('admin.job.circular.edit');
     Route::put('/admin/job-circular-update/{id}', [JobCircularController::class, 'update'])->name('admin.job.circular.update');
     Route::delete('/admin/job-circular-delete/{id}', [JobCircularController::class, 'destroy'])->name('admin.job.circular.destroy');
+
+    // Job Applicants 
+    Route::get('/admin/job-applicants', [JobCircularController::class, 'applicants'])->name('admin.job.applicants.index');
+    Route::delete('admin/job-applicants/{id}', [JobCircularController::class, 'applicant_destroy'])->name('admin.job-applicants.destroy');
+
 });
 
 

@@ -37,6 +37,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('admin.job.circular.create') }}">Create Job Circular</a>
                 <a class="collapse-item" href="{{ route('admin.job.circular.index') }}">Job Circular List</a>
+                <a class="collapse-item" href="{{ route('admin.job.applicants.index') }}">Job Applicants</a>
             </div>
         </div>
     </li>

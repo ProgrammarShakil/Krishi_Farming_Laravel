@@ -57,11 +57,11 @@ class JobApplicantController extends Controller
     
         // Handle file uploads
         if ($request->hasFile('resume')) {
-            $applicant->cv = $request->file('resume')->store('resumes'); // Save the resume
+            $applicant->cv = $request->file('resume')->store('resumes' , 'public'); // Save the resume
         }
     
         if ($request->hasFile('photo')) {
-            $applicant->photo = $request->file('photo')->store('photos'); // Save the photo
+            $applicant->photo = $request->file('photo')->store('photos' , 'public'); // Save the photo
         }
     
         // Save the applicant
