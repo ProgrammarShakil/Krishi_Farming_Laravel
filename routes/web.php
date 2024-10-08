@@ -72,16 +72,16 @@ Route::middleware('auth')->group(function () {
 
     //Intern Application
 
-    Route::get('/intern/application-list', [InternController::class, 'index'])->name('admin.intern.index');
-    Route::delete('/intern/application-list/{id}', [InternController::class, 'destroy'])->name('admin.intern.destroy');
+    Route::get('/admin/intern/application-list', [InternController::class, 'index'])->name('admin.intern.index');
+    Route::delete('/admin/intern/application-list/{id}', [InternController::class, 'destroy'])->name('admin.intern.destroy');
 
     // Job Circular
-    Route::get('/job-circular-create', [JobCircularController::class, 'create'])->name('admin.job.circular.create');
-    Route::post('/job-circular-store', [JobCircularController::class, 'store'])->name('admin.job.circular.store');
-    Route::get('/job-circular-list', [JobCircularController::class, 'index'])->name('admin.job.circular.index');
-    Route::get('/job-circular-edit/{id}', [JobCircularController::class, 'edit'])->name('admin.job.circular.edit');
-    Route::put('/job-circular-update/{id}', [JobCircularController::class, 'update'])->name('admin.job.circular.update');
-    Route::delete('/job-circular-delete/{id}', [JobCircularController::class, 'destroy'])->name('admin.job.circular.destroy');
+    Route::get('/admin/job-circular-create', [JobCircularController::class, 'create'])->name('admin.job.circular.create');
+    Route::post('/admin/job-circular-store', [JobCircularController::class, 'store'])->name('admin.job.circular.store');
+    Route::get('/admin/job-circular-list', [JobCircularController::class, 'index'])->name('admin.job.circular.index');
+    Route::get('/admin/job-circular-edit/{id}', [JobCircularController::class, 'edit'])->name('admin.job.circular.edit');
+    Route::put('/admin/job-circular-update/{id}', [JobCircularController::class, 'update'])->name('admin.job.circular.update');
+    Route::delete('/admin/job-circular-delete/{id}', [JobCircularController::class, 'destroy'])->name('admin.job.circular.destroy');
 });
 
 

@@ -38,11 +38,13 @@
                                             <td>{{ $circular->published_date->format('d-m-Y') }}</td>
                                             <td>{{ $circular->circular_closing_date->format('d-m-Y') }}</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                                                <form action="#" method="POST" style="display:inline;">
+                                                <a href="{{ route('admin.job.circular.edit', $circular->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i>
+                                                </a>
+                                                <form action="{{ route('admin.job.circular.destroy', $circular->id) }}" method="POST" style="display:inline;">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this job circular?');">Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this job circular?');"><i class="fas fa-trash"></i>
+                                                    </button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -61,5 +63,24 @@
         </div>
     </div>
 </div>
+    <!-- Toastr Notifications -->
+    <script>
+        $(document).ready(function() {
+            @if (session('success'))
+                toastr.success('{{ session('success') }}', 'Success', {
+                    closeButton: true,
+                    progressBar: false,
+                    timeOut: 5000 // 5 seconds timeout
+                });
+            @endif
 
+            @if (session('error'))
+                toastr.error('{{ session('error') }}', 'Error', {
+                    closeButton: true,
+                    progressBar: false,
+                    timeOut: 5000
+                });
+            @endif
+        });
+    </script>
 @endsection

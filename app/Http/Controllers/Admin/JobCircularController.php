@@ -13,16 +13,16 @@ class JobCircularController extends Controller
     public function index(Request $request)
     {
         $circulars = JobCircular::all();
-    
+
         // Manually convert date fields to Carbon instances
         foreach ($circulars as $circular) {
             $circular->published_date = Carbon::parse($circular->published_date);
             $circular->circular_closing_date = Carbon::parse($circular->circular_closing_date);
         }
-    
+
         return view('backend.admin-dashboard.pages.job-circular.index', compact('circulars'));
     }
-    
+
     // Show the form to create a new job circular
     public function create()
     {
@@ -33,18 +33,18 @@ class JobCircularController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'position_name' => 'required|string|max:255',
-            'vacancy_number' => 'required|integer',
-            'job_location' => 'required|string|max:255',
-            'educational_requirements' => 'required|string',
-            'additional_requirements' => 'required|string',
-            'responsibilities' => 'required|string',
-            'compensation' => 'required|string',
-            'workplace' => 'required|string',
-            'employment_status' => 'required|string',
-            'gender' => 'nullable|string',
-            'published_date' => 'required|date',
-            'circular_closing_date' => 'required|date',
+            'position_name' => 'required|string|max:255',  // Text field, required
+            'vacancy_number' => 'required|integer|min:1',  // Number field, positive integer
+            'job_location' => 'required|string|max:255',  // Text field, required
+            'educational_requirements' => 'required|string',  // Textarea field, required
+            'additional_requirements' => 'required|string',  // Textarea field, required
+            'responsibilities' => 'required|string',  // Textarea field, required
+            'compensation' => 'required|string|max:255',  // Text field, required
+            'workplace' => 'required|string|max:255',  // Text field, required
+            'employment_status' => 'required|string|in:Full-time,Part-time,Contract,Internship',  // Dropdown field, required
+            'gender' => 'nullable|string|in:Any,Male,Female',  // Dropdown field, optional
+            'published_date' => 'required|date',  // Date field, required
+            'circular_closing_date' => 'required|date|after:published_date',  // Date field, required and must be after published date
         ]);
 
         try {
@@ -66,23 +66,28 @@ class JobCircularController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'position_name' => 'required|string|max:255',
-            'vacancy_number' => 'required|integer',
-            'job_location' => 'required|string',
-            'requirements' => 'required|string',
-            'responsibilities' => 'required|string',
-            'compensation' => 'required|string',
-            'workplace' => 'required|string',
-            'employment_status' => 'required|string',
-            'gender' => 'nullable|string',
-            'published_date' => 'required|date',
-            'circular_closing_date' => 'required|date',
+            'position_name' => 'required|string|max:255',  // Text field, required
+            'vacancy_number' => 'required|integer|min:1',  // Number field, must be a positive integer
+            'job_location' => 'required|string|max:255',  // Text field, required
+            'educational_requirements' => 'required|string',  // Textarea, required
+            'additional_requirements' => 'required|string',  // Textarea, required
+            'responsibilities' => 'required|string',  // Textarea, required
+            'compensation' => 'required|string|max:255',  // Text field, required
+            'workplace' => 'required|string|max:255',  // Text field, required
+            'employment_status' => 'required|string|in:Full-time,Part-time,Contract,Internship',  // Dropdown field, validate options
+            'gender' => 'nullable|string|in:Any,Male,Female',  // Dropdown field, optional
+            'published_date' => 'required|date',  // Date field, required
+            'circular_closing_date' => 'required|date|after:published_date',  // Date field, required and must be after published date
         ]);
 
-        $circular = JobCircular::findOrFail($id);
-        $circular->update($request->all());
 
-        return redirect()->route('backend.admin-dashboard.pages.job-circular.index')->with('success', 'Job Circular Updated Successfully');
+        try {
+            $circular = JobCircular::findOrFail($id);
+            $circular->update($request->all());
+            return redirect()->back()->with('success', 'Job Circular Updated Successfully');
+        } catch (\Throwable $e) {
+            return redirect()->back()->with('error', 'Faile to Update Job Circular' . $e->getMessage());
+        }
     }
 
     // Delete a job circular from the database
@@ -91,6 +96,6 @@ class JobCircularController extends Controller
         $circular = JobCircular::findOrFail($id);
         $circular->delete();
 
-        return redirect()->route('backend.admin-dashboard.pages.job-circular.index')->with('success', 'Job Circular Deleted Successfully');
+        return redirect()->back()->with('success', 'Job Circular Deleted Successfully');
     }
 }
