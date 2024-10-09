@@ -18,12 +18,13 @@ class InvestmentApplicant extends Model
         'proposal_details',
         'attachment_name',
         'attachments',
+        'investment_proposal_id',
     ];
 
     protected $casts = [
         'attachments' => 'array', // Cast attachments as an array
     ];
-    
+
     // Define the inverse relationship with Investment Proposal
     public function InvestmentProposal()
     {

@@ -20,7 +20,6 @@ return new class extends Migration
             $table->decimal('proposal_amount', 10, 2);  // Proposal Amount (currency)
 
             $table->text('proposal_details');  // Details of the proposal
-            $table->string('attachment_name'); // Attachment Name
             $table->string('attachments'); // Type of Attachment (PDF, EXCEL, DOCX, Photo, ZIP)
 
             $table->foreignId('investment_proposal_id')->constrained()->onDelete('cascade'); // Foreign key to InvestmentProposal

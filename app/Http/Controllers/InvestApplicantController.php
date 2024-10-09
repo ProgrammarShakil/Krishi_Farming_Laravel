@@ -11,9 +11,9 @@ class InvestApplicantController extends Controller
 {
     public function index()
     {
-        $circulars = InvestmentProposal::all();
+        $investmentProposals = InvestmentProposal::all();
 
-        return view('frontend.pages.investment-application.list', compact('circulars'));
+        return view('frontend.pages.investment-application.list', compact('investmentProposals'));
     }
 
     public function create($id)
@@ -25,51 +25,43 @@ class InvestApplicantController extends Controller
 
     public function store(Request $request)
     {
-        // Validate the request data
+        // Validate the incoming request data
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'phone_number' => 'required|string|max:15',
+            'investment_proposal_id' => 'required|exists:investment_proposals,id',
+            'proposer_name' => 'required|string|max:255',
+            'phone_number' => 'required|string|max:20',
             'email' => 'required|email|max:255',
-            'education' => 'required|string|max:255',
-            'skills' => 'required|string',
-            'expected_salary' => 'required|string|max:20',
-            'q1' => 'required|string',
-            'q2' => 'required|string',
-            'q3' => 'required|string',
-            'q4' => 'required|string',
-            'resume' => 'required|file|mimes:pdf,docx|max:2048', // File validation
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Image validation
-            'investment_circular_id' => 'required|exists:investment_circulars,id', // Ensure this is included
+            'address' => 'required|string|max:255',
+            'proposal_amount' => 'required|numeric',
+            'proposal_details' => 'required|string',
+            'attachment_name' => 'required|string|max:255',
+            'attachments.*' => 'nullable|file|mimes:pdf,docx,xlsx,zip,jpg,jpeg,png,gif|max:2048', // 2MB max for each file
         ]);
-    
-        // Create the investment applicant record
-        $applicant = new InvestmentApplicant();
-        $applicant->name = $validatedData['name'];
-        $applicant->phone = $validatedData['phone_number'];
-        $applicant->email = $validatedData['email'];
-        $applicant->educational_qualification = $validatedData['education'];
-        $applicant->special_skills = $validatedData['skills'];
-        $applicant->expected_salary = $validatedData['expected_salary'];
-        $applicant->q1 =  $validatedData['q1'];
-        $applicant->q2 =  $validatedData['q2'];
-        $applicant->q3 =  $validatedData['q3'];
-        $applicant->q4 =  $validatedData['q4'];
-    
+
+        // Create a new investment application record
+        $application = InvestmentApplicant::create([
+            'investment_proposal_id' => $validatedData['investment_proposal_id'],
+            'proposer_name' => $validatedData['proposer_name'],
+            'phone_number' => $validatedData['phone_number'],
+            'email' => $validatedData['email'],
+            'address' => $validatedData['address'],
+            'proposal_amount' => $validatedData['proposal_amount'],
+            'proposal_details' => $validatedData['proposal_details'],
+            'attachments' => $validatedData['attachments'],
+        ]);
+
         // Handle file uploads
-        if ($request->hasFile('resume')) {
-            $applicant->cv = $request->file('resume')->store('resumes' , 'public'); // Save the resume
+        if ($request->hasFile('attachments')) {
+            foreach ($request->file('attachments') as $file) {
+                // Store each file in a designated folder
+                $path = $file->store('attachments/' . $application->id);
+
+                // You can also save the file path in the database if needed
+                // Example: $application->attachments()->create(['path' => $path]);
+            }
         }
-    
-        if ($request->hasFile('photo')) {
-            $applicant->photo = $request->file('photo')->store('photos' , 'public'); // Save the photo
-        }
-    
-        // Save the applicant
-        $applicant->investment_circular_id = $validatedData['investment_circular_id']; // Ensure to save investment_circular_id
-        $applicant->save();
-    
-        // Redirect back with a success message
-        return redirect()->back()->with('success', 'Application submitted successfully!');
+
+        // Flash a success message to the session
+        return redirect()->back()->with('success', 'Your application has been submitted successfully!');
     }
-    
 }

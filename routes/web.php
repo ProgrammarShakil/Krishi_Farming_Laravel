@@ -55,6 +55,8 @@ Route::get('/investment-application', [InvestApplicantController::class, 'index'
 Route::get('investment-application/form/{id}', [InvestApplicantController::class, 'create'])->name('frontend.pages.investment.applicants.create');
 Route::post('investment-application/apply', [InvestApplicantController::class, 'store'])->name('frontend.pages.investment.applicants.store');
 
+
+
 // ADMIN DASHBOARD
 Route::get('/dashboard', function () {
     return view('backend.admin-dashboard.pages.index');
