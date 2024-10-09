@@ -7,7 +7,7 @@
     <div class="md:max-w-5xl mt-20 mx-auto bg-transparent shadow-2xl rounded-lg border border-green-700 p-8">
         <h1 class="text-4xl font-bold text-white mb-8 text-center">Business Proposal</h1>
 
-        <form action="{{ route('business-proposal.store') }}" method="POST" enctype="multipart/form-data" novalidate>
+        <form action="{{ route('frontend.pages.business-proposal.store') }}" method="POST" enctype="multipart/form-data" novalidate>
             @csrf
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
