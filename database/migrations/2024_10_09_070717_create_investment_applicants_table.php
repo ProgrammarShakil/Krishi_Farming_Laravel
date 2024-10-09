@@ -18,9 +18,8 @@ return new class extends Migration
             $table->string('email');         // Email Address
             $table->string('address')->nullable();  // Address
             $table->decimal('proposal_amount', 10, 2);  // Proposal Amount (currency)
-
             $table->text('proposal_details');  // Details of the proposal
-            $table->string('attachments'); // Type of Attachment (PDF, EXCEL, DOCX, Photo, ZIP)
+            $table->json('attachments'); // Type of Attachment (PDF, EXCEL, DOCX, Photo, ZIP)
 
             $table->foreignId('investment_proposal_id')->constrained()->onDelete('cascade'); // Foreign key to InvestmentProposal
             $table->timestamps();

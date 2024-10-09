@@ -82,18 +82,6 @@
                         @enderror
                     </div>
 
-                    <!-- Attachment Name -->
-                    <div class="col-span-2">
-                        <label for="attachment_name" class="block text-lg font-semibold text-white mb-2">Attachment
-                            Name</label>
-                        <input type="text"
-                            class="block w-full border border-gray-300 rounded-lg py-3 px-4 text-white bg-transparent leading-tight focus:outline-none focus:border-green-500 transition duration-300"
-                            id="attachment_name" name="attachment_name" value="{{ old('attachment_name') }}" required>
-                        @error('attachment_name')
-                            <div class="text-yellow-500 text-sm mt-1">{{ $message }}</div>
-                        @enderror
-                    </div>
-
                     <!-- Attachments -->
                     <div class="col-span-2">
                         <label for="attachments" class="block text-lg font-semibold text-white mb-2">Attachments (PDF,

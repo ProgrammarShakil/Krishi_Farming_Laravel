@@ -106,8 +106,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/admin/investment-proposal-delete/{id}', [InvestmentProposalController::class, 'destroy'])->name('admin.investment.proposal.destroy');
 
     // Investment Applicants 
-    Route::get('/admin/investment-applicants', [InvestmentProposalController::class, 'investments'])->name('admin.investment.applicants.index');
-    Route::delete('admin/investment-applicants/{id}', [InvestmentProposalController::class, 'investment_destroy'])->name('admin.investment-applicants.destroy');
+    Route::get('/admin/investment-applicants', [InvestmentProposalController::class, 'investment_applicants'])->name('admin.investment.applicants.index');
+    Route::delete('admin/investment-applicants/{id}', [InvestmentProposalController::class, 'investment_applicants_destroy'])->name('admin.investment-applicants.destroy');
 
 });
 

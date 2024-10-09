@@ -16,7 +16,6 @@ class InvestmentApplicant extends Model
         'address',
         'proposal_amount',
         'proposal_details',
-        'attachment_name',
         'attachments',
         'investment_proposal_id',
     ];

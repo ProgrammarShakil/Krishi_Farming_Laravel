@@ -92,7 +92,7 @@ class InvestmentProposalController extends Controller
 
 
     // Applicants List 
-    public function applicants(Request $request)
+    public function investment_applicants(Request $request)
     {
         $applicants = InvestmentApplicant::all();
 
@@ -100,7 +100,7 @@ class InvestmentProposalController extends Controller
     }
 
     // Applicants Remove
-    public function applicant_destroy($id)
+    public function investment_applicants_destroy($id)
     {
         try {
             $applicant = InvestmentApplicant::findOrFail($id);
