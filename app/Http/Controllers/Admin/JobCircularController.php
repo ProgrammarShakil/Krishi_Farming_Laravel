@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 class JobCircularController extends Controller
 {
-    // List all job circulars with pagination
+    // List all job circulars
     public function index(Request $request)
     {
         $circulars = JobCircular::all();

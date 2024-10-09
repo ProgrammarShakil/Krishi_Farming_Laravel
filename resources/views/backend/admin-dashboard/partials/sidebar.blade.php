@@ -42,6 +42,22 @@
         </div>
     </li>
 
+    <!-- Investment Proposal -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#InvestmentProposal"
+            aria-expanded="true" aria-controls="InvestmentProposal">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Investment Proposal</span>
+        </a>
+        <div id="InvestmentProposal" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.investment.proposal.create') }}">Create Proposal</a>
+                <a class="collapse-item" href="{{ route('admin.investment.proposal.index') }}">Proposal List</a>
+                <a class="collapse-item" href="{{ route('admin.investment.applicants.index') }}">Investment Applicants</a>
+            </div>
+        </div>
+    </li>
+
     <!-- Intern Application -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#InternApplication"
@@ -52,20 +68,6 @@
         <div id="InternApplication" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('admin.intern.index') }}">Intern Application List</a>
-            </div>
-        </div>
-    </li>
-
-    <!-- Investment Proposal -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#InvestmentProposal"
-            aria-expanded="true" aria-controls="InvestmentProposal">
-            <i class="fas fa-fw fa-coins"></i>
-            <span>Investment Proposal</span>
-        </a>
-        <div id="InvestmentProposal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="login.html">Investment Proposal List</a>
             </div>
         </div>
     </li>

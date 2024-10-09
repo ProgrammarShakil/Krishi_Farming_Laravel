@@ -3,7 +3,9 @@
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\JobCircularController;
+use App\Http\Controllers\Admin\InvestmentProposalController;
 use App\Http\Controllers\JobApplicantController;
+use App\Http\Controllers\InvestApplicantController;
 use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\BrandFranchiseProposalController;
@@ -48,6 +50,11 @@ Route::get('/job-application', [JobApplicantController::class, 'index'])->name('
 Route::get('job-application/form/{id}', [JobApplicantController::class, 'create'])->name('frontend.pages.job.applicants.create');
 Route::post('job-application/apply', [JobApplicantController::class, 'store'])->name('frontend.pages.job.applicants.store');
 
+// Investment Applicants
+Route::get('/investment-application', [InvestApplicantController::class, 'index'])->name('frontend.pages.investment.proposal.index');
+Route::get('investment-application/form/{id}', [InvestApplicantController::class, 'create'])->name('frontend.pages.investment.applicants.create');
+Route::post('investment-application/apply', [InvestApplicantController::class, 'store'])->name('frontend.pages.investment.applicants.store');
+
 // ADMIN DASHBOARD
 Route::get('/dashboard', function () {
     return view('backend.admin-dashboard.pages.index');
@@ -87,6 +94,18 @@ Route::middleware('auth')->group(function () {
     // Job Applicants 
     Route::get('/admin/job-applicants', [JobCircularController::class, 'applicants'])->name('admin.job.applicants.index');
     Route::delete('admin/job-applicants/{id}', [JobCircularController::class, 'applicant_destroy'])->name('admin.job-applicants.destroy');
+
+    // Invesment Proposal
+    Route::get('/admin/investment-proposal-create', [InvestmentProposalController::class, 'create'])->name('admin.investment.proposal.create');
+    Route::post('/admin/investment-proposal-store', [InvestmentProposalController::class, 'store'])->name('admin.investment.proposal.store');
+    Route::get('/admin/investment-proposal-list', [InvestmentProposalController::class, 'index'])->name('admin.investment.proposal.index');
+    Route::get('/admin/investment-proposal-edit/{id}', [InvestmentProposalController::class, 'edit'])->name('admin.investment.proposal.edit');
+    Route::put('/admin/investment-proposal-update/{id}', [InvestmentProposalController::class, 'update'])->name('admin.investment.proposal.update');
+    Route::delete('/admin/investment-proposal-delete/{id}', [InvestmentProposalController::class, 'destroy'])->name('admin.investment.proposal.destroy');
+
+    // Investment Applicants 
+    Route::get('/admin/investment-applicants', [InvestmentProposalController::class, 'investments'])->name('admin.investment.applicants.index');
+    Route::delete('admin/investment-applicants/{id}', [InvestmentProposalController::class, 'investment_destroy'])->name('admin.investment-applicants.destroy');
 
 });
 
