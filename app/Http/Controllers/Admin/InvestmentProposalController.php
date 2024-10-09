@@ -33,11 +33,11 @@ class InvestmentProposalController extends Controller
             'project_details' => 'required|string',  // Project details are required
             'video' => 'nullable|string|max:255',  // Validate optional video field for YouTube URLs
         ]);
-    
+
         try {
             // Create a new investment proposal with the validated data
             InvestmentProposal::create($validatedData);
-    
+
             // Redirect back to the index page with success message
             return redirect()->route('admin.investment.proposal.index')->with('success', 'Investment proposal created successfully!');
         } catch (\Throwable $e) {
@@ -45,8 +45,8 @@ class InvestmentProposalController extends Controller
             return redirect()->route('admin.investment.proposal.index')->with('error', 'Failed to create investment proposal: ' . $e->getMessage());
         }
     }
-    
-    
+
+
 
     // Show the form to edit an existing investment proposal
     public function edit($id)
@@ -58,30 +58,28 @@ class InvestmentProposalController extends Controller
     // Update an existing investment proposal in the database
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'position_name' => 'required|string|max:255',  // Text field, required
-            'vacancy_number' => 'required|integer|min:1',  // Number field, must be a positive integer
-            'job_location' => 'required|string|max:255',  // Text field, required
-            'educational_requirements' => 'required|string',  // Textarea, required
-            'additional_requirements' => 'required|string',  // Textarea, required
-            'responsibilities' => 'required|string',  // Textarea, required
-            'compensation' => 'required|string|max:255',  // Text field, required
-            'workplace' => 'required|string|max:255',  // Text field, required
-            'employment_status' => 'required|string|in:Full-time,Part-time,Contract,Internship',  // Dropdown field, validate options
-            'gender' => 'nullable|string|in:Any,Male,Female',  // Dropdown field, optional
-            'published_date' => 'required|date',  // Date field, required
-            'proposal_closing_date' => 'required|date|after:published_date',  // Date field, required and must be after published date
+        // Validate the request data
+        $validatedData = $request->validate([
+            'project_name' => 'required|string|max:255',  // Project name is required and max 255 chars
+            'project_details' => 'required|string',  // Project details are required
+            'video' => 'nullable|string|max:255',  // Validate optional video field for YouTube URLs
         ]);
 
-
         try {
-            $proposal = InvestmentProposal::findOrFail($id);
-            $proposal->update($request->all());
-            return redirect()->route('admin.investment.proposal.index')->with('success', 'investment proposal Updated Successfully');
+            // Find the investment proposal by its ID
+            $investmentProposal = InvestmentProposal::findOrFail($id);
+
+            // Update the proposal with the validated data
+            $investmentProposal->update($validatedData);
+
+            // Redirect back to the index page with success message
+            return redirect()->route('admin.investment.proposal.index')->with('success', 'Investment proposal updated successfully!');
         } catch (\Throwable $e) {
-            return redirect()->route('admin.investment.proposal.index')->with('error', 'Faile to Update investment proposal' . $e->getMessage());
+            // Catch any errors and return an error message
+            return redirect()->route('admin.investment.proposal.index')->with('error', 'Failed to update investment proposal: ' . $e->getMessage());
         }
     }
+
 
     // Delete a investment proposal from the database
     public function destroy($id)
