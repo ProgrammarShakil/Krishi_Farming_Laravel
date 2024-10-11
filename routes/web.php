@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\JobCircularController;
+use App\Http\Controllers\Admin\BrandFranchiseController;
 use App\Http\Controllers\Admin\InvestmentProposalController;
 use App\Http\Controllers\JobApplicantController;
 use App\Http\Controllers\InvestApplicantController;
@@ -108,6 +109,11 @@ Route::middleware('auth')->group(function () {
     // Investment Applicants 
     Route::get('/admin/investment-applicants', [InvestmentProposalController::class, 'investment_applicants'])->name('admin.investment.applicants.index');
     Route::delete('admin/investment-applicants/{id}', [InvestmentProposalController::class, 'investment_applicants_destroy'])->name('admin.investment-applicants.destroy');
+
+    
+    // Brand Franchise Proposal
+    Route::get('/admin/brand-franchise-list', [BrandFranchiseController::class, 'index'])->name('admin.brand.franchise.index');
+    Route::delete('/admin/brand-franchise-delete/{id}', [BrandFranchiseController::class, 'destroy'])->name('admin.brand.franchise.destroy');
 
 });
 

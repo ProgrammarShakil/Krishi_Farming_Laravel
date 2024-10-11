@@ -78,6 +78,19 @@
         </div>
     </li>
 
+    <!-- Brand Franchise Proposal -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.brand.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#BrandFranchiseProposal" aria-expanded="true" aria-controls="BrandFranchiseProposal">
+            <i class="fas fa-fw fa-code-branch {{ request()->routeIs('admin.brand.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Brand Proposal</span>
+        </a>
+        <div id="BrandFranchiseProposal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('admin.brand.franchise.index')}}">Brand Franchise List</a>
+            </div>
+        </div>
+    </li>
+
     <!-- Website Settings -->
     <li class="nav-item">
         <a class="nav-link {{ request()->routeIs('admin.settings.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#WebsiteSettings" aria-expanded="true" aria-controls="WebsiteSettings">
