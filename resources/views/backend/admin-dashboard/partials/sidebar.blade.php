@@ -73,7 +73,7 @@
         </a>
         <div id="BusinessProposal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="login.html">Business Proposal List</a>
+                <a class="collapse-item" href="{{route('admin.busines.proposal.index')}}">Business Proposal List</a>
             </div>
         </div>
     </li>

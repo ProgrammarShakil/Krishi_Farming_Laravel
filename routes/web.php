@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\JobCircularController;
 use App\Http\Controllers\Admin\BrandFranchiseController;
+use App\Http\Controllers\Admin\BusinessProposalsController;
 use App\Http\Controllers\Admin\InvestmentProposalController;
 use App\Http\Controllers\JobApplicantController;
 use App\Http\Controllers\InvestApplicantController;
@@ -114,6 +115,10 @@ Route::middleware('auth')->group(function () {
     // Brand Franchise Proposal
     Route::get('/admin/brand-franchise-list', [BrandFranchiseController::class, 'index'])->name('admin.brand.franchise.index');
     Route::delete('/admin/brand-franchise-delete/{id}', [BrandFranchiseController::class, 'destroy'])->name('admin.brand.franchise.destroy');
+    
+    // Business Proposal
+    Route::get('/admin/business-proposal-list', [BusinessProposalsController::class, 'index'])->name('admin.busines.proposal.index');
+    Route::delete('/admin/business-proposal-delete/{id}', [BusinessProposalsController::class, 'destroy'])->name('admin.busines.proposal.destroy');
 
 });
 
