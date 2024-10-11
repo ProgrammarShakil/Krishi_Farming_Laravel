@@ -119,6 +119,8 @@ Route::middleware('auth')->group(function () {
     // Business Proposal
     Route::get('/admin/business-proposal-list', [BusinessProposalsController::class, 'index'])->name('admin.busines.proposal.index');
     Route::delete('/admin/business-proposal-delete/{id}', [BusinessProposalsController::class, 'destroy'])->name('admin.busines.proposal.destroy');
+    // business proposal export 
+    Route::get('/admin/business-proposals/export', [BusinessProposalsController::class, 'export'])->name('admin.business-proposals.export');
 
 });
 
