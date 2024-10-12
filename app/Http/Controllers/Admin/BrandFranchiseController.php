@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Exports\BrandFranchiseExport;
 use App\Http\Controllers\Controller;
 use App\Models\BrandFranchiseProposal;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BrandFranchiseController extends Controller
 {
@@ -24,6 +26,10 @@ class BrandFranchiseController extends Controller
         $circular->delete();
 
         return redirect()->back()->with('success', 'Brand Franchise Proposal Deleted Successfully');
+    }
+
+    public function export(){
+        return Excel::download(new BrandFranchiseExport, 'brand_franchise_proposals.xlsx');
     }
 
 }

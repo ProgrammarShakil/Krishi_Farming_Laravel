@@ -83,7 +83,6 @@ Route::middleware('auth')->group(function () {
 
 
     //Intern Application
-
     Route::get('/admin/intern/application-list', [InternController::class, 'index'])->name('admin.intern.index');
     Route::delete('/admin/intern/application-list/{id}', [InternController::class, 'destroy'])->name('admin.intern.destroy');
 
@@ -94,7 +93,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/job-circular-edit/{id}', [JobCircularController::class, 'edit'])->name('admin.job.circular.edit');
     Route::put('/admin/job-circular-update/{id}', [JobCircularController::class, 'update'])->name('admin.job.circular.update');
     Route::delete('/admin/job-circular-delete/{id}', [JobCircularController::class, 'destroy'])->name('admin.job.circular.destroy');
-    // job circular export 
+    // Job Circular Export 
     Route::get('/admin/job-circular/export', [JobCircularController::class, 'export'])->name('admin.job.circular.export');
     
     // Job Applicants 
@@ -108,7 +107,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/investment-proposal-edit/{id}', [InvestmentProposalController::class, 'edit'])->name('admin.investment.proposal.edit');
     Route::put('/admin/investment-proposal-update/{id}', [InvestmentProposalController::class, 'update'])->name('admin.investment.proposal.update');
     Route::delete('/admin/investment-proposal-delete/{id}', [InvestmentProposalController::class, 'destroy'])->name('admin.investment.proposal.destroy');
-    // investemnt proposal export 
+    // Investemnt Proposal Export 
     Route::get('/admin/investment-proposal/export', [InvestmentProposalController::class, 'export'])->name('admin.investment.proposal.export');
 
     // Investment Applicants 
@@ -119,11 +118,13 @@ Route::middleware('auth')->group(function () {
     // Brand Franchise Proposal
     Route::get('/admin/brand-franchise-list', [BrandFranchiseController::class, 'index'])->name('admin.brand.franchise.index');
     Route::delete('/admin/brand-franchise-delete/{id}', [BrandFranchiseController::class, 'destroy'])->name('admin.brand.franchise.destroy');
+    // Brand Franchise Export 
+    Route::get('/admin/brand-franchise/export', [BrandFranchiseController::class, 'export'])->name('admin.brand.franchise.export');
     
     // Business Proposal
     Route::get('/admin/business-proposal-list', [BusinessProposalsController::class, 'index'])->name('admin.busines.proposal.index');
     Route::delete('/admin/business-proposal-delete/{id}', [BusinessProposalsController::class, 'destroy'])->name('admin.busines.proposal.destroy');
-    // business proposal export 
+    // Business Proposal Export 
     Route::get('/admin/business-proposals/export', [BusinessProposalsController::class, 'export'])->name('admin.business-proposals.export');
 
 });
