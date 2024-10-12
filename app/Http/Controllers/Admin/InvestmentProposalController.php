@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Exports\InvestmentProposalExport;
 use App\Http\Controllers\Controller;
 use App\Models\InvestmentApplicant;
 use App\Models\InvestmentProposal;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 
 class InvestmentProposalController extends Controller
 {
@@ -88,6 +90,11 @@ class InvestmentProposalController extends Controller
         $proposal->delete();
 
         return redirect()->back()->with('success', 'investment proposal Deleted Successfully');
+    }
+
+
+    public function export(){
+        return Excel::download(new InvestmentProposalExport, 'investment_proposal.xlsx');
     }
 
 

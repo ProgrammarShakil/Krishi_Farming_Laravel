@@ -106,7 +106,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/investment-proposal-edit/{id}', [InvestmentProposalController::class, 'edit'])->name('admin.investment.proposal.edit');
     Route::put('/admin/investment-proposal-update/{id}', [InvestmentProposalController::class, 'update'])->name('admin.investment.proposal.update');
     Route::delete('/admin/investment-proposal-delete/{id}', [InvestmentProposalController::class, 'destroy'])->name('admin.investment.proposal.destroy');
-
+    // investemnt proposal export 
+    Route::get('/admin/investment-proposal/export', [InvestmentProposalController::class, 'export'])->name('admin.investment.proposal.export');
+    
     // Investment Applicants 
     Route::get('/admin/investment-applicants', [InvestmentProposalController::class, 'investment_applicants'])->name('admin.investment.applicants.index');
     Route::delete('admin/investment-applicants/{id}', [InvestmentProposalController::class, 'investment_applicants_destroy'])->name('admin.investment-applicants.destroy');
