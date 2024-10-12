@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Exports\JobCircularExport;
 use App\Http\Controllers\Controller;
 use App\Models\JobApplicant;
 use App\Models\JobCircular;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 
 class JobCircularController extends Controller
 {
@@ -100,6 +102,11 @@ class JobCircularController extends Controller
 
         return redirect()->back()->with('success', 'Job Circular Deleted Successfully');
     }
+
+
+    public function export(){
+        return Excel::download(new JobCircularExport, 'job_circular.xlsx');
+    }  
 
 
     // Applicants List 

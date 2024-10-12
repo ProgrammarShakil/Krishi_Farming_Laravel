@@ -13,8 +13,13 @@
             <div class="container-fluid">
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
-                    <div class="card-header py-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
                         <h6 class="m-0 font-weight-bold text-primary">Job Circular List</h6>
+                        <div>
+                            <a href="{{ route('admin.job.circular.export') }}" class="btn btn-success btn-sm">
+                                <i class="fas fa-file-excel"></i> Export to Excel
+                            </a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -24,6 +29,13 @@
                                         <th>Position Name</th>
                                         <th>Vacancy Number</th>
                                         <th>Job Location</th>
+                                        <th>Educational Requirements</th>
+                                        <th>Additional Requirements</th>
+                                        <th>Responsibilities</th>
+                                        <th>Compensation</th>
+                                        <th>Workplace</th>
+                                        <th>Employment Status</th>
+                                        <th>Gender</th>
                                         <th>Published Date</th>
                                         <th>Closing Date</th>
                                         <th>Actions</th>
@@ -35,6 +47,13 @@
                                             <td>{{ $circular->position_name }}</td>
                                             <td>{{ $circular->vacancy_number }}</td>
                                             <td>{{ $circular->job_location }}</td>
+                                            <td>{{ $circular->educational_requirements }}</td>
+                                            <td>{{ $circular->additional_requirements }}</td>
+                                            <td>{{ $circular->responsibilities }}</td>
+                                            <td>{{ $circular->compensation }}</td>
+                                            <td>{{ $circular->workplace }}</td>
+                                            <td>{{ $circular->employment_status }}</td>
+                                            <td>{{ $circular->gender }}</td>
                                             <td>{{ $circular->published_date->format('d-m-Y') }}</td>
                                             <td>{{ $circular->circular_closing_date->format('d-m-Y') }}</td>
                                             <td>
@@ -50,7 +69,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="6" class="text-center">No job circulars found.</td>
+                                            <td colspan="13" class="text-center">No job circulars found.</td>
                                         </tr>
                                     @endforelse
                                 </tbody>

@@ -94,7 +94,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/job-circular-edit/{id}', [JobCircularController::class, 'edit'])->name('admin.job.circular.edit');
     Route::put('/admin/job-circular-update/{id}', [JobCircularController::class, 'update'])->name('admin.job.circular.update');
     Route::delete('/admin/job-circular-delete/{id}', [JobCircularController::class, 'destroy'])->name('admin.job.circular.destroy');
-
+    // job circular export 
+    Route::get('/admin/job-circular/export', [JobCircularController::class, 'export'])->name('admin.job.circular.export');
+    
     // Job Applicants 
     Route::get('/admin/job-applicants', [JobCircularController::class, 'applicants'])->name('admin.job.applicants.index');
     Route::delete('admin/job-applicants/{id}', [JobCircularController::class, 'applicant_destroy'])->name('admin.job-applicants.destroy');
@@ -108,7 +110,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/admin/investment-proposal-delete/{id}', [InvestmentProposalController::class, 'destroy'])->name('admin.investment.proposal.destroy');
     // investemnt proposal export 
     Route::get('/admin/investment-proposal/export', [InvestmentProposalController::class, 'export'])->name('admin.investment.proposal.export');
-    
+
     // Investment Applicants 
     Route::get('/admin/investment-applicants', [InvestmentProposalController::class, 'investment_applicants'])->name('admin.investment.applicants.index');
     Route::delete('admin/investment-applicants/{id}', [InvestmentProposalController::class, 'investment_applicants_destroy'])->name('admin.investment-applicants.destroy');
