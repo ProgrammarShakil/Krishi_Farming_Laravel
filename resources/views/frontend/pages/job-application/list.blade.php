@@ -10,18 +10,18 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 text-white">
                 @forelse ($circulars as $circular)
                     <div class="main-bg-color shadow-md rounded-lg p-4">
-                        <h3 class="text-lg font-semibold">{{ $circular->position_name }}</h3>
-                        <p class="mt-2"><span>Vacancy Number:</span> {{ $circular->vacancy_number }}</p>
-                        <p class="py-1"><span>Job Location:</span> {{ $circular->job_location }}</p>
-                        <p class="py-1"><span>Published Date:</span> {{ $circular->published_date->format('d-m-Y') }}</p>
-                        <p class="py-1"><span>Closing Date:</span> {{ $circular->circular_closing_date->format('d-m-Y') }}</p>
-                        <p class="py-1"><span>Educational Requirements:</span> {{ $circular->educational_requirements }}</p>
-                        <p class="py-1"><span>Additional Requirements:</span> {{ $circular->additional_requirements }}</p>
-                        <p class="py-1"><span>Responsibilities:</span> {{ $circular->responsibilities }}</p>
-                        <p class="py-1"><span>Compensation:</span> {{ $circular->compensation }}</p>
-                        <p class="py-1"><span>Workplace:</span> {{ $circular->workplace }}</p>
-                        <p class="py-1"><span>Employment Status:</span> {{ $circular->employment_status }}</p>
-                        <p class="py-1"><span>Gender:</span> {{ $circular->gender }}</p>
+                        <div><span class="font-semibold text-2xl">Job Title: </span><span class="text-2xl">{{ $circular->position_name }}</span></div>
+                        <p class="mt-2"><span class="font-semibold">Vacancy Number:</span> {{ $circular->vacancy_number }}</p>
+                        <p class="py-1"><span class="font-semibold">Job Location:</span> {{ $circular->job_location }}</p>
+                        <p class="py-1"><span class="font-semibold">Published Date:</span> {{ $circular->published_date->format('d-m-Y') }}</p>
+                        <p class="py-1"><span class="font-semibold">Closing Date:</span> {{ $circular->circular_closing_date->format('d-m-Y') }}</p>
+                        <p class="py-1"><span class="font-semibold">Workplace:</span> {{ $circular->workplace }}</p>
+                        <p class="py-1"><span class="font-semibold">Employment Status:</span> {{ $circular->employment_status }}</p>
+                        <p class="py-1"><span class="font-semibold">Gender:</span> {{ $circular->gender }}</p>
+                        <p class="py-1"><span class="font-semibold">Educational Requirements:</span> {{ $circular->educational_requirements }}</p>
+                        <p class="py-1"><span class="font-semibold">Responsibilities:</span> {{ $circular->responsibilities }}</p>
+                        <p class="py-1"><span class="font-semibold">Additional Requirements:</span> {{ $circular->additional_requirements }}</p>
+                        <p class="py-1"><span class="font-semibold">Compensation:</span> {{ $circular->compensation }}</p>
             
                         <!-- Apply Now Button (Link to new application form) -->
                         <a href="{{ route('frontend.pages.job.applicants.create', ['id' => $circular->id]) }}" class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

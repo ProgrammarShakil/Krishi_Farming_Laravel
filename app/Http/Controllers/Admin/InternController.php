@@ -13,7 +13,7 @@ class InternController extends Controller
     public function index()
     {
         // Fetch all intern applications with specified fields
-        $internApplications = InternApplication::all();
+        $internApplications = InternApplication::orderBy('created_at', 'desc')->get();
         // Pass the data to a view file
         return view('backend.admin-dashboard.pages.intern-application.list', compact('internApplications'));
     }

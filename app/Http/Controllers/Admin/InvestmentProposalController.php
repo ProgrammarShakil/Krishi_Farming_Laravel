@@ -17,7 +17,7 @@ class InvestmentProposalController extends Controller
     // List all investment proposals
     public function index(Request $request)
     {
-        $proposals = InvestmentProposal::all();
+        $proposals = InvestmentProposal::orderBy('created_at', 'desc')->get();
         return view('backend.admin-dashboard.pages.investment-proposal.index', compact('proposals'));
     }
 
@@ -102,7 +102,7 @@ class InvestmentProposalController extends Controller
     // Applicants List 
     public function investment_applicants(Request $request)
     {
-        $applicants = InvestmentApplicant::all();
+        $applicants = InvestmentApplicant::orderBy('created_at', 'desc')->get();
 
         return view('backend.admin-dashboard.pages.investment-proposal.applicants', compact('applicants'));
     }

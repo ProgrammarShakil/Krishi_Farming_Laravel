@@ -11,7 +11,7 @@ class InvestApplicantController extends Controller
 {
     public function index()
     {
-        $investmentProposals = InvestmentProposal::all();
+        $investmentProposals = InvestmentProposal::orderBy('created_at', 'desc')->get();
 
         return view('frontend.pages.investment-application.list', compact('investmentProposals'));
     }

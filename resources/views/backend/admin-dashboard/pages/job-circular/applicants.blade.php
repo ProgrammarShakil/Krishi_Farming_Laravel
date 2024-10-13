@@ -96,7 +96,14 @@
     <!-- Toastr Notifications -->
     <script>
         $(document).ready(function() {
-            $('.table').DataTable();
+            $('.table').DataTable({
+                "order": [
+                    [1, "desc"]
+                ],
+                "responsive": true,
+                "scrollY": "400px",
+                "scrollCollapse": true,
+            });
             
             @if (session('success'))
                 toastr.success('{{ session('success') }}', 'Success', {

@@ -11,7 +11,7 @@ class JobApplicantController extends Controller
 {
     public function index()
     {
-        $circulars = JobCircular::all();
+        $circulars = JobCircular::orderBy('created_at', 'desc')->get();
 
         return view('frontend.pages.job-application.list', compact('circulars'));
     }

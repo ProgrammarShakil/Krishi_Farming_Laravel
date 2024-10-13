@@ -12,7 +12,7 @@ class TeamController extends Controller
     // LIST 
     public function index()
     {
-        $teams = Team::all();
+        $teams = Team::orderBy('created_at', 'desc')->get();
         return view('backend.admin-dashboard.pages.team.list', compact('teams'));
     }
 

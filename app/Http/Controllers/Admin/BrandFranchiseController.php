@@ -13,7 +13,7 @@ class BrandFranchiseController extends Controller
 
     public function index(Request $request)
     {
-        $brand_franchise_proposals = BrandFranchiseProposal::all();
+        $brand_franchise_proposals = BrandFranchiseProposal::orderBy('created_at', 'desc')->get();
 
         return view('backend.admin-dashboard.pages.brand-franchise-proposal.list', compact('brand_franchise_proposals'));
     }

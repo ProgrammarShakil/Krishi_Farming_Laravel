@@ -17,7 +17,7 @@ class JobCircularController extends Controller
     // List all job circulars
     public function index(Request $request)
     {
-        $circulars = JobCircular::all();
+        $circulars = JobCircular::orderBy('created_at', 'desc')->get();
 
         // Manually convert date fields to Carbon instances
         foreach ($circulars as $circular) {
@@ -113,7 +113,7 @@ class JobCircularController extends Controller
     // Applicants List 
     public function applicants(Request $request)
     {
-        $applicants = JobApplicant::all();
+        $applicants = JobApplicant::orderBy('created_at', 'desc')->get();
 
         return view('backend.admin-dashboard.pages.job-circular.applicants', compact('applicants'));
     }

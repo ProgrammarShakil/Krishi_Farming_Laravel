@@ -13,7 +13,7 @@ class BusinessProposalsController extends Controller
 
     public function index(Request $request)
     {
-        $business_proposals = BusinessProposal::all();
+        $business_proposals = BusinessProposal::orderBy('created_at', 'desc')->get();
 
         return view('backend.admin-dashboard.pages.business-proposal.list', compact('business_proposals'));
     }
