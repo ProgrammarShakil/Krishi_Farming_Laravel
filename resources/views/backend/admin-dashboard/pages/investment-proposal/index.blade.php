@@ -17,7 +17,6 @@
                             <h6 class="font-weight-bold text-primary">Investment Proposal List</h6>
                             <div>
                                 <a href="{{ route('admin.investment.proposal.export') }}" class="btn btn-success btn-sm"><i class="fas fa-file-excel"></i> Export to Excel</a>
-
                             </div>
                         </div>
                         <div class="card-body">

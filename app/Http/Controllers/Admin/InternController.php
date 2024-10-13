@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Exports\InternApplicationExport;
 use App\Http\Controllers\Controller;
 use App\Models\InternApplication;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Session;
+use Maatwebsite\Excel\Facades\Excel;
 
 class InternController extends Controller
 {
@@ -43,5 +43,10 @@ class InternController extends Controller
 
         // Optionally, you can set a success message
         return redirect()->back()->with('success', 'Intern application and associated files deleted successfully.');
+    }
+
+    public function intern_application_export()
+    {
+        return Excel::download(new InternApplicationExport, 'intern_applicants.xlsx');
     }
 }

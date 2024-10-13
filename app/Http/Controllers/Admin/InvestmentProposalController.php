@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Exports\InvestmentApplicantExport;
 use App\Exports\InvestmentProposalExport;
 use App\Http\Controllers\Controller;
 use App\Models\InvestmentApplicant;
@@ -93,7 +94,7 @@ class InvestmentProposalController extends Controller
     }
 
 
-    public function export(){
+    public function investment_proposal_export(){
         return Excel::download(new InvestmentProposalExport, 'investment_proposal.xlsx');
     }
 
@@ -127,5 +128,9 @@ class InvestmentProposalController extends Controller
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Failed to delete applicant: ' . $e->getMessage());
         }
+    }
+
+    public function investment_applicants_export(){
+        return Excel::download(new InvestmentApplicantExport, 'investment_applicants.xlsx');
     }
 }

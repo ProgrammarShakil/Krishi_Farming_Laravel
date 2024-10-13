@@ -28,7 +28,7 @@ class BusinessProposalsController extends Controller
         return redirect()->back()->with('success', 'Business Proposal Deleted Successfully');
     }
 
-    public function export()
+    public function business_proposal_export()
     {
         return Excel::download(new BusinessProposalsExport, 'business_proposals.xlsx');
     }

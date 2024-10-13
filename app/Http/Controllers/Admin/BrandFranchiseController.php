@@ -28,7 +28,7 @@ class BrandFranchiseController extends Controller
         return redirect()->back()->with('success', 'Brand Franchise Proposal Deleted Successfully');
     }
 
-    public function export(){
+    public function brand_franchise_export(){
         return Excel::download(new BrandFranchiseExport, 'brand_franchise_proposals.xlsx');
     }
 

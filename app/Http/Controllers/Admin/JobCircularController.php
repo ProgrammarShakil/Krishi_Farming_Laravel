@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Exports\JobApplicantsExport;
 use App\Exports\JobCircularExport;
 use App\Http\Controllers\Controller;
 use App\Models\JobApplicant;
@@ -104,7 +105,7 @@ class JobCircularController extends Controller
     }
 
 
-    public function export(){
+    public function job_circular_export(){
         return Excel::download(new JobCircularExport, 'job_circular.xlsx');
     }  
 
@@ -139,4 +140,9 @@ class JobCircularController extends Controller
             return redirect()->back()->with('error', 'Failed to delete applicant: ' . $e->getMessage());
         }
     }
+
+    public function job_applicants_export(){
+        return Excel::download(new JobApplicantsExport, 'job_applicants.xlsx');
+    }  
+
 }

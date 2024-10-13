@@ -13,8 +13,12 @@
                 <div class="container-fluid">
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Investment Proposal List</h6>
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h6 class="m-0 font-weight-bold text-primary">Investment Applicants List</h6>
+                            <div>
+                                <a href="{{ route('admin.investment.applicants.export') }}" class="btn btn-success btn-sm"><i
+                                        class="fas fa-file-excel"></i> Export to Excel</a>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -58,19 +62,22 @@
                                                     @php
                                                         $attachments = json_decode($proposal->attachments); // Decode the JSON string into an array
                                                     @endphp
-                                                
+
                                                     @if (is_array($attachments) && count($attachments) > 0)
-                                                        @foreach ($attachments as $index => $attachment) <!-- Use $index to get the serial number -->
+                                                        @foreach ($attachments as $index => $attachment)
+                                                            <!-- Use $index to get the serial number -->
                                                             @if (!empty($attachment))
                                                                 <!-- Check that attachment is not empty -->
-                                                                <a href="{{ asset('storage/' . $attachment) }}" target="_blank">Attachment {{ $index + 1 }}</a><br> <!-- Display serial number -->
+                                                                <a href="{{ asset('storage/' . $attachment) }}"
+                                                                    target="_blank">Attachment {{ $index + 1 }}</a><br>
+                                                                <!-- Display serial number -->
                                                             @endif
                                                         @endforeach
                                                     @else
                                                         <span>No attachments available.</span>
                                                     @endif
                                                 </td>
-                                                
+
 
 
 
