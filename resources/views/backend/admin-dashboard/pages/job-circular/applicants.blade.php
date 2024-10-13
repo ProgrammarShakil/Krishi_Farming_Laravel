@@ -59,7 +59,7 @@
                                         <td><em>{{ $applicant->special_skills }}</em></td>
                             
                                         <!-- Format salary as currency -->
-                                        <td>{{ number_format($applicant->expected_salary, 2) }} USD</td>
+                                        <td>{{ number_format($applicant->expected_salary, 2) }} BDT</td>
                             
                                         <!-- Display questions -->
                                         <td>{{ $applicant->q1 }}</td>
@@ -96,6 +96,8 @@
     <!-- Toastr Notifications -->
     <script>
         $(document).ready(function() {
+            $('.table').DataTable();
+            
             @if (session('success'))
                 toastr.success('{{ session('success') }}', 'Success', {
                     closeButton: true,

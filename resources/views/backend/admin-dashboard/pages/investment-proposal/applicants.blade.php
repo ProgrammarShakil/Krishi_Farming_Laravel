@@ -112,6 +112,8 @@
     <!-- Toastr Notifications -->
     <script>
         $(document).ready(function() {
+            $('.table').DataTable();
+            
             @if (session('success'))
                 toastr.success('{{ session('success') }}', 'Success', {
                     closeButton: true,
