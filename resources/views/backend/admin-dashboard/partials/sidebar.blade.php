@@ -91,25 +91,11 @@
         </div>
     </li>
 
-    <!-- Website Settings -->
-    <li class="nav-item">
-        <a class="nav-link {{ request()->routeIs('admin.settings.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#WebsiteSettings" aria-expanded="true" aria-controls="WebsiteSettings">
-            <i class="fas fa-fw fa-tools {{ request()->routeIs('admin.settings.*') ? 'text-white' : 'text-gray-400' }}"></i>
-            <span>Website Settings</span>
-        </a>
-        <div id="WebsiteSettings" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="login.html">Change Logo</a>
-                <a class="collapse-item" href="login.html">Change Password</a>
-            </div>
-        </div>
-    </li>
-
     <!-- Blogs -->
     <li class="nav-item">
         <a class="nav-link {{ request()->routeIs('admin.blogs.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#Blogs" aria-expanded="true" aria-controls="Blogs">
             <i class="fas fa-fw fa-blog {{ request()->routeIs('admin.blogs.*') ? 'text-white' : 'text-gray-400' }}"></i>
-            <span>Blog Manage</span>
+            <span>Manage Blog</span>
         </a>
         <div id="Blogs" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -123,12 +109,41 @@
     <li class="nav-item">
         <a class="nav-link {{ request()->routeIs('admin.teams.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#Teams" aria-expanded="true" aria-controls="Teams">
             <i class="fas fa-fw fa-users {{ request()->routeIs('admin.teams.*') ? 'text-white' : 'text-gray-400' }}"></i>
-            <span>Team Manage</span>
+            <span>Manage Team</span>
         </a>
         <div id="Teams" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('admin.teams.create') }}">Create Team</a>
                 <a class="collapse-item" href="{{ route('admin.teams.list') }}">Team List</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Photo Gallery -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.photos.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#PhotoGallery" aria-expanded="true" aria-controls="PhotoGallery">
+            <i class="fas fa-fw fa-users {{ request()->routeIs('admin.teams.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Photo Gallery</span>
+        </a>
+        <div id="PhotoGallery" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.teams.create') }}">Create Photo</a>
+                <a class="collapse-item" href="{{ route('admin.teams.list') }}">Photo List</a>
+            </div>
+        </div>
+    </li>
+
+    
+    <!-- Website Settings -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.settings.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#WebsiteSettings" aria-expanded="true" aria-controls="WebsiteSettings">
+            <i class="fas fa-fw fa-tools {{ request()->routeIs('admin.settings.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Website Settings</span>
+        </a>
+        <div id="WebsiteSettings" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="login.html">Change Logo</a>
+                <a class="collapse-item" href="login.html">Change Password</a>
             </div>
         </div>
     </li>
