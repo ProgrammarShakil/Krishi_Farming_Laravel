@@ -5,7 +5,7 @@
 @section('content')
     <div class="main-bg-color py-10 px-5">
         <div class="md:max-w-5xl mt-20 mx-auto bg-transparent shadow-2xl rounded-lg border border-green-700 p-8">
-            <h1 class="text-4xl font-bold text-white mb-8 text-center">Investment Application</h1>
+            <h1 class="text-3xl font-semibold text-white mb-8 text-center">Investment Application for {{$investment->project_name}}</h1>
 
             <form action="{{ route('frontend.pages.investment.applicants.store') }}" method="POST"
                 enctype="multipart/form-data" novalidate>

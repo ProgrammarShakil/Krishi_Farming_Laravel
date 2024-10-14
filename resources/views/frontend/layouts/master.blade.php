@@ -42,6 +42,12 @@
     {{-- MAIN CONTENT  --}}
     @yield('content')
 
+
+    {{-- WhatsApp Chatting  --}}
+    <a href="https://wa.me/+8801870178888" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600">
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+    
     @include('frontend.partials.footer')
     <!-- JAVASCRIPT CDN -->
     <!-- Owl Carousel JS -->

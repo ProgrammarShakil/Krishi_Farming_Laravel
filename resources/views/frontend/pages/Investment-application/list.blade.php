@@ -10,8 +10,8 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 text-white">
                 @forelse ($investmentProposals as $investmentProposal)
                     <div class="main-bg-color shadow-md rounded-lg p-4">
-                        <h3 class="text-lg font-semibold"><span>Project Title: </span>{{ $investmentProposal->project_name }}</h3>
-                        <p class="mt-2"><span>Project Details:</span> {{ $investmentProposal->project_details }}</p>
+                        <h2 class="text-xl mb-5"><span class="font-semibold">Project Title: </span>{{ $investmentProposal->project_name }}</h2>
+                        <p class="mt-2"><span class="font-semibold">Project Details:</span> {{ $investmentProposal->project_details }}</p>
 
                         <!-- Optional YouTube Video URL -->
                         <div class="py-4">
