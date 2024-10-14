@@ -96,6 +96,7 @@
             ],
             "responsive": true,
             "scrollY": "400px",
+            "scrollX": true,
             "scrollCollapse": true,
             "paging": true
         });

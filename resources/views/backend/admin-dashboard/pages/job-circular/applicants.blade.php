@@ -101,6 +101,7 @@
                     [1, "desc"]
                 ],
                 "responsive": true,
+                "scrollX": true,
                 "scrollY": "400px",
                 "scrollCollapse": true,
             });
