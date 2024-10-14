@@ -11,6 +11,7 @@ use App\Http\Controllers\InvestApplicantController;
 use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\BrandFranchiseProposalController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -133,6 +134,14 @@ Route::middleware('auth')->group(function () {
     // Business Proposal Export 
     Route::get('/admin/business-proposals/export', [BusinessProposalsController::class, 'business_proposal_export'])->name('admin.business-proposals.export');
 
+    // Manage Page 
+    Route::get('admin/pages', [PageController::class, 'index'])->name('admin.pages.index');
+    Route::get('admin/pages/create', [PageController::class, 'create'])->name('admin.pages.create');
+    Route::post('admin/pages', [PageController::class, 'store'])->name('admin.pages.store');
+    Route::get('admin/pages/{page}', [PageController::class, 'show'])->name('admin.pages.show');
+    Route::get('admin/pages/{page}/edit', [PageController::class, 'edit'])->name('admin.pages.edit');
+    Route::put('admin/pages/{page}', [PageController::class, 'update'])->name('admin.pages.update');
+    Route::delete('admin/pages/{page}', [PageController::class, 'destroy'])->name('admin.pages.destroy');
 });
 
 

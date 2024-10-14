@@ -64,12 +64,6 @@
                 <!-- Begin Page Content -->
                 @yield('content')
 
-                {{-- Testing Quill Editor --}}
-                <div id="editor-container">
-                    <p>Hello World!</p>
-                    <p>This is the Quill text editor!</p>
-                </div>
-
                 <!-- /.container-fluid -->
 
             </div>

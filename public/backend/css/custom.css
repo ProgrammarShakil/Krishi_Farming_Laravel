@@ -1,5 +1,20 @@
-/* OVERWRITE TOASTR CSS  */
 
+/* QUILL EDITOR CUSTOMIZE  */
+.ql-editor {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    min-height: 300px;
+  }
+  
+  .ql-toolbar {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+  }
+  
+
+
+/* OVERWRITE TOASTR CSS  */
 .toast-success {
     background-color: #28a745; /* Bootstrap green */
 }

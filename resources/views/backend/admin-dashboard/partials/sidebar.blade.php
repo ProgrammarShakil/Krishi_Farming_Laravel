@@ -122,13 +122,27 @@
     <!-- Photo Gallery -->
     <li class="nav-item">
         <a class="nav-link {{ request()->routeIs('admin.photos.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#PhotoGallery" aria-expanded="true" aria-controls="PhotoGallery">
-            <i class="fas fa-fw fa-users {{ request()->routeIs('admin.teams.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <i class="fas fa-fw fa-image {{ request()->routeIs('admin.teams.*') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Photo Gallery</span>
         </a>
         <div id="PhotoGallery" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('admin.teams.create') }}">Create Photo</a>
                 <a class="collapse-item" href="{{ route('admin.teams.list') }}">Photo List</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Manage Page -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.pages.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#ManagePage" aria-expanded="true" aria-controls="ManagePage">
+            <i class="fas fa-fw fa-file-alt {{ request()->routeIs('admin.teams.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Manage Page</span>
+        </a>
+        <div id="ManagePage" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.pages.create') }}">Create Page</a>
+                <a class="collapse-item" href="{{ route('admin.pages.index') }}">All Pages</a>
             </div>
         </div>
     </li>
