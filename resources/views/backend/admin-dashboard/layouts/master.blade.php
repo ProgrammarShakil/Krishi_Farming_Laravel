@@ -18,6 +18,11 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
+    <!-- Quill Editor CSS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <!-- Include Quill Snow Theme CSS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
     <!-- Include jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -58,6 +63,13 @@
 
                 <!-- Begin Page Content -->
                 @yield('content')
+
+                {{-- Testing Quill Editor --}}
+                <div id="editor-container">
+                    <p>Hello World!</p>
+                    <p>This is the Quill text editor!</p>
+                </div>
+
                 <!-- /.container-fluid -->
 
             </div>
@@ -97,10 +109,14 @@
     <script src="{{ asset('backend/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('backend/js/demo/chart-pie-demo.js') }}"></script>
 
+    <!-- Quill Editor JS -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
     <!-- Data Table JS -->
     <script src="{{ asset('backend/vendor/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('backend/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('backend/js/demo/datatables-demo.js') }}"></script>
+    <script src="{{ asset('backend/js/custom.js') }}"></script>
 </body>
 
 </html>
