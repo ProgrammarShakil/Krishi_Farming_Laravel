@@ -5,14 +5,14 @@
     font-size: 16px;
     color: #333;
     min-height: 300px;
+    text-align: center;
   }
   
-  .ql-toolbar {
-    background: #f0f0f0;
-    border: 1px solid #ccc;
-  }
-  
-
+  .ql-editor iframe {
+    width: 50%;
+    height: 400px;
+    max-width: 100%; /* This ensures iframes are responsive */
+}
 
 /* OVERWRITE TOASTR CSS  */
 .toast-success {

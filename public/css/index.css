@@ -13,7 +13,11 @@
     max-width: 100%;  /* Ensures responsiveness */
 }
 
-
+.ql-editor iframe {
+    width: 50%;
+    height: 400px;
+    max-width: 100%; /* This ensures iframes are responsive */
+}
 /* TOASTR CSS  */
 .toast {
     opacity: 1 !important;
