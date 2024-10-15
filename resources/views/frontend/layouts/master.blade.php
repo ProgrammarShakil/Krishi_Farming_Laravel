@@ -27,8 +27,13 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link href="https://cdn.quilljs.com/1.1.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.1.6/quill.js"></script>
+    
     <!-- EXTERNAL CSS  -->
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+
 </head>
 
 <body>
