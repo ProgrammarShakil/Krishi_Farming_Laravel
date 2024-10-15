@@ -25,7 +25,7 @@
     <!-- Job Circular -->
     <li class="nav-item">
         <a class="nav-link {{ request()->routeIs('admin.job.circular.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#JobCircular" aria-expanded="true" aria-controls="JobCircular">
-            <i class="fas fa-fw fa-briefcase {{ request()->routeIs('admin.job.circular.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <i class="fas fa-fw fa-bullhorn {{ request()->routeIs('admin.job.circular.*') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Job Circular</span>
         </a>
         <div id="JobCircular" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -136,7 +136,7 @@
     <!-- Manage Page -->
     <li class="nav-item">
         <a class="nav-link {{ request()->routeIs('admin.pages.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#ManagePage" aria-expanded="true" aria-controls="ManagePage">
-            <i class="fas fa-fw fa-file-alt {{ request()->routeIs('admin.teams.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <i class="fas fa-fw fa-file-alt {{ request()->routeIs('admin.pages.*') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Manage Page</span>
         </a>
         <div id="ManagePage" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -147,9 +147,64 @@
         </div>
     </li>
 
+    <!-- Manage Porfolio -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.portfolios.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#ManagePortfolio" aria-expanded="true" aria-controls="ManagePortfolio">
+            <i class="fas fa-fw fa-folder-open {{ request()->routeIs('admin.portfolios.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Manage Portfolio</span>
+        </a>
+        <div id="ManagePortfolio" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.pages.create') }}">Create Portfolio</a>
+                <a class="collapse-item" href="{{ route('admin.pages.index') }}">All Portfolios</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Contact -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.contacts.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#Contacts" aria-expanded="true" aria-controls="Contacts">
+            <i class="fas fa-fw fa-envelope {{ request()->routeIs('admin.contacts.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Messages</span>
+        </a>
+        <div id="Contacts" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.pages.index') }}">All Messages</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Manage Video Story -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.videos.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#ManageVideoStory" aria-expanded="true" aria-controls="ManageVideoStory">
+            <i class="fas fa-fw fa-video {{ request()->routeIs('admin.videos.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Manage Video Story</span>
+        </a>
+        <div id="ManageVideoStory" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.pages.index') }}">All Videos</a>
+                <a class="collapse-item" href="{{ route('admin.pages.index') }}">Change Video</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Manage Allies -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.allies.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#ManageAllies" aria-expanded="true" aria-controls="ManageAllies">
+            <i class="fas fa-fw fa-handshake {{ request()->routeIs('admin.allies.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Manage Allies</span>
+        </a>
+        <div id="ManageAllies" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.pages.index') }}">All Allies</a>
+                <a class="collapse-item" href="{{ route('admin.pages.index') }}">Change Allies Image</a>
+            </div>
+        </div>
+    </li>
+
     
     <!-- Website Settings -->
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link {{ request()->routeIs('admin.settings.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#WebsiteSettings" aria-expanded="true" aria-controls="WebsiteSettings">
             <i class="fas fa-fw fa-tools {{ request()->routeIs('admin.settings.*') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Website Settings</span>
@@ -157,10 +212,9 @@
         <div id="WebsiteSettings" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="login.html">Change Logo</a>
-                <a class="collapse-item" href="login.html">Change Password</a>
             </div>
         </div>
-    </li>
+    </li> --}}
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

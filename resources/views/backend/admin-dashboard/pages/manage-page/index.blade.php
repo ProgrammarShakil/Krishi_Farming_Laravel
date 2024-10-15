@@ -11,12 +11,17 @@
             <div id="content">
                 <!-- Content -->
                 <div class="container-fluid">
-                    <h1>All Pages</h1>
-                    @foreach($pages as $page)
-                    <div>
-                        <h2><a href="{{ route('admin.pages.show', $page) }}">{{ $page->title }}</a></h2>
-                    </div>
-                @endforeach
+                    <h3>All Pages</h3>
+                    @php
+                        $index = 1; // Initialize the index
+                    @endphp
+
+                    @foreach ($pages as $page)
+                        <div>
+                            <p>Page {{ $index++ }}- <a href="{{ route('admin.pages.show', $page->url) }}">{{ $page->title }}</a>
+                            </p>
+                        </div>
+                    @endforeach
                 </div>
 
             </div>

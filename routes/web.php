@@ -6,12 +6,12 @@ use App\Http\Controllers\Admin\JobCircularController;
 use App\Http\Controllers\Admin\BrandFranchiseController;
 use App\Http\Controllers\Admin\BusinessProposalsController;
 use App\Http\Controllers\Admin\InvestmentProposalController;
+use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\JobApplicantController;
 use App\Http\Controllers\InvestApplicantController;
 use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\BrandFranchiseProposalController;
-use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -59,6 +59,11 @@ Route::get('investment-application/form/{id}', [InvestApplicantController::class
 Route::post('investment-application/apply', [InvestApplicantController::class, 'store'])->name('frontend.pages.investment.applicants.store');
 
 
+// Manage Blog 
+Route::get('/blogs', [PageController::class, 'blog_index'])->name('frontend.pages.blog.index');
+
+// Pages Show
+Route::get('/{slug}', [PageController::class, 'showFrontend'])->name('frontend.pages.show');
 
 // ADMIN DASHBOARD
 Route::get('/dashboard', function () {
@@ -73,15 +78,11 @@ Route::middleware('auth')->group(function () {
 
     // Team 
     Route::get('/admin/teams', [TeamController::class, 'index'])->name('admin.teams.list');
-
     Route::get('/admin/teams/create', [TeamController::class, 'create'])->name('admin.teams.create');
     Route::post('/admin/teams', [TeamController::class, 'store'])->name('admin.teams.store');
-
     Route::get('/admin/teams/{id}/edit', [TeamController::class, 'edit'])->name('admin.teams.edit');
     Route::put('/admin/teams/{id}', [TeamController::class, 'update'])->name('admin.teams.update');
-
     Route::delete('/admin/teams/{id}', [TeamController::class, 'destroy'])->name('admin.teams.destroy');
-
 
     //Intern Application
     Route::get('/admin/intern/application-list', [InternController::class, 'index'])->name('admin.intern.index');
@@ -138,10 +139,11 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/pages', [PageController::class, 'index'])->name('admin.pages.index');
     Route::get('admin/pages/create', [PageController::class, 'create'])->name('admin.pages.create');
     Route::post('admin/pages', [PageController::class, 'store'])->name('admin.pages.store');
-    Route::get('admin/pages/{page}', [PageController::class, 'show'])->name('admin.pages.show');
-    Route::get('admin/pages/{page}/edit', [PageController::class, 'edit'])->name('admin.pages.edit');
-    Route::put('admin/pages/{page}', [PageController::class, 'update'])->name('admin.pages.update');
-    Route::delete('admin/pages/{page}', [PageController::class, 'destroy'])->name('admin.pages.destroy');
+    Route::get('admin/pages/{slug}', [PageController::class, 'show'])->name('admin.pages.show');
+    Route::get('admin/pages/{slug}/edit', [PageController::class, 'edit'])->name('admin.pages.edit');
+    Route::put('admin/pages/{slug}', [PageController::class, 'update'])->name('admin.pages.update');
+    Route::delete('admin/pages/{slug}', [PageController::class, 'destroy'])->name('admin.pages.destroy');
+
 });
 
 
