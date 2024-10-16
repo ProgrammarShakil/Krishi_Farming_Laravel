@@ -126,9 +126,13 @@ Route::middleware('auth')->group(function () {
 
     // Investment Applicants 
     Route::get('/admin/investment-applicants', [InvestmentProposalController::class, 'investment_applicants'])->name('admin.investment.applicants.index');
+    Route::get('/admin/investment-applicants-show/{id}', [InvestmentProposalController::class, 'investment_applicants_show'])->name('admin.investment.applicants.show');
     Route::delete('admin/investment-applicants/{id}', [InvestmentProposalController::class, 'investment_applicants_destroy'])->name('admin.investment-applicants.destroy');
     // Investemnt Applicants Export 
     Route::get('/admin/investment-applicants/export', [InvestmentProposalController::class, 'investment_applicants_export'])->name('admin.investment.applicants.export');
+    // Investment Applicants Single Download 
+    Route::get('admin/investment-applicants/{id}/download', [InvestmentProposalController::class, 'investment_applicants_download'])->name('admin.investment.applicants.download');
+
 
     
     // Brand Franchise Proposal

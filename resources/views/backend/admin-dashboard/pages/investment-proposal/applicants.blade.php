@@ -25,6 +25,7 @@
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
+                                            <th>SL No</th>
                                             <th>Proposer Name</th>
                                             <th>Phone Number</th>
                                             <th>Email</th>
@@ -39,6 +40,8 @@
                                     <tbody>
                                         @foreach ($applicants as $proposal)
                                             <tr>
+                                                <td>{{ $loop->iteration }}</td>
+
                                                 <!-- Capitalize proposer name -->
                                                 <td>{{ ucfirst($proposal->proposer_name) }}</td>
 
@@ -77,13 +80,15 @@
                                                         <span>No attachments available.</span>
                                                     @endif
                                                 </td>
-
-
-
-
                                                 <!-- Investment Proposal ID -->
                                                 <td>{{ $proposal->investment_proposal_id }}</td>
-                                                <td>
+
+                                                <td class="d-flex justify-content-center">
+                                                    {{-- View Button  --}}
+                                                    <a href="{{ route('admin.investment.applicants.show', $proposal->id) }}"
+                                                        class="btn btn-info btn-sm mx-1"><i class="fas fa-eye"></i></a>
+
+                                                    {{-- Delete Button  --}}
                                                     <form
                                                         action="{{ route('admin.investment-applicants.destroy', $proposal->id) }}"
                                                         method="POST" style="display:inline;">
@@ -117,6 +122,7 @@
                     [1, "desc"]
                 ],
                 "responsive": true,
+                "scrollX": true,
                 "scrollY": "400px",
                 "scrollCollapse": true,
                 "paging": true

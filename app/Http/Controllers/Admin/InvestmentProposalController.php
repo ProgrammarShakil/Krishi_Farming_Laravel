@@ -7,7 +7,7 @@ use App\Exports\InvestmentProposalExport;
 use App\Http\Controllers\Controller;
 use App\Models\InvestmentApplicant;
 use App\Models\InvestmentProposal;
-use Carbon\Carbon;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
@@ -49,6 +49,12 @@ class InvestmentProposalController extends Controller
         }
     }
 
+    // Show a specific investment proposal
+    public function show($id)
+    {
+        $proposal = InvestmentProposal::findOrFail($id);
+        return view('backend.admin-dashboard.pages.investment-proposal.show', compact('proposal'));
+    }
 
 
     // Show the form to edit an existing investment proposal
@@ -94,7 +100,8 @@ class InvestmentProposalController extends Controller
     }
 
 
-    public function investment_proposal_export(){
+    public function investment_proposal_export()
+    {
         return Excel::download(new InvestmentProposalExport, 'investment_proposal.xlsx');
     }
 
@@ -130,7 +137,30 @@ class InvestmentProposalController extends Controller
         }
     }
 
-    public function investment_applicants_export(){
+    public function investment_applicants_export()
+    {
         return Excel::download(new InvestmentApplicantExport, 'investment_applicants.xlsx');
+    }
+
+    // Show details of a specific applicant
+    public function investment_applicants_show($id)
+    {
+        $applicant = InvestmentApplicant::findOrFail($id);
+        return view('backend.admin-dashboard.pages.investment-proposal.applicants-show', compact('applicant'));
+    }
+
+
+
+    public function investment_applicants_download($id)
+    {
+        $invest_application = InvestmentApplicant::find($id);
+
+        if (!$invest_application) {
+            return redirect()->back()->with('error', 'Invest application not found.');
+        }
+
+        $pdf = Pdf::loadView('backend.admin-dashboard.pages.investment-proposal.applicant_pdf', compact('invest_application'));
+
+        return $pdf->download('investment_applicant_id_' . $invest_application->id . '.pdf');
     }
 }

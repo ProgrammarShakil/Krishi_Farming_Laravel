@@ -1,6 +1,6 @@
 @extends('backend.admin-dashboard.layouts.master')
 
-@section('title', 'Job Circulars')
+@section('title', 'Job Applicants')
 
 @section('content')
 
@@ -14,7 +14,7 @@
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h6 class="m-0 font-weight-bold text-primary">Job Circular List</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Job Applicants List</h6>
                         <div>
                             <a href="{{ route('admin.job.applicants.export') }}" class="btn btn-success btn-sm"><i class="fas fa-file-excel"></i> Export to Excel</a>
                         </div>
@@ -24,6 +24,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
+                                        <th>SL No</th>
                                         <th>Name</th>
                                         <th>Phone</th>
                                         <th>Email</th>
@@ -44,6 +45,8 @@
                                 <tbody>
                                     @foreach($applicants as $applicant)
                                     <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        
                                         <!-- Capitalize name -->
                                         <td>{{ ucfirst($applicant->name) }}</td>
                             

@@ -26,6 +26,7 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>SL No</th>
                                             <th>Position Name</th>
                                             <th>Vacancy Number</th>
                                             <th>Job Location</th>
@@ -44,6 +45,7 @@
                                     <tbody>
                                         @forelse ($circulars as $circular)
                                             <tr>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $circular->position_name }}</td>
                                                 <td>{{ $circular->vacancy_number }}</td>
                                                 <td>{{ $circular->job_location }}</td>

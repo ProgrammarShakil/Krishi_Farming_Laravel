@@ -27,6 +27,7 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>SL No</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone Number</th>
@@ -44,6 +45,7 @@
                                     <tbody>
                                         @foreach($internApplications as $application)
                                         <tr>
+                                            <td>{{ $loop->iteration }}</td>
                                             <td>{{ $application->name }}</td>
                                             <td>{{ $application->email }}</td>
                                             <td>{{ $application->phone_number }}</td>

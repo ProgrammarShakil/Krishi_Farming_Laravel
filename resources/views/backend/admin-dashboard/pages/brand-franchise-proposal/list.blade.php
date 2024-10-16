@@ -21,7 +21,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>SL No</th>
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -37,7 +37,7 @@
                         <tbody>
                             @foreach ($brand_franchise_proposals as $proposal)
                                 <tr>
-                                    <td>{{ $proposal->id }}</td>
+                                    <td>{{ $loop->iteration }}</td>
                                     <td>{{ $proposal->owner_name }}</td>
                                     <td>{{ $proposal->phone_number }}</td>
                                     <td>{{ $proposal->email }}</td>

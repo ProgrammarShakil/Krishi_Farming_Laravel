@@ -24,6 +24,7 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>SL No</th>
                                             <th>Project Name</th>
                                             <th>Project Details</th>
                                             <th>Video</th>
@@ -33,6 +34,7 @@
                                     <tbody>
                                         @forelse ($proposals as $proposal)
                                             <tr>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $proposal->project_name }}</td>
                                                 <td>{{ $proposal->project_details }}</td>
                                                 <td>
