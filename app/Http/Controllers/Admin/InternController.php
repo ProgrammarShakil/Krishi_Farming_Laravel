@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Exports\InternApplicationExport;
 use App\Http\Controllers\Controller;
 use App\Models\InternApplication;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\File;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -31,7 +32,7 @@ class InternController extends Controller
         // Pass the application data to a show view
         return view('backend.admin-dashboard.pages.intern-application.show', compact('internApplication'));
     }
-    
+
     public function destroy($id)
     {
         // Find the intern application by ID
@@ -62,5 +63,18 @@ class InternController extends Controller
     public function intern_application_export()
     {
         return Excel::download(new InternApplicationExport, 'intern_applicants.xlsx');
+    }
+
+    public function download($id)
+    {
+        $internApplication = InternApplication::find($id);
+
+        if (!$internApplication) {
+            return redirect()->back()->with('error', 'Intern application not found.');
+        }
+
+        $pdf = Pdf::loadView('backend.admin-dashboard.pages.intern-application.pdf', compact('internApplication'));
+
+        return $pdf->download('intern_application_id_' . $internApplication->id . '.pdf');
     }
 }

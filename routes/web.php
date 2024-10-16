@@ -90,7 +90,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/admin/intern/application-list/{id}', [InternController::class, 'destroy'])->name('admin.intern.destroy');
     // Intern Application Export 
     Route::get('/admin/intern/application/export', [InternController::class, 'intern_application_export'])->name('admin.intern.export');
-    
+    // Intern Application Single Download 
+    Route::get('admin/intern-application/{id}/download', [InternController::class, 'download'])->name('admin.intern.download');
+
     // Job Circular
     Route::get('/admin/job-circular-create', [JobCircularController::class, 'create'])->name('admin.job.circular.create');
     Route::post('/admin/job-circular-store', [JobCircularController::class, 'store'])->name('admin.job.circular.store');
