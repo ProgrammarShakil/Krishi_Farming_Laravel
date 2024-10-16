@@ -18,6 +18,20 @@ class InternController extends Controller
         return view('backend.admin-dashboard.pages.intern-application.list', compact('internApplications'));
     }
 
+    public function show($id)
+    {
+        // Find the intern application by ID
+        $internApplication = InternApplication::find($id);
+
+        // Check if the application exists
+        if (!$internApplication) {
+            return redirect()->back()->with('error', 'Intern application not found.');
+        }
+
+        // Pass the application data to a show view
+        return view('backend.admin-dashboard.pages.intern-application.show', compact('internApplication'));
+    }
+    
     public function destroy($id)
     {
         // Find the intern application by ID

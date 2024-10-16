@@ -66,7 +66,7 @@ Route::get('/blogs', [PageController::class, 'blog_index'])->name('frontend.page
 Route::get('/{slug}', [PageController::class, 'showFrontend'])->name('frontend.pages.show');
 
 // ADMIN DASHBOARD
-Route::get('/dashboard', function () {
+Route::get('admin/dashboard', function () {
     return view('backend.admin-dashboard.pages.index');
 })->middleware(['auth', 'verified'])->name('admin.dashboard');
 
@@ -86,6 +86,7 @@ Route::middleware('auth')->group(function () {
 
     //Intern Application
     Route::get('/admin/intern/application-list', [InternController::class, 'index'])->name('admin.intern.index');
+    Route::get('/admin/intern/{id}', [InternController::class, 'show'])->name('admin.intern.show');
     Route::delete('/admin/intern/application-list/{id}', [InternController::class, 'destroy'])->name('admin.intern.destroy');
     // Intern Application Export 
     Route::get('/admin/intern/application/export', [InternController::class, 'intern_application_export'])->name('admin.intern.export');

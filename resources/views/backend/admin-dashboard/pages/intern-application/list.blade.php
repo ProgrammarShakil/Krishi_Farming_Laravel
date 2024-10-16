@@ -47,12 +47,14 @@
                                             <td>{{ $application->skills }}</td>
                                             <td><a href="{{ asset('storage/' . $application->resume) }}" target="_blank">View Resume</a></td>
                                             <td><img src="{{ asset('storage/' . $application->photo) }}" alt="Photo" width="50"></td>
-                                            <td>
+                                            <td class="d-flex justify-content-between">
+                                                <!-- View Button -->
+                                                <a href="{{ route('admin.intern.show', $application->id) }}" class="btn btn-info btn-sm"><i class="fas fa-eye"></i></a>
                                                 <!-- Add Delete Form -->
                                                 <form action="{{ route('admin.intern.destroy', $application->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this application?');">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"> <i class="fas fa-trash"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
