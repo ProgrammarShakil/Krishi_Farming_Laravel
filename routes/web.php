@@ -63,7 +63,7 @@ Route::post('investment-application/apply', [InvestApplicantController::class, '
 Route::get('/blogs', [PageController::class, 'blog_index'])->name('frontend.pages.blog.index');
 
 // Pages Show
-Route::get('/{slug}', [PageController::class, 'showFrontend'])->name('frontend.pages.show');
+Route::get('pages/{slug}', [PageController::class, 'showFrontend'])->name('frontend.pages.show');
 
 // ADMIN DASHBOARD
 Route::get('admin/dashboard', function () {
