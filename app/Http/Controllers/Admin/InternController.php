@@ -65,7 +65,7 @@ class InternController extends Controller
         return Excel::download(new InternApplicationExport, 'intern_applicants.xlsx');
     }
 
-    public function download($id)
+    public function intern_application_download($id)
     {
         $internApplication = InternApplication::find($id);
 
@@ -75,6 +75,6 @@ class InternController extends Controller
 
         $pdf = Pdf::loadView('backend.admin-dashboard.pages.intern-application.pdf', compact('internApplication'));
 
-        return $pdf->download('intern_application_id_' . $internApplication->id . '.pdf');
+        return $pdf->download('intern_applicant_id_' . $internApplication->id . '.pdf');
     }
 }

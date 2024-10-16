@@ -7,6 +7,7 @@ use App\Exports\JobCircularExport;
 use App\Http\Controllers\Controller;
 use App\Models\JobApplicant;
 use App\Models\JobCircular;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -60,6 +61,12 @@ class JobCircularController extends Controller
         }
     }
 
+    public function show($id)
+    {
+        $circular = JobCircular::findOrFail($id);  // Find the job circular by its ID
+        return view('backend.admin-dashboard.pages.job-circular.show', compact('circular'));
+    }
+
     // Show the form to edit an existing job circular
     public function edit($id)
     {
@@ -105,9 +112,10 @@ class JobCircularController extends Controller
     }
 
 
-    public function job_circular_export(){
+    public function job_circular_export()
+    {
         return Excel::download(new JobCircularExport, 'job_circular.xlsx');
-    }  
+    }
 
 
     // Applicants List 
@@ -117,6 +125,15 @@ class JobCircularController extends Controller
 
         return view('backend.admin-dashboard.pages.job-circular.applicants', compact('applicants'));
     }
+
+    // Show the list of applicants for a specific job circular
+    public function applicants_show($id)
+    {
+        $applicant = JobApplicant::findOrFail($id);
+
+        return view('backend.admin-dashboard.pages.job-circular.applicants-show', compact('applicant'));
+    }
+
 
     // Applicants Remove
     public function applicant_destroy($id)
@@ -141,8 +158,22 @@ class JobCircularController extends Controller
         }
     }
 
-    public function job_applicants_export(){
+    public function job_applicants_export()
+    {
         return Excel::download(new JobApplicantsExport, 'job_applicants.xlsx');
-    }  
+    }
 
+    
+    public function job_applicant_download($id)
+    {
+        $job_applicant= JobApplicant::find($id);
+
+        if (!$job_applicant) {
+            return redirect()->back()->with('error', 'Job applicant not found.');
+        }
+
+        $pdf = Pdf::loadView('backend.admin-dashboard.pages.job-circular.applicant_pdf', compact('job_applicant'));
+
+        return $pdf->download('job_applicant_id_' . $job_applicant->id . '.pdf');
+    }
 }

@@ -16,7 +16,7 @@
                             <h2>Intern Application Details</h2>
                             <a href="{{ route('admin.intern.download', ['id' => $internApplication->id]) }}"
                                 class="btn btn-success">
-                                Download PDF
+                                <i class="fas fa-download"></i> Download <i class="fas fa-file-pdf"></i>
                             </a>
 
                         </div>

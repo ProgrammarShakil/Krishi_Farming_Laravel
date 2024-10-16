@@ -30,9 +30,9 @@
                                             <th>Vacancy Number</th>
                                             <th>Job Location</th>
                                             <th>Educational Requirements</th>
-                                            <th>Additional Requirements</th>
+                                            {{-- <th>Additional Requirements</th>
                                             <th>Responsibilities</th>
-                                            <th>Compensation</th>
+                                            <th>Compensation</th> --}}
                                             <th>Workplace</th>
                                             <th>Employment Status</th>
                                             <th>Gender</th>
@@ -48,17 +48,21 @@
                                                 <td>{{ $circular->vacancy_number }}</td>
                                                 <td>{{ $circular->job_location }}</td>
                                                 <td>{{ $circular->educational_requirements }}</td>
-                                                <td>{{ $circular->additional_requirements }}</td>
+                                                {{-- <td>{{ $circular->additional_requirements }}</td>
                                                 <td>{{ $circular->responsibilities }}</td>
-                                                <td>{{ $circular->compensation }}</td>
+                                                <td>{{ $circular->compensation }}</td> --}}
                                                 <td>{{ $circular->workplace }}</td>
                                                 <td>{{ $circular->employment_status }}</td>
                                                 <td>{{ $circular->gender }}</td>
                                                 <td>{{ $circular->published_date->format('d-m-Y') }}</td>
                                                 <td>{{ $circular->circular_closing_date->format('d-m-Y') }}</td>
-                                                <td>
+                                                <td class="d-flex justify-content-between">
+                                                    <!-- View Button -->
+                                                    <a href="{{ route('admin.job.circular.show', $circular->id) }}"
+                                                        class="btn btn-info btn-sm mx-1"><i class="fas fa-eye"></i></a>
+
                                                     <a href="{{ route('admin.job.circular.edit', $circular->id) }}"
-                                                        class="btn btn-warning btn-sm"><i class="fas fa-edit"></i>
+                                                        class="btn btn-warning btn-sm mx-1"><i class="fas fa-edit"></i>
                                                     </a>
                                                     <form action="{{ route('admin.job.circular.destroy', $circular->id) }}"
                                                         method="POST" style="display:inline;">
@@ -90,17 +94,17 @@
     <script>
         $(document).ready(function() {
 
-           $('#dataTable').DataTable({
-            "order": [
-                [1, "desc"]
-            ],
-            "responsive": true,
-            "scrollY": "400px",
-            "scrollX": true,
-            "scrollCollapse": true,
-            "paging": true
-        });
-        
+            $('#dataTable').DataTable({
+                "order": [
+                    [1, "desc"]
+                ],
+                "responsive": true,
+                "scrollY": "400px",
+                "scrollX": true,
+                "scrollCollapse": true,
+                "paging": true
+            });
+
             @if (session('success'))
                 toastr.success('{{ session('success') }}', 'Success', {
                     closeButton: true,

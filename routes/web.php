@@ -91,23 +91,28 @@ Route::middleware('auth')->group(function () {
     // Intern Application Export 
     Route::get('/admin/intern/application/export', [InternController::class, 'intern_application_export'])->name('admin.intern.export');
     // Intern Application Single Download 
-    Route::get('admin/intern-application/{id}/download', [InternController::class, 'download'])->name('admin.intern.download');
+    Route::get('admin/intern-application/{id}/download', [InternController::class, 'intern_application_download'])->name('admin.intern.download');
 
     // Job Circular
     Route::get('/admin/job-circular-create', [JobCircularController::class, 'create'])->name('admin.job.circular.create');
     Route::post('/admin/job-circular-store', [JobCircularController::class, 'store'])->name('admin.job.circular.store');
     Route::get('/admin/job-circular-list', [JobCircularController::class, 'index'])->name('admin.job.circular.index');
+    Route::get('/admin/job-circular-show/{id}', [JobCircularController::class, 'show'])->name('admin.job.circular.show');
     Route::get('/admin/job-circular-edit/{id}', [JobCircularController::class, 'edit'])->name('admin.job.circular.edit');
     Route::put('/admin/job-circular-update/{id}', [JobCircularController::class, 'update'])->name('admin.job.circular.update');
     Route::delete('/admin/job-circular-delete/{id}', [JobCircularController::class, 'destroy'])->name('admin.job.circular.destroy');
     // Job Circular Export 
     Route::get('/admin/job-circular/export', [JobCircularController::class, 'job_circular_export'])->name('admin.job.circular.export');
-    
+
     // Job Applicants 
     Route::get('/admin/job-applicants', [JobCircularController::class, 'applicants'])->name('admin.job.applicants.index');
+    Route::get('/admin/job-applicants-show/{id}', [JobCircularController::class, 'applicants_show'])->name('admin.job-applicants.show');
     Route::delete('admin/job-applicants/{id}', [JobCircularController::class, 'applicant_destroy'])->name('admin.job-applicants.destroy');
     // Job Applicants Export 
     Route::get('/admin/job-applicants/export', [JobCircularController::class, 'job_applicants_export'])->name('admin.job.applicants.export');
+    // Job Applicants Single Download 
+    Route::get('admin/job-circular/{id}/download', [JobCircularController::class, 'job_applicant_download'])->name('admin.job.applicants.download');
+
     
     // Invesment Proposal
     Route::get('/admin/investment-proposal-create', [InvestmentProposalController::class, 'create'])->name('admin.investment.proposal.create');

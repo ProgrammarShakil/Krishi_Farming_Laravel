@@ -32,6 +32,10 @@
                                             <th>Phone Number</th>
                                             <th>Education</th>
                                             <th>Skills</th>
+                                            {{-- <th>Question 01</th>
+                                            <th>Question 02</th>
+                                            <th>Question 03</th>
+                                            <th>Question 04</th> --}}
                                             <th>Resume</th>
                                             <th>Photo</th>
                                             <th>Actions</th> <!-- Add Actions column -->
@@ -45,6 +49,10 @@
                                             <td>{{ $application->phone_number }}</td>
                                             <td>{{ $application->education }}</td>
                                             <td>{{ $application->skills }}</td>
+                                            {{-- <td>{{ $application->q1 }}</td>
+                                            <td>{{ $application->q2 }}</td>
+                                            <td>{{ $application->q3 }}</td>
+                                            <td>{{ $application->q4 }}</td> --}}
                                             <td><a href="{{ asset('storage/' . $application->resume) }}" target="_blank">View Resume</a></td>
                                             <td><img src="{{ asset('storage/' . $application->photo) }}" alt="Photo" width="50"></td>
                                             <td class="d-flex justify-content-between">

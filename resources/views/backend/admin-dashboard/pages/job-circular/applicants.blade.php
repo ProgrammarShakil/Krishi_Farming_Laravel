@@ -30,12 +30,13 @@
                                         <th>Educational Qualification</th>
                                         <th>Special Skills</th>
                                         <th>Expected Salary</th>
-                                        <th>Question 1</th>
+                                        {{-- <th>Question 1</th>
                                         <th>Question 2</th>
                                         <th>Question 3</th>
-                                        <th>Question 4</th>
+                                        <th>Question 4</th> --}}
                                         <th>CV</th>
                                         <th>Photo</th>
+                                        <th>Job Circular Name</th>
                                         <th>Job Circular ID</th>
                                         <th>Action</th>
                                     </tr>
@@ -62,16 +63,24 @@
                                         <td>{{ number_format($applicant->expected_salary, 2) }} BDT</td>
                             
                                         <!-- Display questions -->
-                                        <td>{{ $applicant->q1 }}</td>
+                                        {{-- <td>{{ $applicant->q1 }}</td>
                                         <td>{{ $applicant->q2 }}</td>
                                         <td>{{ $applicant->q3 }}</td>
-                                        <td>{{ $applicant->q4 }}</td>
+                                        <td>{{ $applicant->q4 }}</td> --}}
                             
                                         <td><a href="{{ asset('storage/' . $applicant->cv) }}" target="_blank">View Resume</a></td>
                                         <td><img src="{{ asset('storage/' . $applicant->photo) }}" alt="Photo" width="50"></td>
                                         <!-- Job Circular ID -->
-                                        <td>{{ $applicant->job_circular_id }}</td>
                                         <td>
+                                            <a href="{{ route('admin.job.circular.show', $applicant->job_circular_id) }}">
+                                                {{ $applicant->jobCircular->position_name }}
+                                            </a>
+                                        </td>
+                                        
+                                        <td>{{ $applicant->job_circular_id }}</td>
+                                        <td class="d-flex justify-content-between">
+                                             <!-- View Button -->
+                                             <a href="{{ route('admin.job-applicants.show', $applicant->id) }}" class="btn btn-info btn-sm"><i class="fas fa-eye"></i></a>
                                             <form action="{{ route('admin.job-applicants.destroy', $applicant->id) }}" method="POST" style="display:inline;">
                                                 @csrf
                                                 @method('DELETE') <!-- This will create a DELETE request -->
