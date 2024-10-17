@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// FRONTEND ROUTES 
+// ****************** FRONTEND ROUTES ******************* // 
 Route::get('/', function () {
     return view('frontend.pages.index');
 })->name('frontend.pages.index');
@@ -59,14 +59,15 @@ Route::get('/investment-application', [InvestApplicantController::class, 'index'
 Route::get('investment-application/form/{id}', [InvestApplicantController::class, 'create'])->name('frontend.pages.investment.applicants.create');
 Route::post('investment-application/apply', [InvestApplicantController::class, 'store'])->name('frontend.pages.investment.applicants.store');
 
-
 // Manage Blog 
 Route::get('/blogs', [PageController::class, 'blog_index'])->name('frontend.pages.blog.index');
 
 // Pages Show
 Route::get('pages/{slug}', [PageController::class, 'showFrontend'])->name('frontend.pages.show');
 
-// ADMIN DASHBOARD
+
+
+// ************** ADMIN DASHBOARD ***************** //
 Route::get('admin/dashboard', [AdminDashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.dashboard');
 
 Route::middleware('auth')->group(function () {
