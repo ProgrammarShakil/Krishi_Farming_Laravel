@@ -60,7 +60,7 @@
 
                                 <!-- Center text -->
                             </div>
-                            <div class="center-text"><a href="https://bdkrishi.com" target="_blank">BD Krishi </a>
+                            <div class="center-text"><a href="https://bdkrishi.com" target="_blank">BDKrishi </a>
                             </div>
                         </div>
                     </div>
