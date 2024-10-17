@@ -47,7 +47,7 @@
 
             <!-- CTA Buttons for Desktop -->
             <div class="hidden md:flex space-x-4">
-                <a href="#" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Contact</a>
+                <a href="{{route('frontend.contact.form')}}" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Contact</a>
                 <a href="{{route('frontend.pages.show', ['slug' => 'about-us'])}}"
                     class="bg-white border border-red-500 text-red-500 px-4 py-2 rounded hover:bg-red-500 hover:text-white">About
                     Us</a>
@@ -106,8 +106,8 @@
             <a href="{{route('frontend.pages.show', ['slug' => 'about-us'])}}"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">About
                 Us</a>
-            <a href="#"
-                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Join
+            <a href="{{route('frontend.contact.form')}}"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Contact
                 Us</a>
         </div>
     </div>

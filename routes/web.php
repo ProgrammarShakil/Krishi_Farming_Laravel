@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\JobCircularController;
 use App\Http\Controllers\Admin\BrandFranchiseController;
 use App\Http\Controllers\Admin\BusinessProposalsController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\InvestmentProposalController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\JobApplicantController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\InvestApplicantController;
 use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\BrandFranchiseProposalController;
+use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -70,6 +72,11 @@ Route::get('/blogs', [PageController::class, 'blog_index'])->name('frontend.page
 
 // Pages Show
 Route::get('pages/{slug}', [PageController::class, 'showFrontend'])->name('frontend.pages.show');
+
+
+// Manage Contact Form
+Route::get('/contact/form', [ContactFormController::class, 'form'])->name('frontend.contact.form');
+Route::post('/contact', [ContactFormController::class, 'store'])->name('frontend.contact.store');
 
 
 
@@ -140,7 +147,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/investment-applicants', [InvestmentProposalController::class, 'investment_applicants'])->name('admin.investment.applicants.index');
     Route::get('/admin/investment-applicants-show/{id}', [InvestmentProposalController::class, 'investment_applicants_show'])->name('admin.investment.applicants.show');
     Route::delete('admin/investment-applicants/{id}', [InvestmentProposalController::class, 'investment_applicants_destroy'])->name('admin.investment-applicants.destroy');
-    // Investemnt Applicants Export 
+    // Investment Applicants Export 
     Route::get('/admin/investment-applicants/export', [InvestmentProposalController::class, 'investment_applicants_export'])->name('admin.investment.applicants.export');
     // Investment Applicants Single Download 
     Route::get('admin/investment-applicants/{id}/download', [InvestmentProposalController::class, 'investment_applicants_download'])->name('admin.investment.applicants.download');
@@ -170,6 +177,12 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/pages/{slug}/edit', [PageController::class, 'edit'])->name('admin.pages.edit');
     Route::put('admin/pages/{slug}', [PageController::class, 'update'])->name('admin.pages.update');
     Route::delete('admin/pages/{slug}', [PageController::class, 'destroy'])->name('admin.pages.destroy');
+
+
+    // Manage Contact
+    Route::get('/contacts', [ContactController::class, 'index'])->name('admin.contact.index');
+    Route::get('/contacts/{id}', [ContactController::class, 'show'])->name('admin.contact.show');
+    Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('admin.contact.destroy');
 });
 
 

@@ -95,4 +95,36 @@
         </div>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            
+            // Data Table 
+            $('.table').DataTable({
+                "order": [
+                    [1, "desc"]
+                ],
+                "responsive": true,
+                "scrollY": "400px",
+                "scrollCollapse": true,
+                "paging": true
+            });
+
+            // Toastr Notifications 
+            @if (session('success'))
+                toastr.success('{{ session('success') }}', 'Success', {
+                    closeButton: true,
+                    progressBar: false,
+                    timeOut: 5000 // 5 seconds timeout
+                });
+            @endif
+
+            @if (session('error'))
+                toastr.error('{{ session('error') }}', 'Error', {
+                    closeButton: true,
+                    progressBar: false,
+                    timeOut: 5000
+                });
+            @endif
+        });
+    </script>
 @endsection

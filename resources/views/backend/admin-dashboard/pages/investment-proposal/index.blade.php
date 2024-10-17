@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-    <!-- Toastr Notifications -->
+
     <script>
         $(document).ready(function() {
 

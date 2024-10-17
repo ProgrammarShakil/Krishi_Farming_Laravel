@@ -163,13 +163,13 @@
 
     <!-- Contact -->
     <li class="nav-item">
-        <a class="nav-link {{ request()->routeIs('admin.contacts.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#Contacts" aria-expanded="true" aria-controls="Contacts">
-            <i class="fas fa-fw fa-envelope {{ request()->routeIs('admin.contacts.*') ? 'text-white' : 'text-gray-400' }}"></i>
+        <a class="nav-link {{ request()->routeIs('admin.contact.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#Contacts" aria-expanded="true" aria-controls="Contacts">
+            <i class="fas fa-fw fa-envelope {{ request()->routeIs('admin.contact.*') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Messages</span>
         </a>
         <div id="Contacts" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('admin.pages.index') }}">All Messages</a>
+                <a class="collapse-item" href="{{ route('admin.contact.index') }}">All Messages</a>
             </div>
         </div>
     </li>
