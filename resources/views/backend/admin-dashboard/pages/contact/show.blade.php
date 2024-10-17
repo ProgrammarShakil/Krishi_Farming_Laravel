@@ -26,6 +26,9 @@
                                 <strong>Phone:</strong> {{ $contact->phone_number }}
                             </div>
                             <div class="mb-3">
+                                <strong>Date:</strong> {{$contact->created_at->setTimezone('Asia/Dhaka')->format('d-m-y h:i A') }}
+                            </div>
+                            <div class="mb-3">
                                 <strong>Subject:</strong> {{ $contact->subject }}
                             </div>
                             <div class="mb-3">

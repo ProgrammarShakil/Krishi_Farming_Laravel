@@ -57,7 +57,7 @@
                                         <br> Info</a></div>
                                 <div class="label label-7"><a href="https://bdkrishi.com" target="_blank">Farmer <br>
                                         Connector</a></div>
-    
+
                                 <!-- Center text -->
                             </div>
                             <div class="center-text"><a href="https://bdkrishi.com" target="_blank">BD Krishi </a>
@@ -82,7 +82,7 @@
             <!-- Card 1 -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
                     <div class="flex flex-col items-center justify-center">
                         <img src="{{ asset('images/portfolio/portfolio (1).png') }}" alt="Food Security Icon"
                             class="h-12 w-12">
@@ -94,7 +94,7 @@
             <!-- Card 2 -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
                     <div class="flex flex-col items-center justify-center">
                         <img src="{{ asset('images/portfolio/portfolio (2).png') }}" alt="Food Security Icon"
                             class="h-12 w-12">
@@ -107,7 +107,7 @@
             <!-- Card 3 -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
                     <div class="flex flex-col items-center justify-center">
                         <img src="{{ asset('images/portfolio/portfolio (3).png') }}" alt="Food Security Icon"
                             class="h-12 w-12">
@@ -119,7 +119,7 @@
             <!-- Card 4 -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
                     <div class="flex flex-col items-center justify-center">
                         <img src="{{ asset('images/portfolio/portfolio (4).png') }}" alt="Food Security Icon"
                             class="h-12 w-12">
@@ -132,7 +132,7 @@
             <!-- Card 5 -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
                     <div class="flex flex-col items-center justify-center">
                         <img src="{{ asset('images/portfolio/portfolio (5).png') }}" alt="Food Security Icon"
                             class="h-12 w-12">
@@ -144,7 +144,7 @@
             <!-- Card 6 -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
                     <div class="flex flex-col items-center justify-center">
                         <img src="{{ asset('images/portfolio/portfolio (6).png') }}" alt="Food Security Icon"
                             class="h-12 w-12">
@@ -156,7 +156,7 @@
             <!-- Card 5 -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
                     <div class="flex flex-col items-center justify-center">
                         <img src="{{ asset('images/portfolio/portfolio (7).png') }}" alt="Food Security Icon"
                             class="h-12 w-12">
@@ -168,7 +168,7 @@
             <!-- Card 6 -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 bg-green-700 transform transition-transform duration-300 hover:scale-110">
+                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
                     <div class="flex flex-col items-center justify-center">
                         <img src="{{ asset('images/portfolio/portfolio (8).png') }}" alt="Food Security Icon"
                             class="h-12 w-12">
@@ -180,137 +180,8 @@
     </div>
 
 
-    <!-- BLOGS  -->
-    <div class="container mx-auto px-4 py-10">
-        <h1 class="text-4xl font-bold text-center mb-8">Our Blogs</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (1).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
-                    <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
-                        success lies in a well-crafted [...]</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More →</a>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
-                    <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
-                        through
-                        tech-driven solutions [...]</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More →</a>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
-                    <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
-                        restaurant management processes [...]</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More →</a>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
-                    <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
-                        success lies in a well-crafted [...]</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More →</a>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
-                    <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
-                        through
-                        tech-driven solutions [...]</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More →</a>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
-                    <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
-                        restaurant management processes [...]</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More →</a>
-                </div>
-            </div>
-        </div>
-        <div class="text-center">
-            <a href="#"
-                class="inline-block mt-4 px-4 py-3 text-white bg-green-700 hover:bg-green-800 rounded-md">More Blogs →</a>
-        </div>
-    </div>
-
-    <!-- VIDEO STORIES  -->
-    <div class="slider-container mb-5">
-        <div class="text-center pb-5">
-            <h2 class="text-4xl font-bold mb-3">Video Stories</h2>
-        </div>
-        <div class="owl-carousel owl-theme">
-            <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="text-center">
-            <div class="text-center">
-                <a href="#"
-                    class="inline-block mt-4 px-4 py-3 text-white bg-green-700 hover:bg-green-800 rounded-md">More Videos
-                    →</a>
-            </div>
-        </div>
-    </div>
-
     <!-- PHOTO GALLERY -->
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 md:mt-10">
         <h1 class="text-4xl font-bold text-center mb-8 mt-4">Photo Gallery</h1>
 
         <!-- Photo Grid -->
@@ -377,13 +248,165 @@
             </div>
 
         </div>
-        <div class="text-center">
-            <a href="#" class="inline-block mt-4 px-4 py-3 text-white bg-green-700 hover:bg-green-800 rounded-md">More Photos →</a>
+        <div class="flex justify-center">
+            <button
+                class="flex items-center mt-8 px-6 py-3 main-bg-color text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
+                <span>See More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        {{-- <div class="text-center">
+                <a href="#"
+                    class="inline-block mt-4 px-4 py-3 text-white bg-green-700 hover:bg-green-800 rounded-md">More Photos →</a>
+            </div> --}}
+    </div>
+
+
+    <!-- VIDEO STORIES  -->
+    <div class="slider-container my-10">
+        <div class="text-center pb-5">
+            <h2 class="text-4xl font-bold mb-3">Video Stories</h2>
+        </div>
+        <div class="owl-carousel owl-theme">
+            <div class="item border-2">
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="item border-2">
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="item border-2">
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="item border-2">
+                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <button
+                class="flex items-center mt-8 px-6 py-3 main-bg-color text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
+                <span>See More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- BLOGS  -->
+    <div class="container mx-auto px-4 py-10">
+        <h1 class="text-4xl font-bold text-center mb-8">Our Blogs</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="{{ asset('images/blogs/blogs (1).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
+                    <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
+                        success lies in a well-crafted</p>
+                    <a href="#"
+                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
+                        More...</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
+                    <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
+                        through
+                        tech-driven solutions</p>
+                    <a href="#"
+                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
+                        More...</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
+                    <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
+                        restaurant management processes</p>
+                    <a href="#"
+                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
+                        More...</a>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
+                    <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
+                        success lies in a well-crafted</p>
+                    <a href="#"
+                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
+                        More...</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
+                    <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
+                        through
+                        tech-driven solutions</p>
+                    <a href="#"
+                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
+                        More...</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
+                    <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
+                        restaurant management processes</p>
+                    <a href="#"
+                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
+                        More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <button
+                class="flex items-center mt-8 px-6 py-3 main-bg-color text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
+                <span>See More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
         </div>
     </div>
 
     <!-- ALICE AREA  -->
-    <div class="slider-container mt-5">
+    <div class="slider-container my-10">
         <div class="text-center pb-5">
             <h2 class="text-3xl font-bold">Our Allies</h2>
         </div>
