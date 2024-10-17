@@ -18,7 +18,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Job Applicants</h6>
                     </div>
                     <div class="card-body">
-                        Job Applicants
+                        <a href="{{route('admin.job.applicants.index')}}">{{count($job_applicants)}}</a>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Job Circulars</h6>
                     </div>
                     <div class="card-body">
-                        Job Circulars
+                        <a href="{{route('admin.job.circular.index')}}">{{count($job_circulars)}}</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Investment Applicants</h6>
                     </div>
                     <div class="card-body">
-                        Investment Applicants
+                        <a href="{{route('admin.investment.applicants.index')}}">{{count($investment_applicants)}}</a>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Investment Proposals</h6>
                     </div>
                     <div class="card-body">
-                        Investment Proposals
+                        <a href="{{route('admin.investment.proposal.index')}}">{{count($investment_propsals)}}</a>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Intern Applicants</h6>
                     </div>
                     <div class="card-body">
-                        Intern Applicants
+                        <a href="{{route('admin.intern.index')}}">{{count($intern_applicants)}}</a>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Business Proposals</h6>
                     </div>
                     <div class="card-body">
-                        Business Proposals
+                        <a href="{{route('admin.busines.proposal.index')}}">{{count($business_proposals)}}</a>
                     </div>
                 </div>
             </div>
@@ -90,19 +90,19 @@
                         <h6 class="m-0 font-weight-bold text-primary">Team Members</h6>
                     </div>
                     <div class="card-body">
-                        Team Members
+                        {{-- <a href="{{route('admin.teams.list')}}">{{count($teams)}}</a> --}} 0
                     </div>
                 </div>
             </div>
 
-            <!-- Blogs -->
+            <!-- Pages -->
             <div class="col-md-4 col-12 mb-4">
                 <div class="card shadow">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Blogs</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Pages</h6>
                     </div>
                     <div class="card-body">
-                        Blogs
+                        <a href="{{route('admin.pages.index')}}">{{count($pages)}}</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Portfolios</h6>
                     </div>
                     <div class="card-body">
-                        Portfolios
+                        {{-- <a href="{{route('admin.portfolios.index')}}">{{count($portfolios)}}</a> --}} 0
                     </div>
                 </div>
             </div>
