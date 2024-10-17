@@ -19,6 +19,14 @@ class BusinessProposalsController extends Controller
     }
 
 
+    // Show a specific Brand Franchise Proposal
+    public function show($id)
+    {
+        $proposal = BusinessProposal::findOrFail($id);
+
+        return view('backend.admin-dashboard.pages.business-proposal.show', compact('proposal'));
+    }
+
     // Delete a job circular from the database
     public function destroy($id)
     {

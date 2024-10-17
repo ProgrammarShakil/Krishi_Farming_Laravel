@@ -66,7 +66,11 @@
                                     </td>
 
                                     <td>{{ $proposal->created_at->format('Y-m-d') }}</td>
-                                    <td>
+                                    <td class="d-flex justify-content-between">
+                                        <!-- View Button -->
+                                        <a href="{{ route('admin.brand.franchise.show', $proposal->id) }}"
+                                            class="btn btn-info btn-sm mx-1"><i class="fas fa-eye"></i></a>
+
                                         <form action="{{ route('admin.brand.franchise.destroy', $proposal->id) }}"
                                             method="POST">
                                             @csrf
@@ -85,7 +89,7 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         $(document).ready(function() {
             $('.table').DataTable({

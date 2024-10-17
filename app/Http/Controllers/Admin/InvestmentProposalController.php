@@ -106,7 +106,7 @@ class InvestmentProposalController extends Controller
     }
 
 
-    // Applicants List 
+    //  **************** Investment Applicants List  ****************//
     public function investment_applicants(Request $request)
     {
         $applicants = InvestmentApplicant::orderBy('created_at', 'desc')->get();

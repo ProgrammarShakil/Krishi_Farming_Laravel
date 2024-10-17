@@ -11,9 +11,10 @@
         <div class="card shadow mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h6 class="m-0 font-weight-bold text-primary">Business Proposals</h6>
-                <a href="{{ route('admin.business-proposals.export') }}" class="btn btn-success btn-sm"><i class="fas fa-file-excel"></i> Export to Excel</a>
+                <a href="{{ route('admin.business-proposals.export') }}" class="btn btn-success btn-sm"><i
+                        class="fas fa-file-excel"></i> Export to Excel</a>
             </div>
-            
+
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -64,8 +65,12 @@
                                     </td>
 
                                     <td>{{ $proposal->created_at->format('Y-m-d') }}</td>
-                                    <td>
-                                        <form action="{{ route('admin.brand.franchise.destroy', $proposal->id) }}"
+                                    <td class="d-flex justify-content-between">
+                                        <!-- View Button -->
+                                        <a href="{{ route('admin.busines.proposal.show', $proposal->id) }}"
+                                            class="btn btn-info btn-sm mx-1"><i class="fas fa-eye"></i></a>
+
+                                        <form action="{{ route('admin.busines.proposal.destroy', $proposal->id) }}"
                                             method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -83,7 +88,7 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         $(document).ready(function() {
             $('.table').DataTable({

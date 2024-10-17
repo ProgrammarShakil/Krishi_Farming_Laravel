@@ -41,26 +41,32 @@ Route::get('/team', function () {
 Route::get('/intern-applications/apply', [InternApplicationController::class, 'create'])->name('frontend.pages.intern-applications.create');
 Route::post('/intern-applications', [InternApplicationController::class, 'store'])->name('frontend.pages.intern-applications.store');
 
+
 // Business Proposal
 Route::get('/business-proposal/apply', [BusinessProposalController::class, 'create'])->name('frontend.pages.business-proposal.create');
 Route::post('/business-proposal', [BusinessProposalController::class, 'store'])->name('frontend.pages.business-proposal.store');
 
+
 // Brand Franchise Proposal 
 Route::get('/brand-franchise-proposal/apply', [BrandFranchiseProposalController::class, 'create'])->name('frontend.pages.brand-franchise-proposal.create');
 Route::post('/brand-franchise-proposal', [BrandFranchiseProposalController::class, 'store'])->name('frontend.pages.brand-franchise-proposal.store');
+
 
 // Job Applicants
 Route::get('/job-application', [JobApplicantController::class, 'index'])->name('frontend.pages.job.circular.index');
 Route::get('job-application/form/{id}', [JobApplicantController::class, 'create'])->name('frontend.pages.job.applicants.create');
 Route::post('job-application/apply', [JobApplicantController::class, 'store'])->name('frontend.pages.job.applicants.store');
 
+
 // Investment Applicants
 Route::get('/investment-application', [InvestApplicantController::class, 'index'])->name('frontend.pages.investment.proposal.index');
 Route::get('investment-application/form/{id}', [InvestApplicantController::class, 'create'])->name('frontend.pages.investment.applicants.create');
 Route::post('investment-application/apply', [InvestApplicantController::class, 'store'])->name('frontend.pages.investment.applicants.store');
 
+
 // Manage Blog 
 Route::get('/blogs', [PageController::class, 'blog_index'])->name('frontend.pages.blog.index');
+
 
 // Pages Show
 Route::get('pages/{slug}', [PageController::class, 'showFrontend'])->name('frontend.pages.show');
@@ -71,10 +77,12 @@ Route::get('pages/{slug}', [PageController::class, 'showFrontend'])->name('front
 Route::get('admin/dashboard', [AdminDashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.dashboard');
 
 Route::middleware('auth')->group(function () {
+
     // Profile 
     Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('admin.profile.edit');
     Route::patch('/admin/profile', [ProfileController::class, 'update'])->name('admin.profile.update');
     // Route::delete('/admin/profile', [ProfileController::class, 'destroy'])->name('admin.profile.destroy');
+
 
     // Team 
     Route::get('/admin/teams', [TeamController::class, 'index'])->name('admin.teams.list');
@@ -84,6 +92,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/admin/teams/{id}', [TeamController::class, 'update'])->name('admin.teams.update');
     Route::delete('/admin/teams/{id}', [TeamController::class, 'destroy'])->name('admin.teams.destroy');
 
+
     //Intern Application
     Route::get('/admin/intern/application-list', [InternController::class, 'index'])->name('admin.intern.index');
     Route::get('/admin/intern/{id}', [InternController::class, 'show'])->name('admin.intern.show');
@@ -92,6 +101,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/intern/application/export', [InternController::class, 'intern_application_export'])->name('admin.intern.export');
     // Intern Application Single Download 
     Route::get('admin/intern-application/{id}/download', [InternController::class, 'intern_application_download'])->name('admin.intern.download');
+
 
     // Job Circular
     Route::get('/admin/job-circular-create', [JobCircularController::class, 'create'])->name('admin.job.circular.create');
@@ -103,6 +113,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/admin/job-circular-delete/{id}', [JobCircularController::class, 'destroy'])->name('admin.job.circular.destroy');
     // Job Circular Export 
     Route::get('/admin/job-circular/export', [JobCircularController::class, 'job_circular_export'])->name('admin.job.circular.export');
+
 
     // Job Applicants 
     Route::get('/admin/job-applicants', [JobCircularController::class, 'applicants'])->name('admin.job.applicants.index');
@@ -124,6 +135,7 @@ Route::middleware('auth')->group(function () {
     // Investemnt Proposal Export 
     Route::get('/admin/investment-proposal/export', [InvestmentProposalController::class, 'investment_proposal_export'])->name('admin.investment.proposal.export');
 
+
     // Investment Applicants 
     Route::get('/admin/investment-applicants', [InvestmentProposalController::class, 'investment_applicants'])->name('admin.investment.applicants.index');
     Route::get('/admin/investment-applicants-show/{id}', [InvestmentProposalController::class, 'investment_applicants_show'])->name('admin.investment.applicants.show');
@@ -134,18 +146,21 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/investment-applicants/{id}/download', [InvestmentProposalController::class, 'investment_applicants_download'])->name('admin.investment.applicants.download');
 
 
-
     // Brand Franchise Proposal
     Route::get('/admin/brand-franchise-list', [BrandFranchiseController::class, 'index'])->name('admin.brand.franchise.index');
+    Route::get('/admin/brand-franchise-show/{id}', [BrandFranchiseController::class, 'show'])->name('admin.brand.franchise.show');
     Route::delete('/admin/brand-franchise-delete/{id}', [BrandFranchiseController::class, 'destroy'])->name('admin.brand.franchise.destroy');
     // Brand Franchise Export 
     Route::get('/admin/brand-franchise/export', [BrandFranchiseController::class, 'brand_franchise_export'])->name('admin.brand.franchise.export');
 
+
     // Business Proposal
     Route::get('/admin/business-proposal-list', [BusinessProposalsController::class, 'index'])->name('admin.busines.proposal.index');
+    Route::get('/admin/business-proposal-show/{id}', [BusinessProposalsController::class, 'show'])->name('admin.busines.proposal.show');
     Route::delete('/admin/business-proposal-delete/{id}', [BusinessProposalsController::class, 'destroy'])->name('admin.busines.proposal.destroy');
     // Business Proposal Export 
     Route::get('/admin/business-proposals/export', [BusinessProposalsController::class, 'business_proposal_export'])->name('admin.business-proposals.export');
+
 
     // Manage Page 
     Route::get('admin/pages', [PageController::class, 'index'])->name('admin.pages.index');

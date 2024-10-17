@@ -11,6 +11,7 @@ use Maatwebsite\Excel\Facades\Excel;
 class BrandFranchiseController extends Controller
 {
 
+    // List of Brand Franchise Proposal
     public function index(Request $request)
     {
         $brand_franchise_proposals = BrandFranchiseProposal::orderBy('created_at', 'desc')->get();
@@ -18,6 +19,13 @@ class BrandFranchiseController extends Controller
         return view('backend.admin-dashboard.pages.brand-franchise-proposal.list', compact('brand_franchise_proposals'));
     }
 
+    // Show a specific Brand Franchise Proposal
+    public function show($id)
+    {
+        $proposal = BrandFranchiseProposal::findOrFail($id);
+
+        return view('backend.admin-dashboard.pages.brand-franchise-proposal.show', compact('proposal'));
+    }
 
     // Delete a job circular from the database
     public function destroy($id)

@@ -115,7 +115,7 @@
             <!-- Published Date -->
             <div class="form-group">
                 <label for="published_date">Published Date</label>
-                <input type="date" name="published_date" class="form-control" id="published_date" value="{{ old('published_date', $circular->published_date) }}" required>
+                <input type="date" name="published_date" class="form-control" id="published_date" value="{{ old('published_date', $circular->published_date->format('Y-m-d')) }}" required>
                 @error('published_date')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
@@ -124,7 +124,7 @@
             <!-- Circular Closing Date -->
             <div class="form-group">
                 <label for="circular_closing_date">Circular Closing Date</label>
-                <input type="date" name="circular_closing_date" class="form-control" id="circular_closing_date" value="{{ old('circular_closing_date', $circular->circular_closing_date) }}" required>
+                <input type="date" name="circular_closing_date" class="form-control" id="circular_closing_date" value="{{ old('circular_closing_date', $circular->circular_closing_date->format('Y-m-d')) }}" required>
                 @error('circular_closing_date')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror

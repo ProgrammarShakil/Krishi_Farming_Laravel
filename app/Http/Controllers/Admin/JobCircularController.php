@@ -118,7 +118,7 @@ class JobCircularController extends Controller
     }
 
 
-    // Applicants List 
+    // ************** Job Applicants List **************** //
     public function applicants(Request $request)
     {
         $applicants = JobApplicant::orderBy('created_at', 'desc')->get();
