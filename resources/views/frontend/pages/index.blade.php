@@ -250,7 +250,7 @@
         </div>
         <div class="flex justify-center">
             <button
-                class="flex items-center mt-8 px-6 py-3 main-bg-color text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
+                class="flex items-center mt-8 px-6 py-3 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
                 <span>See More</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -299,7 +299,7 @@
         </div>
         <div class="flex justify-center">
             <button
-                class="flex items-center mt-8 px-6 py-3 main-bg-color text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
+                class="flex items-center mt-8 px-6 py-3 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
                 <span>See More</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -395,7 +395,7 @@
         </div>
         <div class="flex justify-center">
             <button
-                class="flex items-center mt-8 px-6 py-3 main-bg-color text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
+                class="flex items-center mt-8 px-6 py-3 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
                 <span>See More</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
