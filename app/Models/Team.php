@@ -13,6 +13,11 @@ class Team extends Model
         'name',
         'position',
         'description',
-        'image'
+        'image',
+        'facebook_link',
+        'linkedin_link',
+        'twitter_link',
+        'instagram_link',
+        'youtube_link'
     ];
 }

@@ -14,6 +14,9 @@ class CreateTeamsTable extends Migration
             $table->string('position')->nullable();
             $table->text('description')->nullable();
             $table->string('image')->nullable();
+
+            // Check the Modified Migration OR Check the Model
+
             $table->timestamps();
         });
     }

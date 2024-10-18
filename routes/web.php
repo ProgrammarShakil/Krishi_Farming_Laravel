@@ -17,6 +17,7 @@ use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\BrandFranchiseProposalController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\FrontendPageController;
+use App\Http\Controllers\FrontendTeamController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,11 +37,8 @@ use Illuminate\Support\Facades\Route;
 // Frontend Page
 Route::get('/', [FrontendPageController::class, 'index'])->name('frontend.pages.index');
 
-
-Route::get('/team', function () {
-    return view('frontend.pages.team.list');
-})->name('frontend.pages.team');
-
+// Team Page
+Route::get('/team', [FrontendTeamController::class, 'index'])->name('frontend.pages.team');
 
 // Intern Application 
 Route::get('/intern-applications/apply', [InternApplicationController::class, 'create'])->name('frontend.pages.intern-applications.create');
