@@ -14,7 +14,7 @@
     <!-- Dashboard -->
     <li class="nav-item">
         <a class="nav-link {{ request()->routeIs('admin.dashboard') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="{{ route('admin.dashboard') }}">
-            <i class="fas fa-fw fa-tachometer-alt {{ request()->routeIs('admin.dashboard') ? 'text-white' : 'text-gray-400' }}"></i>
+            <i class="fas fa-fw fa-home {{ request()->routeIs('admin.dashboard') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Dashboard</span>
         </a>
     </li>
@@ -22,10 +22,23 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
+    <!-- Change Segments -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.segments.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#Segments" aria-expanded="true" aria-controls="Segments">
+            <i class="fas fa-fw fa-leaf {{ request()->routeIs('admin.segments.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Change Segments</span>
+        </a>
+        <div id="Segments" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.segments.index') }}">All Segments</a>
+            </div>
+        </div>
+    </li>
+
     <!-- Job Circular -->
     <li class="nav-item">
-        <a class="nav-link {{ request()->routeIs('admin.job.circular.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#JobCircular" aria-expanded="true" aria-controls="JobCircular">
-            <i class="fas fa-fw fa-bullhorn {{ request()->routeIs('admin.job.circular.*') ? 'text-white' : 'text-gray-400' }}"></i>
+        <a class="nav-link {{ request()->routeIs('admin.job.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#JobCircular" aria-expanded="true" aria-controls="JobCircular">
+            <i class="fas fa-fw fa-bullhorn {{ request()->routeIs('admin.job.*') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Job Circular</span>
         </a>
         <div id="JobCircular" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -39,8 +52,8 @@
 
     <!-- Investment Proposal -->
     <li class="nav-item">
-        <a class="nav-link {{ request()->routeIs('admin.investment.proposal.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#InvestmentProposal" aria-expanded="true" aria-controls="InvestmentProposal">
-            <i class="fas fa-dollar-sign {{ request()->routeIs('admin.investment.proposal.*') ? 'text-white' : 'text-gray-400' }}"></i>
+        <a class="nav-link {{ request()->routeIs('admin.investment.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#InvestmentProposal" aria-expanded="true" aria-controls="InvestmentProposal">
+            <i class="fas fa-dollar-sign {{ request()->routeIs('admin.investment.*') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Investment Proposal</span>
         </a>
         <div id="InvestmentProposal" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">

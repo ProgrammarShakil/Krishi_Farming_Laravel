@@ -43,24 +43,30 @@
                         <div class="w-full mx-auto">
                             <div class="ml-90 pie-chart">
                                 <!-- Rotating labels in each segment -->
-                                <div class="label label-1"><a href="https://bdkrishi.com" target="_blank">Products</a>
+                                <div class="label label-1"><a href="{{ $segment->segment_1_link }}"
+                                        target="_blank">{!! str_replace(' ', '<br>', $segment->segment_1_name) !!}</a>
                                 </div>
-                                <div class="label label-2"><a href="https://bdkrishi.com" target="_blank">Services</a>
+                                <div class="label label-2"><a href="{{ $segment->segment_2_link }}"
+                                        target="_blank">{!! str_replace(' ', '<br>', $segment->segment_2_name) !!}</a>
                                 </div>
-                                <div class="label label-3"><a href="https://bdkrishi.com" target="_blank">Agriculture
-                                        <br> Segments</a></div>
-                                <div class="label label-4"><a href="https://bdkrishi.com" target="_blank">Krishi <br>
-                                        Market</a></div>
-                                <div class="label label-5"><a href="https://bdkrishi.com" target="_blank">EDP</a>
+                                <div class="label label-3"><a href="{{ $segment->segment_3_link }}"
+                                        target="_blank">{!! str_replace(' ', '<br>', $segment->segment_3_name) !!}</div>
+                                <div class="label label-4"><a href="{{ $segment->segment_4_link }}"
+                                        target="_blank">{!! str_replace(' ', '<br>', $segment->segment_4_name) !!}<br>
                                 </div>
-                                <div class="label label-6"><a href="https://bdkrishi.com" target="_blank">Agriculture
-                                        <br> Info</a></div>
-                                <div class="label label-7"><a href="https://bdkrishi.com" target="_blank">Farmer <br>
-                                        Connector</a></div>
+                                <div class="label label-5"><a href="{{ $segment->segment_5_link }}"
+                                        target="_blank">{!! str_replace(' ', '<br>', $segment->segment_5_name) !!}</a>
+                                </div>
+                                <div class="label label-6"><a href="{{ $segment->segment_6_link }}"
+                                        target="_blank">{!! str_replace(' ', '<br>', $segment->segment_6_name) !!}</div>
+                                <div class="label label-7"><a href="{{ $segment->segment_7_link }}"
+                                        target="_blank">{!! str_replace(' ', '<br>', $segment->segment_7_name) !!}<br>
+                                </div>
 
                                 <!-- Center text -->
                             </div>
-                            <div class="center-text"><a href="https://bdkrishi.com" target="_blank">BDKrishi </a>
+                            <div class="center-text"><a href="{{ $segment->main_segment_link }}"
+                                    target="_blank">{{ $segment->main_segment_name }}</a>
                             </div>
                         </div>
                     </div>

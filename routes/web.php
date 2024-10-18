@@ -9,12 +9,14 @@ use App\Http\Controllers\Admin\BusinessProposalsController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\InvestmentProposalController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\SegmentController;
 use App\Http\Controllers\JobApplicantController;
 use App\Http\Controllers\InvestApplicantController;
 use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\BrandFranchiseProposalController;
 use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\FrontendPageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,9 +32,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 // ****************** FRONTEND ROUTES ******************* // 
-Route::get('/', function () {
-    return view('frontend.pages.index');
-})->name('frontend.pages.index');
+
+// Frontend Page
+Route::get('/', [FrontendPageController::class, 'index'])->name('frontend.pages.index');
+
 
 Route::get('/team', function () {
     return view('frontend.pages.team.list');
@@ -180,9 +183,15 @@ Route::middleware('auth')->group(function () {
 
 
     // Manage Contact
-    Route::get('/contacts', [ContactController::class, 'index'])->name('admin.contact.index');
-    Route::get('/contacts/{id}', [ContactController::class, 'show'])->name('admin.contact.show');
-    Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('admin.contact.destroy');
+    Route::get('admin/contacts', [ContactController::class, 'index'])->name('admin.contact.index');
+    Route::get('admin/contacts/{id}', [ContactController::class, 'show'])->name('admin.contact.show');
+    Route::delete('admin/contacts/{id}', [ContactController::class, 'destroy'])->name('admin.contact.destroy');
+
+     // Change Segment
+     Route::get('admin/segments', [SegmentController::class, 'index'])->name('admin.segments.index');
+     Route::get('admin/segments/{id}/edit', [SegmentController::class, 'edit'])->name('admin.segments.edit');
+     Route::put('admin/segments/{id}', [SegmentController::class, 'update'])->name('admin.segments.update');
+
 });
 
 

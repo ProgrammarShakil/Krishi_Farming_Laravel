@@ -143,20 +143,20 @@
 }
 
 .label-3 {
-    top: 37%;
+    top: 35%;
     right: 6%;
     transform: rotate(168deg);
 }
 
 .label-4 {
-    bottom: 22%;
+    bottom: 26%;
     right: 19%;
     transform: rotate(221deg);
 }
 
 .label-5 {
-    bottom: 19%;
-    left: 46%;
+    bottom: 12%;
+    left: 42%;
     transform: rotate(273deg);
 }
 
@@ -168,7 +168,7 @@
 
 .label-7 {
     top: 35%;
-    left: 6%;
+    left: 4%;
     transform: rotate(369deg);
 }
 
