@@ -51,13 +51,13 @@
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    /* background: conic-gradient(#f39c12 0% 14.29%,
+    background: conic-gradient(#f39c12 0% 14.29%,
             #e74c3c 14.29% 28.57%,
             #2ecc71 28.57% 42.86%,
             #f1c40f 42.86% 57.14%,
             #9b59b6 57.14% 71.43%,
             #3498db 71.43% 85.71%,
-            #e67e22 85.71% 100%); */
+            #e67e22 85.71% 100%);
 
     /* background: conic-gradient(#013602 0% 14.29%,
             #222A35 14.29% 28.57%,
@@ -85,7 +85,7 @@
                 rgba(180, 157, 229, 85%) 71.43% 85.71%, 
                 rgba(82, 190, 76, 85%) 85.71% 100%); */
 
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)),
+            /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)),
             conic-gradient(
                 rgba(35, 97, 134, 85%) 0% 14.29%, 
                 rgba(253, 168, 26, 85%) 14.29% 28.57%, 
@@ -93,7 +93,7 @@
                 rgba(180, 36, 144, 85%) 42.86% 57.14%, 
                 rgba(106, 80, 167, 85%) 57.14% 71.43%, 
                 rgba(180, 157, 229, 85%) 71.43% 85.71%, 
-                rgba(82, 190, 76, 85%) 85.71% 100%);
+                rgba(82, 190, 76, 85%) 85.71% 100%); */
 
     animation: rotateChart 25s linear infinite;
 }
@@ -117,8 +117,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     /* background-color: #3B7314; */
-    /* background-color: rgb(34, 133, 110); */
-    background-color: rgb(74, 126, 113);
+    background-color: rgb(34, 133, 110);
+    /* background-color: rgb(74, 126, 113); */
     border-radius: 50%;
 }
 
