@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\JobCircularController;
 use App\Http\Controllers\Admin\BrandFranchiseController;
 use App\Http\Controllers\Admin\BusinessProposalsController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\InvestmentProposalController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SegmentController;
@@ -185,11 +186,15 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/contacts/{id}', [ContactController::class, 'show'])->name('admin.contact.show');
     Route::delete('admin/contacts/{id}', [ContactController::class, 'destroy'])->name('admin.contact.destroy');
 
-     // Change Segment
-     Route::get('admin/segments', [SegmentController::class, 'index'])->name('admin.segments.index');
-     Route::get('admin/segments/{id}/edit', [SegmentController::class, 'edit'])->name('admin.segments.edit');
-     Route::put('admin/segments/{id}', [SegmentController::class, 'update'])->name('admin.segments.update');
+    // Change Segment
+    Route::get('admin/segments', [SegmentController::class, 'index'])->name('admin.segments.index');
+    Route::get('admin/segments/{id}/edit', [SegmentController::class, 'edit'])->name('admin.segments.edit');
+    Route::put('admin/segments/{id}', [SegmentController::class, 'update'])->name('admin.segments.update');
 
+    // Change Footer 
+    Route::get('footers', [FooterController::class, 'index'])->name('admin.footers.index');     
+    Route::get('footers/{id}/edit', [FooterController::class, 'edit'])->name('admin.footers.edit'); 
+    Route::put('footers/{id}', [FooterController::class, 'update'])->name('admin.footers.update');  
 });
 
 

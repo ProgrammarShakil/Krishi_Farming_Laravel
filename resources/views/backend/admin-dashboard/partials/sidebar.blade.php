@@ -216,18 +216,18 @@
     </li>
 
     
-    <!-- Website Settings -->
-    {{-- <li class="nav-item">
-        <a class="nav-link {{ request()->routeIs('admin.settings.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#WebsiteSettings" aria-expanded="true" aria-controls="WebsiteSettings">
-            <i class="fas fa-fw fa-tools {{ request()->routeIs('admin.settings.*') ? 'text-white' : 'text-gray-400' }}"></i>
-            <span>Website Settings</span>
+    <!-- Manage Footer -->
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('admin.footers.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#ManageFooter" aria-expanded="true" aria-controls="ManageFooter">
+            <i class="fas fa-fw fa-tools {{ request()->routeIs('admin.footers.*') ? 'text-white' : 'text-gray-400' }}"></i>
+            <span>Manage Footer</span>
         </a>
-        <div id="WebsiteSettings" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="ManageFooter" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="login.html">Change Logo</a>
+                <a class="collapse-item" href="{{route('admin.footers.index')}}">All Footer</a>
             </div>
         </div>
-    </li> --}}
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
