@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\InvestmentProposalController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\SegmentController;
 use App\Http\Controllers\JobApplicantController;
 use App\Http\Controllers\InvestApplicantController;
@@ -186,15 +187,26 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/contacts/{id}', [ContactController::class, 'show'])->name('admin.contact.show');
     Route::delete('admin/contacts/{id}', [ContactController::class, 'destroy'])->name('admin.contact.destroy');
 
+
+    // Manage Portfolio
+    Route::get('admin/portfolios', [PortfolioController::class, 'index'])->name('admin.portfolios.index');
+    Route::get('admin/portfolios/create', [PortfolioController::class, 'create'])->name('admin.portfolios.create');
+    Route::post('admin/portfolios', [PortfolioController::class, 'store'])->name('admin.portfolios.store');
+    Route::get('admin/portfolios/{id}/edit', [PortfolioController::class, 'edit'])->name('admin.portfolios.edit');
+    Route::put('admin/portfolios/{id}', [PortfolioController::class, 'update'])->name('admin.portfolios.update');
+    Route::delete('admin/portfolios/{id}', [PortfolioController::class, 'destroy'])->name('admin.portfolios.destroy');
+
+
     // Change Segment
     Route::get('admin/segments', [SegmentController::class, 'index'])->name('admin.segments.index');
     Route::get('admin/segments/{id}/edit', [SegmentController::class, 'edit'])->name('admin.segments.edit');
     Route::put('admin/segments/{id}', [SegmentController::class, 'update'])->name('admin.segments.update');
 
+
     // Change Footer 
-    Route::get('footers', [FooterController::class, 'index'])->name('admin.footers.index');     
-    Route::get('footers/{id}/edit', [FooterController::class, 'edit'])->name('admin.footers.edit'); 
-    Route::put('footers/{id}', [FooterController::class, 'update'])->name('admin.footers.update');  
+    Route::get('footers', [FooterController::class, 'index'])->name('admin.footers.index');
+    Route::get('footers/{id}/edit', [FooterController::class, 'edit'])->name('admin.footers.edit');
+    Route::put('footers/{id}', [FooterController::class, 'update'])->name('admin.footers.update');
 });
 
 

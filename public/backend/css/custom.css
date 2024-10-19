@@ -30,3 +30,7 @@
 .toast-info {
     background-color: #17a2b8; /* Bootstrap info */
 }
+
+.main-bg-color{
+    background-color: rgb(25 83 69);
+}

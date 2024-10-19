@@ -85,104 +85,25 @@
             </p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-3">
-            <!-- Card 1 -->
-            <div class="flex flex-col items-center justify-center space-y-2">
-                <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
-                    <div class="flex flex-col items-center justify-center">
-                        <img src="{{ asset('images/portfolio/portfolio (1).png') }}" alt="Food Security Icon"
-                            class="h-12 w-12">
-                        <p class="text-white font-semibold text-center mt-2">Agriculture <br> Segments</p>
+            @foreach ($portfolios as $portfolio)
+                <!-- Dynamic Portfolio Card -->
+                <a href="{{ $portfolio->link }}" target="_blank">
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <div
+                            class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
+                            <div class="flex flex-col items-center justify-center">
+                                <!-- Dynamic Image -->
+                                <img src="{{ asset('storage/' . $portfolio->image) }}" alt="{{ $portfolio->title }}"
+                                    class="h-12 w-12">
+                                <!-- Dynamic Title -->
+                                <p class="text-white font-semibold text-center mt-2">{{ $portfolio->title }}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="flex flex-col items-center justify-center space-y-2">
-                <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
-                    <div class="flex flex-col items-center justify-center">
-                        <img src="{{ asset('images/portfolio/portfolio (2).png') }}" alt="Food Security Icon"
-                            class="h-12 w-12">
-                        <p class="text-white font-semibold text-center mt-2">Food Security</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Card 3 -->
-            <div class="flex flex-col items-center justify-center space-y-2">
-                <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
-                    <div class="flex flex-col items-center justify-center">
-                        <img src="{{ asset('images/portfolio/portfolio (3).png') }}" alt="Food Security Icon"
-                            class="h-12 w-12">
-                        <p class="text-white font-semibold text-center mt-2">Krishi Market</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="flex flex-col items-center justify-center space-y-2">
-                <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
-                    <div class="flex flex-col items-center justify-center">
-                        <img src="{{ asset('images/portfolio/portfolio (4).png') }}" alt="Food Security Icon"
-                            class="h-12 w-12">
-                        <p class="text-white font-semibold text-center mt-2">EDP</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Card 5 -->
-            <div class="flex flex-col items-center justify-center space-y-2">
-                <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
-                    <div class="flex flex-col items-center justify-center">
-                        <img src="{{ asset('images/portfolio/portfolio (5).png') }}" alt="Food Security Icon"
-                            class="h-12 w-12">
-                        <p class="text-white font-semibold text-center mt-2">Agriculture Info</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="flex flex-col items-center justify-center space-y-2">
-                <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
-                    <div class="flex flex-col items-center justify-center">
-                        <img src="{{ asset('images/portfolio/portfolio (6).png') }}" alt="Food Security Icon"
-                            class="h-12 w-12">
-                        <p class="text-white font-semibold text-center mt-2">Farmer Connector</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="flex flex-col items-center justify-center space-y-2">
-                <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
-                    <div class="flex flex-col items-center justify-center">
-                        <img src="{{ asset('images/portfolio/portfolio (7).png') }}" alt="Food Security Icon"
-                            class="h-12 w-12">
-                        <p class="text-white font-semibold text-center mt-2">Services</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="flex flex-col items-center justify-center space-y-2">
-                <div
-                    class="border-2 border-gray-300 w-36 h-36 rounded-full p-6 hover:scale-1 main-bg-color transform transition-transform duration-300 hover:scale-110">
-                    <div class="flex flex-col items-center justify-center">
-                        <img src="{{ asset('images/portfolio/portfolio (8).png') }}" alt="Food Security Icon"
-                            class="h-12 w-12">
-                        <p class="text-white font-semibold text-center mt-2">Products</p>
-                    </div>
-                </div>
-            </div>
+                </a>
+            @endforeach
         </div>
+
     </div>
 
 
