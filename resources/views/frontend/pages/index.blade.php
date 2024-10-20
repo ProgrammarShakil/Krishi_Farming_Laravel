@@ -79,7 +79,7 @@
     <!-- PORTFOLIO  -->
     <div class="container mx-auto px-5 py-10">
         <div class=" text-center mb-8">
-            <h1 class="text-4xl font-bold">What we do?</h1>
+            <h2 class="text-3xl font-bold uppercase">What we do?</h2>
             <p class="py-3 text-lg">We share evidence, engage stakeholders, and empower communities <br> for a more
                 dignified and prosperous future.
             </p>
@@ -109,81 +109,32 @@
 
     <!-- PHOTO GALLERY -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 md:mt-10">
-        <h1 class="text-4xl font-bold text-center mb-8 mt-4">Photo Gallery</h1>
+        <h1 class="text-3xl font-bold text-center mb-8 mt-4 uppercase">Photo Gallery</h1>
 
         <!-- Photo Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-            <!-- Image 1 -->
-            <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-1349772438-612x612.webp') }}"
-                    alt="Ecommerce Product Ads Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
-                <div
-                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
-                    <a href="#" class="text-white text-lg font-semibold">Ecommerce Product Ads Edit</a>
+            @foreach ($gallaries->take(6) as $gallery)
+                <div class="relative group">
+                    <img src="{{ asset('storage/' . $gallery->photo) }}" alt="Ecommerce Product Ads Edit"
+                        class="object-cover w-full h-full rounded-lg shadow-lg">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
+                        <a href="{{ route('frontend.photo_gallery.index') }}" class="text-white text-lg font-semibold">{{ $gallery->title }}</a>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Image 2 -->
-            <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-168351414-612x612.webp') }}" alt="Car Racing Video Edit"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
-                <div
-                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
-                    <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>
-                </div>
-            </div>
-
-            <!-- Image 3 -->
-            <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-649730320-612x612.webp') }}" alt="Almonds Pouch Design"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
-                <div
-                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
-                    <a href="#" class="text-white text-lg font-semibold">Almonds Pouch Design</a>
-                </div>
-            </div>
-
-            <!-- Image 4 -->
-            <div class="relative group">
-                <img src="{{ asset('images/gallery/istockphoto-965148388-612x612.webp') }}"
-                    alt="Ecommerce Product Ads Edit" class="object-cover w-full h-full rounded-lg shadow-lg">
-                <div
-                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
-                    <a href="#" class="text-white text-lg font-semibold">Ecommerce Product Ads Edit</a>
-                </div>
-            </div>
-
-            <!-- Image 5 -->
-            <div class="relative group">
-                <img src="{{ asset('images/gallery/photo-1692369194934-e3e2dc0d8d0d.jpg') }}" alt="Car Racing Video Edit"
-                    class="object-cover w-full h-full rounded-lg shadow-lg">
-                <div
-                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
-                    <a href="#" class="text-white text-lg font-semibold">Car Racing Video Edit</a>
-                </div>
-            </div>
-
-            <!-- Image 6 -->
-            <div class="relative group">
-                <img src="{{ asset('images/gallery/premium_photo-1661909621192-98cd04208d8e.jpg') }}"
-                    alt="Almonds Pouch Design" class="object-cover w-full h-full rounded-lg shadow-lg">
-                <div
-                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
-                    <a href="#" class="text-white text-lg font-semibold">Almonds Pouch Design</a>
-                </div>
-            </div>
-
+            @endforeach
         </div>
         <div class="flex justify-center">
-            <button
-                class="flex items-center mt-8 px-6 py-3 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
-                <span>See More</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
+            <a href="{{ route('frontend.photo_gallery.index') }}">
+                <button
+                    class="flex items-center mt-8 px-6 py-3 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
+                    <span>See More</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </a>
         </div>
 
         {{-- <div class="text-center">
@@ -196,146 +147,94 @@
     <!-- VIDEO STORIES  -->
     <div class="slider-container my-10">
         <div class="text-center pb-5">
-            <h2 class="text-4xl font-bold mb-3">Video Stories</h2>
+            <h2 class="text-3xl font-bold mb-3 uppercase">Video Stories</h2>
         </div>
         <div class="owl-carousel owl-theme">
-            <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="item border-2">
-                <iframe width="430" height="315" src="https://www.youtube.com/embed/NcSX5oAlKDQ?si=7HnALdmUUwlV2j1Q"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            @foreach ($videos as $video)
+                <div class="item border-2">
+                    @php
+                        $videoUrl = $video->video;
+                        // Initialize embedUrl as null
+                        $embedUrl = null;
+
+                        // Check if it's a standard YouTube URL (e.g., https://www.youtube.com/watch?v=video_id)
+                        if (strpos($videoUrl, 'youtube.com/watch?v=') !== false) {
+                            $videoId = substr($videoUrl, strpos($videoUrl, 'v=') + 2, 11);
+                            $embedUrl = "https://www.youtube.com/embed/$videoId";
+                        }
+                        // Check if it's a shortened YouTube URL (e.g., https://youtu.be/video_id)
+                        elseif (strpos($videoUrl, 'youtu.be/') !== false) {
+                            $videoId = substr($videoUrl, strrpos($videoUrl, '/') + 1);
+                            $embedUrl = "https://www.youtube.com/embed/$videoId";
+                        }
+                    @endphp
+
+                    @if ($embedUrl)
+                        <iframe width="350" height="300" src="{{ $embedUrl }}" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    @else
+                        <p>Invalid video URL</p>
+                    @endif
+                </div>
+            @endforeach
+
+
         </div>
         <div class="flex justify-center">
-            <button
-                class="flex items-center mt-8 px-6 py-3 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
-                <span>See More</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
+            <a href="{{ route('frontend.video_story.index') }}">
+                <button
+                    class="flex items-center mt-8 px-6 py-3 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
+                    <span>See More</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </a>
         </div>
     </div>
 
 
     <!-- BLOGS  -->
     <div class="container mx-auto px-4 py-10">
-        <h1 class="text-4xl font-bold text-center mb-8">Our Blogs</h1>
+        <h1 class="text-3xl font-bold text-center uppercase mb-8">Our Blogs</h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (1).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
-                    <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
-                        success lies in a well-crafted</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More...</a>
-                </div>
-            </div>
 
-            <!-- Card 2 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (2).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
-                    <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
-                        through
-                        tech-driven solutions</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More...</a>
+            @foreach ($blogs->take(6) as $blog)
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="{{ asset('images/blogs/blogs (1).jpg') }}" alt="Blog Image"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800">{{$blog->title}}</h3>
+                        <p class="text-gray-600 mt-2">{{ \Illuminate\Support\Str::limit($blog->description, 163) }}</p>
+                        <a href="{{ route('frontend.blog.index') }}"
+                            class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
+                            More...</a>
+                    </div>
                 </div>
-            </div>
+            @endforeach
 
-            <!-- Card 3 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (3).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
-                    <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
-                        restaurant management processes</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More...</a>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (4).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Keys to Success in the Restaurant Business</h3>
-                    <p class="text-gray-600 mt-2">At Netigian IT, we understand that every project is unique, and its
-                        success lies in a well-crafted</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More...</a>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (5).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Improving Customer Satisfaction</h3>
-                    <p class="text-gray-600 mt-2">Explore the best strategies for improving customer experiences
-                        through
-                        tech-driven solutions</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More...</a>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="{{ asset('images/blogs/blogs (6).jpg') }}" alt="Blog Image" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Modern Restaurant Management Tools</h3>
-                    <p class="text-gray-600 mt-2">Discover cutting-edge tools and technologies that can transform your
-                        restaurant management processes</p>
-                    <a href="#"
-                        class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                        More...</a>
-                </div>
-            </div>
         </div>
         <div class="flex justify-center">
-            <button
-                class="flex items-center mt-8 px-6 py-3 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
-                <span>See More</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
+            <a href="{{ route('frontend.blog.index') }}">
+                <button
+                    class="flex items-center mt-8 px-6 py-3 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-600 transition duration-300 ease-in-out">
+                    <span>See More</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </a>
         </div>
     </div>
 
     <!-- ALICE AREA  -->
     <div class="slider-container my-10">
         <div class="text-center pb-5">
-            <h2 class="text-3xl font-bold">Our Allies</h2>
+            <h2 class="text-3xl font-bold uppercase">Our Allies</h2>
         </div>
         <div class="owl-carousel owl-theme">
             @foreach ($allies as $ally)

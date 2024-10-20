@@ -40,7 +40,7 @@
                 <a href="{{ route('frontend.pages.brand-franchise-proposal.create') }}"
                     class="font-bold text-gray-600 hover:text-gray-900">Brand Franchise
                     Proposal</a>
-                <a href="{{route('frontend.pages.blog.index')}}" class="font-bold text-gray-600 hover:text-gray-900">News & Media</a>
+                <a href="{{route('frontend.blog.index')}}" class="font-bold text-gray-600 hover:text-gray-900">News & Media</a>
                 <a href="#" class="font-bold text-gray-600 hover:text-gray-900">Our Impacts</a>
                 <a href="{{route('frontend.pages.team')}}" class="font-bold text-gray-600 hover:text-gray-900">Team</a>
             </div>
@@ -95,7 +95,7 @@
             <a href="{{ route('frontend.pages.brand-franchise-proposal.create') }}"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Brand Franchise
                 Proposal</a>
-            <a href="{{route('frontend.pages.blog.index')}}"
+            <a href="{{route('frontend.blog.index')}}"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">News &
                 Media</a>
             <a href="#"
