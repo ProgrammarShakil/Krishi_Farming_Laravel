@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AlliesController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\JobCircularController;
@@ -195,6 +196,15 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/portfolios/{id}/edit', [PortfolioController::class, 'edit'])->name('admin.portfolios.edit');
     Route::put('admin/portfolios/{id}', [PortfolioController::class, 'update'])->name('admin.portfolios.update');
     Route::delete('admin/portfolios/{id}', [PortfolioController::class, 'destroy'])->name('admin.portfolios.destroy');
+
+
+    // Allies Management
+    Route::get('admin/allies', [AlliesController::class, 'index'])->name('admin.allies.index');
+    Route::get('admin/allies/create', [AlliesController::class, 'create'])->name('admin.allies.create');
+    Route::post('admin/allies', [AlliesController::class, 'store'])->name('admin.allies.store');
+    Route::get('admin/allies/{id}/edit', [AlliesController::class, 'edit'])->name('admin.allies.edit');
+    Route::put('admin/allies/{id}', [AlliesController::class, 'update'])->name('admin.allies.update');
+    Route::delete('admin/allies/{id}', [AlliesController::class, 'destroy'])->name('admin.allies.destroy');
 
 
     // Change Segment

@@ -338,18 +338,12 @@
             <h2 class="text-3xl font-bold">Our Allies</h2>
         </div>
         <div class="owl-carousel owl-theme">
-            <div class="item border-2">
-                <img src="{{ asset('images/alice/alience2.jpg') }}" alt="Image 1">
-            </div>
-            <div class="item border-2">
-                <img src="{{ asset('images/alice/bti.jpg') }}" alt="Image 2">
-            </div>
-            <div class="item border-2">
-                <img src="{{ asset('images/alice/michigin.jpg') }}" alt="Image 3">
-            </div>
-            <div class="item border-2">
-                <img src="{{ asset('images/alice/michigin.jpg') }}" alt="Image 4">
-            </div>
+            @foreach ($allies as $ally)
+                <div class="item border-2">
+                    <img src="{{ asset('storage/' . $ally->allies_image) }}" alt="{{ $ally->allies_title }}">
+                </div>
+            @endforeach
         </div>
     </div>
+
 @endsection

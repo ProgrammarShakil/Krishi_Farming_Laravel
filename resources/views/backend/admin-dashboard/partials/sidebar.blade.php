@@ -209,8 +209,8 @@
         </a>
         <div id="ManageAllies" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('admin.pages.index') }}">All Allies</a>
-                <a class="collapse-item" href="{{ route('admin.pages.index') }}">Change Allies Image</a>
+                <a class="collapse-item" href="{{ route('admin.allies.index') }}">All Allies</a>
+                <a class="collapse-item" href="{{ route('admin.allies.create') }}">Create Allies Image</a>
             </div>
         </div>
     </li>
