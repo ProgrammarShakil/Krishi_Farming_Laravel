@@ -9,7 +9,7 @@ class FrontendVideoStoryController extends Controller
 {
     public function index()
     {
-        $vidoes = VideoStory::orderBy('created_at', 'desc')->get();
-        return view('frontend.pages.video-story.index', compact('vidoes'));
+        $videos = VideoStory::orderBy('created_at', 'desc')->get();
+        return view('frontend.pages.video-story.index', compact('videos'));
     }
 }

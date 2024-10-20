@@ -119,7 +119,7 @@
                         class="object-cover w-full h-full rounded-lg shadow-lg">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
-                        <a href="{{ route('frontend.photo_gallery.index') }}" class="text-white text-lg font-semibold">{{ $gallery->title }}</a>
+                        <a href="{{ route('frontend.photo_gallery.index') }}" class="text-white text-lg font-semibold px-4">{{ $gallery->title }}</a>
                     </div>
                 </div>
             @endforeach
@@ -136,11 +136,6 @@
                 </button>
             </a>
         </div>
-
-        {{-- <div class="text-center">
-                <a href="#"
-                    class="inline-block mt-4 px-4 py-3 text-white bg-green-700 hover:bg-green-800 rounded-md">More Photos →</a>
-            </div> --}}
     </div>
 
 
@@ -151,7 +146,7 @@
         </div>
         <div class="owl-carousel owl-theme">
             @foreach ($videos as $video)
-                <div class="item border-2">
+                <div class="item">
                     @php
                         $videoUrl = $video->video;
                         // Initialize embedUrl as null
@@ -170,7 +165,7 @@
                     @endphp
 
                     @if ($embedUrl)
-                        <iframe width="350" height="300" src="{{ $embedUrl }}" title="YouTube video player"
+                        <iframe class="rounded-lg" width="350" height="300" src="{{ $embedUrl }}" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

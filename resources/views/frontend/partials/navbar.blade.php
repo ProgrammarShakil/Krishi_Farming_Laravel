@@ -41,7 +41,7 @@
                     class="font-bold text-gray-600 hover:text-gray-900">Brand Franchise
                     Proposal</a>
                 <a href="{{route('frontend.blog.index')}}" class="font-bold text-gray-600 hover:text-gray-900">News & Media</a>
-                <a href="#" class="font-bold text-gray-600 hover:text-gray-900">Our Impacts</a>
+                <a href="{{route('admin.busines.proposal.index')}}" class="font-bold text-gray-600 hover:text-gray-900">Our Impacts</a>
                 <a href="{{route('frontend.pages.team')}}" class="font-bold text-gray-600 hover:text-gray-900">Team</a>
             </div>
 
@@ -83,9 +83,9 @@
                 <div id="mobileDropdownContent" class="hidden px-3 py-2 bg-gray-50 rounded-md">
                     <a href="{{ route('frontend.pages.intern-applications.create') }}" class="block px-4 py-2 hover:bg-gray-200">Intern
                         Application</a>
-                    <a href="#"
+                    <a href="{{route('frontend.pages.job.circular.index')}}"
                         class="block px-4 py-2 hover:bg-gray-200">job Application</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Investment Proposal</a>
+                    <a href="{{route('frontend.pages.investment.proposal.index')}}" class="block px-4 py-2 hover:bg-gray-200">Investment Proposal</a>
                     <a href="{{ route('frontend.pages.business-proposal.create') }}" class="block px-4 py-2 hover:bg-gray-200">Business
                         Proposal</a>
                 </div>
@@ -98,7 +98,7 @@
             <a href="{{route('frontend.blog.index')}}"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">News &
                 Media</a>
-            <a href="#"
+            <a href="{{route('admin.busines.proposal.index')}}"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Our
                 Impacts</a>
             <a href="{{route('frontend.pages.team')}}"
