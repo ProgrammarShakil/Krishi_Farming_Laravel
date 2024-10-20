@@ -67,7 +67,7 @@
         $(document).ready(function() {
             $('.table').DataTable({
                 "order": [
-                    [1, "asc"]
+                    [0, "asc"]
                 ],
                 "responsive": true,
                 "scrollX": true,

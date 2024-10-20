@@ -11,7 +11,7 @@ class AlliesController extends Controller
     // Display a listing of the allies
     public function index()
     {
-        $allies = Allies::all();
+        $allies = Allies::orderBy('created_at', 'desc')->get();
         return view('backend.admin-dashboard.pages.allies.index', compact('allies'));
     }
 
