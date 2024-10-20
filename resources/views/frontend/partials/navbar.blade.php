@@ -8,7 +8,7 @@
             </div>
 
             <!-- DESKTOP MENU -->
-            <div class="relative hidden md:block">
+            <div class="relative hidden xl:block">
                 <button id="dropdownButton" class="text-gray-600 hover:text-gray-900 focus:outline-none">
                     <span class="font-bold">Opportunities</span>
                     <svg class="w-5 h-5 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -35,7 +35,7 @@
             </div>
 
             <!-- Menu Links for Desktop -->
-            <div class="hidden md:flex space-x-6">
+            <div class="hidden xl:flex space-x-6">
                 <a href="{{route('frontend.pages.business-proposal.create')}}" class="font-bold text-gray-600 hover:text-gray-900">EDP</a>
                 <a href="{{ route('frontend.pages.brand-franchise-proposal.create') }}"
                     class="font-bold text-gray-600 hover:text-gray-900">Brand Franchise
@@ -46,7 +46,7 @@
             </div>
 
             <!-- CTA Buttons for Desktop -->
-            <div class="hidden md:flex space-x-4">
+            <div class="hidden xl:flex space-x-4">
                 <a href="{{route('frontend.contact.form')}}" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Contact</a>
                 <a href="{{route('frontend.pages.show', ['slug' => 'about-us'])}}"
                     class="bg-white border border-red-500 text-red-500 px-4 py-2 rounded hover:bg-red-500 hover:text-white">About
@@ -54,7 +54,7 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <div class="md:hidden">
+            <div class="xl:hidden">
                 <button id="mobileMenuButton" class="focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +67,7 @@
     </div>
 
     <!-- MOBILE MENU -->
-    <div id="mobileMenu" class="hidden md:hidden">
+    <div id="mobileMenu" class="hidden xl:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <!-- Mobile Dropdown -->
             <div class="relative">
