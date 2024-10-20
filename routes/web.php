@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AlliesController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\InternController;
 use App\Http\Controllers\Admin\JobCircularController;
@@ -11,16 +12,21 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\InvestmentProposalController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\PhotoGalleryController;
 use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\SegmentController;
+use App\Http\Controllers\Admin\VideoStoryController;
 use App\Http\Controllers\JobApplicantController;
 use App\Http\Controllers\InvestApplicantController;
 use App\Http\Controllers\InternApplicationController;
 use App\Http\Controllers\BusinessProposalController;
 use App\Http\Controllers\BrandFranchiseProposalController;
 use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\FrontendBlogController;
 use App\Http\Controllers\FrontendPageController;
+use App\Http\Controllers\FrontendPhotoGalleryController;
 use App\Http\Controllers\FrontendTeamController;
+use App\Http\Controllers\FrontendVideoStoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -70,8 +76,14 @@ Route::get('investment-application/form/{id}', [InvestApplicantController::class
 Route::post('investment-application/apply', [InvestApplicantController::class, 'store'])->name('frontend.pages.investment.applicants.store');
 
 
-// Manage Blog 
-Route::get('/blogs', [PageController::class, 'blog_index'])->name('frontend.pages.blog.index');
+// Blog Page
+Route::get('/blogs', [FrontendBlogController::class, 'index'])->name('frontend.blog.index');
+
+// Video Story
+Route::get('/video_story', [FrontendVideoStoryController::class, 'index'])->name('frontend.video_story.index');
+
+// Photo Gallery 
+Route::get('/photo_gallery', [FrontendPhotoGalleryController::class, 'index'])->name('frontend.photo_gallery.index');
 
 
 // Pages Show
@@ -205,6 +217,36 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/allies/{id}/edit', [AlliesController::class, 'edit'])->name('admin.allies.edit');
     Route::put('admin/allies/{id}', [AlliesController::class, 'update'])->name('admin.allies.update');
     Route::delete('admin/allies/{id}', [AlliesController::class, 'destroy'])->name('admin.allies.destroy');
+
+    
+    // Manage Blog 
+    Route::get('admin/blogs', [BlogController::class, 'index'])->name('admin.blogs.index');
+    Route::get('admin/blogs/create', [BlogController::class, 'create'])->name('admin.blogs.create');
+    Route::post('admin/blogs', [BlogController::class, 'store'])->name('admin.blogs.store');
+    Route::get('admin/blogs/{slug}', [BlogController::class, 'show'])->name('admin.blogs.show');
+    Route::get('admin/blogs/{slug}/edit', [BlogController::class, 'edit'])->name('admin.blogs.edit');
+    Route::put('admin/blogs/{slug}', [BlogController::class, 'update'])->name('admin.blogs.update');
+    Route::delete('admin/blogs/{slug}', [BlogController::class, 'destroy'])->name('admin.blogs.destroy');
+
+    
+    // Manage Photo Gallery
+    Route::get('admin/photo_gallery', [PhotoGalleryController::class, 'index'])->name('admin.photo_gallery.index');
+    Route::get('admin/photo_gallery/create', [PhotoGalleryController::class, 'create'])->name('admin.photo_gallery.create');
+    Route::post('admin/photo_gallery', [PhotoGalleryController::class, 'store'])->name('admin.photo_gallery.store');
+    Route::get('admin/photo_gallery/{slug}', [PhotoGalleryController::class, 'show'])->name('admin.photo_gallery.show');
+    Route::get('admin/photo_gallery/{slug}/edit', [PhotoGalleryController::class, 'edit'])->name('admin.photo_gallery.edit');
+    Route::put('admin/photo_gallery/{slug}', [PhotoGalleryController::class, 'update'])->name('admin.photo_gallery.update');
+    Route::delete('admin/photo_gallery/{slug}', [PhotoGalleryController::class, 'destroy'])->name('admin.photo_gallery.destroy');
+
+    
+    // Manage Video Story 
+    Route::get('admin/video_story', [VideoStoryController::class, 'index'])->name('admin.video_story.index');
+    Route::get('admin/video_story/create', [VideoStoryController::class, 'create'])->name('admin.video_story.create');
+    Route::post('admin/video_story', [VideoStoryController::class, 'store'])->name('admin.video_story.store');
+    Route::get('admin/video_story/{slug}', [VideoStoryController::class, 'show'])->name('admin.video_story.show');
+    Route::get('admin/video_story/{slug}/edit', [VideoStoryController::class, 'edit'])->name('admin.video_story.edit');
+    Route::put('admin/video_story/{slug}', [VideoStoryController::class, 'update'])->name('admin.video_story.update');
+    Route::delete('admin/video_story/{slug}', [VideoStoryController::class, 'destroy'])->name('admin.video_story.destroy');
 
 
     // Change Segment

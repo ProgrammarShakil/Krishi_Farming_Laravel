@@ -112,8 +112,8 @@
         </a>
         <div id="Blogs" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="login.html">Create Blog</a>
-                <a class="collapse-item" href="login.html">Blog List</a>
+                <a class="collapse-item" href="{{ route('admin.blogs.create') }}">Create Blog</a>
+                <a class="collapse-item" href="{{ route('admin.blogs.index') }}">Blog List</a>
             </div>
         </div>
     </li>
@@ -134,14 +134,14 @@
 
     <!-- Photo Gallery -->
     <li class="nav-item">
-        <a class="nav-link {{ request()->routeIs('admin.photos.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#PhotoGallery" aria-expanded="true" aria-controls="PhotoGallery">
-            <i class="fas fa-fw fa-image {{ request()->routeIs('admin.teams.*') ? 'text-white' : 'text-gray-400' }}"></i>
+        <a class="nav-link {{ request()->routeIs('admin.photo_gallery.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#PhotoGallery" aria-expanded="true" aria-controls="PhotoGallery">
+            <i class="fas fa-fw fa-image {{ request()->routeIs('admin.photo_gallery.*') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Photo Gallery</span>
         </a>
         <div id="PhotoGallery" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('admin.teams.create') }}">Create Photo</a>
-                <a class="collapse-item" href="{{ route('admin.teams.list') }}">Photo List</a>
+                <a class="collapse-item" href="{{ route('admin.photo_gallery.create') }}">Add Photo</a>
+                <a class="collapse-item" href="{{ route('admin.photo_gallery.index') }}">Photo List</a>
             </div>
         </div>
     </li>
@@ -189,14 +189,14 @@
 
     <!-- Manage Video Story -->
     <li class="nav-item">
-        <a class="nav-link {{ request()->routeIs('admin.videos.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#ManageVideoStory" aria-expanded="true" aria-controls="ManageVideoStory">
-            <i class="fas fa-fw fa-video {{ request()->routeIs('admin.videos.*') ? 'text-white' : 'text-gray-400' }}"></i>
+        <a class="nav-link {{ request()->routeIs('admin.video_story.*') ? 'bg-blue-600 text-white' : 'text-gray-400 hover:bg-blue-500 hover:text-white' }}" href="#" data-toggle="collapse" data-target="#ManageVideoStory" aria-expanded="true" aria-controls="ManageVideoStory">
+            <i class="fas fa-fw fa-video {{ request()->routeIs('admin.video_story.*') ? 'text-white' : 'text-gray-400' }}"></i>
             <span>Manage Video Story</span>
         </a>
         <div id="ManageVideoStory" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('admin.pages.index') }}">All Videos</a>
-                <a class="collapse-item" href="{{ route('admin.pages.index') }}">Change Video</a>
+                <a class="collapse-item" href="{{ route('admin.video_story.index') }}">All Video Story</a>
+                <a class="collapse-item" href="{{ route('admin.video_story.create') }}">Create Video Story</a>
             </div>
         </div>
     </li>
