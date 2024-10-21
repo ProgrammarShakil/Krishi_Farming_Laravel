@@ -6,29 +6,28 @@
 
     <!-- HERO AREA  -->
     <div id="particles-js" class="pb-20"></div>
-    <div class="pt-20 relative flex flex-col items-center justify-center md:h-screen text-center text-white overflow-hidden">
+    <div class="pt-20 md:pt-5 relative flex flex-col items-center justify-center md:h-screen text-center text-white overflow-hidden">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 justify-items-center">
                 <!-- Column 1 -->
                 <div class="pt-2 md:p-4">
                     <!-- Left Section -->
                     <div class=" text-center  md:p-8">
-                        <div class="typing-container">
-                            <div class="text-lg md:text-5xl font-bold text-white text-left">Harvest Fresh Crops:
+                        <div class="text-2xl md:text-5xl pt-2 md:pt-5 pb-0 font-bold text-white text-left">Harvest Fresh Crops:
+                            Sustainable Farming
 
-                                <div class="text-left">Sustainable <p
-                                        class="typing-text px-2 font-bold text-lg md:text-5xl text-white"></p>
-                                </div>
+                            <div class="text-left">
+                                {{-- <div>Sustainable</div> --}}
+                                {{-- <p class="typing-text px-2 font-bold text-lg md:text-5xl text-white"></p> --}}
                             </div>
-
                         </div>
-                        <div class="text-left pt-1 md:pt-5 text-sm md:text-xl mt-3 text-white">
+                        <div class="text-left pt-1 mt-2 md:mt-5 text-sm md:text-xl text-white">
                             We value the user experience prior to offering our service. This moment presents to
                             collaborate with us and elevate your brand to new heights. Let's seize this opportunity
                             and
                             propel your business forward together
                         </div>
-                        <div class="md:mt-10 mt-3 text-left">
+                        <div class="md:mt-10 mt-4  text-left">
                             <button
                                 class="bg-green-600 hover:bg-red-600 text-white font-semibold py-1 px-2 md:py-2 md:px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
                                 Contact Us
@@ -154,11 +153,11 @@
                         $embedUrl = null;
 
                         // Check if it's a standard YouTube URL (e.g., https://www.youtube.com/watch?v=video_id)
-                        if (strpos($videoUrl, 'youtube.com/watch?v=') !== false) {
-                            $videoId = substr($videoUrl, strpos($videoUrl, 'v=') + 2, 11);
-                            $embedUrl = "https://www.youtube.com/embed/$videoId";
-                        }
-                        // Check if it's a shortened YouTube URL (e.g., https://youtu.be/video_id)
+if (strpos($videoUrl, 'youtube.com/watch?v=') !== false) {
+    $videoId = substr($videoUrl, strpos($videoUrl, 'v=') + 2, 11);
+    $embedUrl = "https://www.youtube.com/embed/$videoId";
+}
+// Check if it's a shortened YouTube URL (e.g., https://youtu.be/video_id)
                         elseif (strpos($videoUrl, 'youtu.be/') !== false) {
                             $videoId = substr($videoUrl, strrpos($videoUrl, '/') + 1);
                             $embedUrl = "https://www.youtube.com/embed/$videoId";
@@ -200,8 +199,7 @@
 
             @foreach ($blogs->take(6) as $blog)
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image"
-                        class="w-full h-48 object-cover">
+                    <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-gray-800">{{ $blog->title }}</h3>
                         <p class="text-gray-600 mt-2">{{ \Illuminate\Support\Str::limit($blog->description, 163) }}</p>

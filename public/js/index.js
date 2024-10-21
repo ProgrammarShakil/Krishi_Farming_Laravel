@@ -24,34 +24,34 @@ dropdownButton.addEventListener('click', () => {
 });
 
 // TYPING ANIMATION JS 
-const textElement = document.querySelector('.typing-text');
-const names = ["Farming", "Solution"];
-let nameIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+// const textElement = document.querySelector('.typing-text');
+// const names = ["Farming", "Solution"];
+// let nameIndex = 0;
+// let charIndex = 0;
+// let isDeleting = false;
 
-function type() {
-    const currentName = names[nameIndex];
+// function type() {
+//     const currentName = names[nameIndex];
 
-    if (isDeleting) {
-        charIndex--;
-    } else {
-        charIndex++;
-    }
+//     if (isDeleting) {
+//         charIndex--;
+//     } else {
+//         charIndex++;
+//     }
 
-    textElement.textContent = currentName.slice(0, charIndex);
+//     textElement.textContent = currentName.slice(0, charIndex);
 
-    if (!isDeleting && charIndex === currentName.length) {
-        setTimeout(() => (isDeleting = true), 1000);
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        nameIndex = (nameIndex + 1) % names.length; // Loop between names
-    }
+//     if (!isDeleting && charIndex === currentName.length) {
+//         setTimeout(() => (isDeleting = true), 1000);
+//     } else if (isDeleting && charIndex === 0) {
+//         isDeleting = false;
+//         nameIndex = (nameIndex + 1) % names.length; // Loop between names
+//     }
 
-    setTimeout(type, isDeleting ? 5000 : 150);
-}
+//     setTimeout(type, isDeleting ? 5000 : 150);
+// }
 
-type();
+// type();
 
 // PORTFOLIO MODAL CONTROL
 

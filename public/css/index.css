@@ -196,11 +196,11 @@
     color: #333;
 } */
 
-.typing-text {
-    display: inline-block;
-}
+/* .typing-text {
+    display: inline;
+} */
 
-@keyframes blink {
+/* @keyframes blink {
     50% {
         border-color: transparent;
     }
@@ -208,7 +208,7 @@
 
 .typing-container {
     animation: blink 0.75s step-end infinite alternate;
-}
+} */
 
 /* CUSTOM CSS  */
 .ml-90 {
