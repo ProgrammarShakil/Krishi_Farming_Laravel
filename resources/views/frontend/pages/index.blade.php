@@ -119,7 +119,8 @@
                         class="object-cover w-full h-full rounded-lg shadow-lg">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:rounded-lg transition-opacity duration-300">
-                        <a href="{{ route('frontend.photo_gallery.index') }}" class="text-white text-lg font-semibold px-4">{{ $gallery->title }}</a>
+                        <a href="{{ route('frontend.photo_gallery.index') }}"
+                            class="text-white text-lg font-semibold px-4">{{ $gallery->title }}</a>
                     </div>
                 </div>
             @endforeach
@@ -141,7 +142,7 @@
 
     <!-- VIDEO STORIES  -->
     <div class="slider-container my-10">
-        <div class="text-center pb-5">
+        <div class="text-center py-5">
             <h2 class="text-3xl font-bold mb-3 uppercase">Video Stories</h2>
         </div>
         <div class="owl-carousel owl-theme">
@@ -165,8 +166,8 @@
                     @endphp
 
                     @if ($embedUrl)
-                        <iframe class="rounded-lg" width="350" height="300" src="{{ $embedUrl }}" title="YouTube video player"
-                            frameborder="0"
+                        <iframe class="rounded-lg" width="350" height="300" src="{{ $embedUrl }}"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     @else
@@ -199,14 +200,14 @@
 
             @foreach ($blogs->take(6) as $blog)
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="{{ asset('images/blogs/blogs (1).jpg') }}" alt="Blog Image"
+                    <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-800">{{$blog->title}}</h3>
+                        <h3 class="text-lg font-semibold text-gray-800">{{ $blog->title }}</h3>
                         <p class="text-gray-600 mt-2">{{ \Illuminate\Support\Str::limit($blog->description, 163) }}</p>
-                        <a href="{{ route('frontend.blog.index') }}"
+                        <a href="{{ route('frontend.blog.details', ['id' => $blog->id]) }}"
                             class="inline-block mt-4 px-4 py-2 text-white bg-teal-600 hover:bg-teal-700 rounded-lg">Read
-                            More...</a>
+                            More</a>
                     </div>
                 </div>
             @endforeach

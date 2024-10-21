@@ -12,4 +12,10 @@ class FrontendBlogController extends Controller
         $blogs = Blog::orderBy('created_at', 'desc')->get();
         return view('frontend.pages.blog.index', compact('blogs'));
     }
+
+    public function details($id) {
+        $details = Blog::where('id', $id)->firstOrFail();
+        return view('frontend.pages.blog.details', compact('details'));
+    }
+    
 }

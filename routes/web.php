@@ -78,6 +78,7 @@ Route::post('investment-application/apply', [InvestApplicantController::class, '
 
 // Blog Page
 Route::get('/blogs', [FrontendBlogController::class, 'index'])->name('frontend.blog.index');
+Route::get('/blogs/{id}', [FrontendBlogController::class, 'details'])->name('frontend.blog.details');
 
 // Video Story
 Route::get('/video_story', [FrontendVideoStoryController::class, 'index'])->name('frontend.video_story.index');
