@@ -17,7 +17,7 @@
                             <div class="text-lg md:text-5xl font-bold text-white text-left">Harvest Fresh Crops:
 
                                 <div class="text-left">Sustainable <p
-                                        class="typing-text font-bold text-lg md:text-5xl text-white"></p>
+                                        class="typing-text px-2 font-bold text-lg md:text-5xl text-white"></p>
                                 </div>
                             </div>
 

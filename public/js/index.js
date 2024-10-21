@@ -48,7 +48,7 @@ function type() {
         nameIndex = (nameIndex + 1) % names.length; // Loop between names
     }
 
-    setTimeout(type, isDeleting ? 100 : 150);
+    setTimeout(type, isDeleting ? 5000 : 150);
 }
 
 type();
