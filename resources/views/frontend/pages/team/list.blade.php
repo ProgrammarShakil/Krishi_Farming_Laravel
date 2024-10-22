@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Meet Our Team')
+@section('title', 'Our Team')
 
 @section('content')
     <div class="main-bg-color pt-10 pb-10 md:pb-24">

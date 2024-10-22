@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Business Proposal')
+@section('title', 'Photo Gallery')
 
 @section('content')
     <div class="main-bg-color py-10 px-5">

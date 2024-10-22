@@ -1,6 +1,6 @@
 @extends('backend.admin-dashboard.layouts.master')
 
-@section('title', 'Dashboard')
+@section('title', 'Intern Application')
 
 @section('content')
 

@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Intern Apply')
+@section('title', 'Job Apply')
 
 @section('content')
     <div class="py-10 px-5">

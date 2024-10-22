@@ -6,26 +6,24 @@
 
     <!-- HERO AREA  -->
     <div id="particles-js" class="pb-20"></div>
-    <div class="pt-24 md:pt-5 relative flex flex-col items-center justify-center md:h-screen text-center text-white overflow-hidden">
+    <div
+        class="pt-24 md:pt-5 relative flex flex-col items-center justify-center md:h-screen text-center text-white overflow-hidden">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 justify-items-center">
                 <!-- Column 1 -->
                 <div class="pt-2 md:p-4">
                     <!-- Left Section -->
                     <div class=" text-center  md:p-8">
-                        <div class="text-2xl md:text-5xl pt-2 md:pt-5 pb-0 font-bold text-white text-left">Harvest Fresh Crops:
-                            Sustainable Farming
-
-                            <div class="text-left">
-                                {{-- <div>Sustainable</div> --}}
-                                {{-- <p class="typing-text px-2 font-bold text-lg md:text-5xl text-white"></p> --}}
+                        <div class="typing-container text-2xl md:text-4xl pt-2 md:pt-5 pb-0 font-bold text-white text-left">
+                            <div><div>BDKrishi Offers:</div>
+                                <sup class="text-lg">"</sup><p class="typing-text font-bold text-lg md:text-4xl text-white"></p><sup  class="text-lg">"</sup>
                             </div>
+
                         </div>
                         <div class="text-left py-2 md:pt-1 mt-2 md:mt-5 text-sm md:text-xl text-white">
-                            We value the user experience prior to offering our service. This moment presents to
-                            collaborate with us and elevate your brand to new heights. Let's seize this opportunity
-                            and
-                            propel your business forward together
+                            BDKrishi prioritizes the user experience before delivering our quality products and services.
+                            Now is the perfect time to collaborate with us. Let’s seize this opportunity and drive your
+                            business forward together for the <b>SMART</b> Development of Agriculture!
                         </div>
                         <div class="my-10 md:mt-10 mt-4 text-left">
                             <button
@@ -34,6 +32,25 @@
                             </button>
                         </div>
                     </div>
+
+                    {{-- <div class=" text-center p-8">
+                        <div class="typing-container">
+                            <span class="text-3xl md:text-5xl font-bold text-white">Make Your Business</span>
+                            <p class="typing-text font-bold md:text-5xl text-3xl text-white"></p>
+                        </div>
+                        <div class="text-left pt-5 text-xl mt-3 text-white">
+                            We value the user experience prior to offering our service. This moment presents to
+                            collaborate with us and elevate your brand to new heights. Let's seize this opportunity
+                            and
+                            propel your business forward together
+                        </div>
+                        <div class="mt-10 text-left">
+                            <button
+                                class="bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
+                                Contact Us
+                            </button>
+                        </div>
+                    </div> --}}
                 </div>
                 <!-- Column 2 -->
                 <div class="md:p-4">

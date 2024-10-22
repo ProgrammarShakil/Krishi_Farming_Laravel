@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Our Video Stories')
+@section('title', 'Video Stories')
 
 @section('content')
     <div class="main-bg-color p-5">

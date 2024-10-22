@@ -5,7 +5,7 @@
         <div>
             <img src="{{ asset('images/logo.png') }}" alt="Farming Future Bangladesh"
                 class="mb-3 mx-auto w-24 w-32 lg:w-96">
-            <p class="uppercase tracking-wide">Evidence • Engage • Empower</p>
+            <p class="tracking-wide">Lighthouse of Agriculture</p>
         </div>
 
         <!-- About Us section -->

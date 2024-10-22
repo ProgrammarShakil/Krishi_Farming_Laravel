@@ -1,7 +1,7 @@
 @extends('backend.admin-dashboard.layouts.master')
 
 @section('title', 'Dashboard')
-
+ 
 @section('content')
     <div class="container-fluid">
         <!-- Page Heading -->
@@ -90,7 +90,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Team Members</h6>
                     </div>
                     <div class="card-body">
-                        {{-- <a href="{{route('admin.teams.list')}}">{{count($teams)}}</a> --}} 0
+                        <a href="{{route('admin.teams.list')}}">{{count($team_members)}}</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +114,19 @@
                         <h6 class="m-0 font-weight-bold text-primary">Portfolios</h6>
                     </div>
                     <div class="card-body">
-                        {{-- <a href="{{route('admin.portfolios.index')}}">{{count($portfolios)}}</a> --}} 0
+                        <a href="{{route('admin.portfolios.index')}}">{{count($portfolios)}}</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blogs -->
+            <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Blogs</h6>
+                    </div>
+                    <div class="card-body">
+                        <a href="{{route('admin.blogs.index')}}">{{count($blogs)}}</a>
                     </div>
                 </div>
             </div>
