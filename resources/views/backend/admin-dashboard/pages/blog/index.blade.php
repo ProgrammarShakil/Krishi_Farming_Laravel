@@ -27,7 +27,7 @@
                                         <tr>
                                             <th>SL No</th>
                                             <th>Title</th>
-                                            <th>Description</th>
+                                            {{-- <th>Description</th> --}}
                                             <th>Image</th>
                                             <th>Action</th>
                                         </tr>
@@ -39,9 +39,9 @@
 
                                                 <!-- Display title -->
                                                 <td>{{ $blog->title }}</td>
-
+{{-- 
                                                 <!-- Display description -->
-                                                <td>{{ $blog->description }}</td>
+                                                <td>{{ $blog->content }}</td> --}}
 
                                                 <!-- Show image if available -->
                                                 <td>
@@ -57,6 +57,10 @@
 
                                                 <!-- Action buttons -->
                                                 <td class="d-flex justify-content-center">
+                                                    {{-- View Button  --}}
+                                                    <a href="{{ route('admin.blogs.show', $blog->id) }}"
+                                                        class="btn btn-warning btn-sm mx-1"><i class="fas fa-eye"></i></a>
+                                                        
                                                     {{-- Edit Button  --}}
                                                     <a href="{{ route('admin.blogs.edit', $blog->id) }}"
                                                         class="btn btn-warning btn-sm mx-1"><i class="fas fa-edit"></i></a>

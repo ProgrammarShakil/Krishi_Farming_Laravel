@@ -27,6 +27,9 @@
                     @endforeach
 
                 </div>
+                <div class="mt-8">
+                    {{ $blogs->links('pagination::tailwind') }}
+                </div>
             </div>
         </div>
     </div>

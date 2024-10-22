@@ -13,7 +13,7 @@
                     <h3 class="mb-4">Create Blog</h3>
                     <form action="{{ route('admin.blogs.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <!-- Ally Title -->
+                        <!-- Blog Title -->
                         <div class="mb-3">
                             <label for="title">Blog Title:</label>
                             <input type="text" class="form-control" id="title" name="title"
@@ -23,16 +23,19 @@
                             @enderror
                         </div>
 
-                        <!-- Ally Description -->
+                        <!-- Blog Description -->
                         <div class="mb-3">
-                            <label for="description">Blog Description:</label>
-                            <textarea class="form-control" id="description" name="description" rows="4" required>{{ old('description') }}</textarea>
-                            @error('description')
+                            <label for="content">Blog Description:</label>
+                            <div id="editor-container"></div>
+                        <input type="hidden" name="content" id="content-quill">
+                            @error('content')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
-                        <!-- Ally Image -->
+       
+
+                        <!-- Blog Image -->
                         <div class="mb-3">
                             <label for="image">Blog Image:</label>
                             <input type="file" class="form-control p-1" id="image" name="image" required>
@@ -48,9 +51,78 @@
         </div>
     </div>
 
-    <!-- Toastr Notifications -->
     <script>
+        // CUSTOMIZING QUILL EDITOR
         $(document).ready(function() {
+            var quill = new Quill("#editor-container", {
+                theme: "snow",
+                modules: {
+                    toolbar: [
+                        // Font options
+                        [{
+                            font: [],
+                        }, ],
+
+                        // Header options (h1 to h6)
+                        [{
+                            header: [1, 2, 3, 4, 5, 6, false],
+                        }, ],
+
+                        // Formatting options
+                        ["bold", "italic", "underline", "strike"], // Toggle buttons
+
+                        // Color and Background options
+                        [{
+                                color: [],
+                            },
+                            {
+                                background: [],
+                            },
+                        ],
+
+                        // Text alignment options
+                        [{
+                            align: [],
+                        }, ],
+
+                        // List and indent options
+                        [{
+                                list: "ordered",
+                            },
+                            {
+                                list: "bullet",
+                            },
+                        ],
+
+                        // Add link, image, video, and formula
+                        ["link", "image", "video"],
+
+                        // Remove formatting button
+                        ["clean"],
+                    ],
+                },
+            });
+
+            // Function to update hidden input with Quill content
+            function updateContent() {
+                var content = quill.root.innerHTML; // Get editor content
+                $('#content-quill').val(content); // Set hidden input value
+            }
+
+            // Update content on text change
+            quill.on('text-change', function() {
+                updateContent();
+            });
+
+            // Handle form submission
+            $('#page-form').on('submit', function(e) {
+                updateContent(); // Ensure hidden input has the latest content
+                // console.log('Title:', $('#title').val()); // Log the title value
+                // console.log('Content:', $('#content-quill').val()); // Log the content value
+            });
+
+
+
             @if (session('success'))
                 toastr.success('{{ session('success') }}', 'Success', {
                     closeButton: true,

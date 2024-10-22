@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <!-- Toastr Notifications -->
+
     <script>
         // CUSTOMIZING QUILL EDITOR
         $(document).ready(function() {

@@ -13,7 +13,7 @@
                     <h3 class="mb-4">Edit Blog</h3>
                     <form action="{{ route('admin.blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        @method('PUT') <!-- Use PUT method for updates -->
+                        @method('PUT') <!-- Specify the PUT method for updating -->
                         
                         <!-- Blog Title -->
                         <div class="mb-3">
@@ -27,9 +27,10 @@
 
                         <!-- Blog Description -->
                         <div class="mb-3">
-                            <label for="description">Blog Description:</label>
-                            <textarea class="form-control" id="description" name="description" rows="4" required>{{ old('description', $blog->description) }}</textarea>
-                            @error('description')
+                            <label for="content">Blog Description:</label>
+                            <div id="editor-container"></div>
+                            <input type="hidden" name="content" id="content-quill" value="{{ old('content', $blog->content) }}">
+                            @error('content')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
@@ -37,14 +38,15 @@
                         <!-- Blog Image -->
                         <div class="mb-3">
                             <label for="image">Blog Image:</label>
-                            <input type="file" class="form-control p-1" id="image" name="image">
-                            <small class="form-text text-muted">Leave blank to keep the current image.</small>
+                            <input type="file" class="form-control p-1 mb-3" id="image" name="image">
                             @error('image')
-                                <div class="text-danger">{{ $message }}</div>
+                            <div class="text-danger">{{ $message }}</div>
                             @enderror
+
+                            <small>Thumbnail Image:</small>
                             @if ($blog->image)
-                                <div class="mt-2">
-                                    <img src="{{ asset('storage/' . $blog->image) }}" alt="Current Image" style="max-width: 200px;">
+                                <div class="">
+                                    <img class="rounded" src="{{ asset('storage/' . $blog->image) }}" alt="Current Image" style="max-width: 200px;">
                                 </div>
                             @endif
                         </div>
@@ -56,14 +58,49 @@
         </div>
     </div>
 
-    <!-- Toastr Notifications -->
     <script>
+        // CUSTOMIZING QUILL EDITOR
         $(document).ready(function() {
+            var quill = new Quill("#editor-container", {
+                theme: "snow",
+                modules: {
+                    toolbar: [
+                        [ { font: [] }, ],
+                        [ { header: [1, 2, 3, 4, 5, 6, false] }, ],
+                        ["bold", "italic", "underline", "strike"],
+                        [ { color: [] }, { background: [] }, ],
+                        [ { align: [] }, ],
+                        [ { list: "ordered" }, { list: "bullet" }, ],
+                        ["link", "image", "video"],
+                        ["clean"],
+                    ],
+                },
+            });
+
+            // Set the content of Quill editor to the existing description
+            quill.root.innerHTML = $('#content-quill').val();
+
+            // Function to update hidden input with Quill content
+            function updateContent() {
+                var content = quill.root.innerHTML;
+                $('#content-quill').val(content);
+            }
+
+            // Update content on text change
+            quill.on('text-change', function() {
+                updateContent();
+            });
+
+            // Handle form submission
+            $('form').on('submit', function(e) {
+                updateContent(); // Ensure hidden input has the latest content
+            });
+
             @if (session('success'))
                 toastr.success('{{ session('success') }}', 'Success', {
                     closeButton: true,
                     progressBar: false,
-                    timeOut: 5000 // 5 seconds timeout
+                    timeOut: 5000
                 });
             @endif
 

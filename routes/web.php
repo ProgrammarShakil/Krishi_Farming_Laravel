@@ -224,10 +224,10 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/blogs', [BlogController::class, 'index'])->name('admin.blogs.index');
     Route::get('admin/blogs/create', [BlogController::class, 'create'])->name('admin.blogs.create');
     Route::post('admin/blogs', [BlogController::class, 'store'])->name('admin.blogs.store');
-    Route::get('admin/blogs/{slug}', [BlogController::class, 'show'])->name('admin.blogs.show');
-    Route::get('admin/blogs/{slug}/edit', [BlogController::class, 'edit'])->name('admin.blogs.edit');
-    Route::put('admin/blogs/{slug}', [BlogController::class, 'update'])->name('admin.blogs.update');
-    Route::delete('admin/blogs/{slug}', [BlogController::class, 'destroy'])->name('admin.blogs.destroy');
+    Route::get('admin/blogs/{id}', [BlogController::class, 'show'])->name('admin.blogs.show');
+    Route::get('admin/blogs/{id}/edit', [BlogController::class, 'edit'])->name('admin.blogs.edit');
+    Route::put('admin/blogs/{id}', [BlogController::class, 'update'])->name('admin.blogs.update');
+    Route::delete('admin/blogs/{id}', [BlogController::class, 'destroy'])->name('admin.blogs.destroy');
 
     
     // Manage Photo Gallery

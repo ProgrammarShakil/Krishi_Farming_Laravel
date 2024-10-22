@@ -28,7 +28,7 @@ class BlogController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'description' => 'nullable|string',
+            'content' => 'nullable|string',
         ]);
 
         $blog = new Blog();
@@ -39,7 +39,7 @@ class BlogController extends Controller
             $blog->image = $imagePath;
         }
 
-        $blog->description = $request->description;
+        $blog->content = $request->content;
 
         // Save the blog to the database
         $blog->save();
@@ -48,9 +48,9 @@ class BlogController extends Controller
     }
 
     // Display the specified blog.
-    public function show($slug)
+    public function show($id)
     {
-        $blog = Blog::where('slug', $slug)->firstOrFail();
+        $blog = Blog::where('id', $id)->firstOrFail();
         return view('backend.admin-dashboard.pages.blog.show', compact('blog'));
     }
 
@@ -69,7 +69,7 @@ class BlogController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'description' => 'nullable|string',
+            'content' => 'nullable|string',
         ]);
 
         $blog->title = $request->title;
@@ -83,8 +83,8 @@ class BlogController extends Controller
             $blog->image = $imagePath;
         }
 
-        // Update the blog description
-        $blog->description = $request->description;
+        // Update the blog content
+        $blog->content = $request->content;
 
         // Save the updated blog to the database
         $blog->save();
