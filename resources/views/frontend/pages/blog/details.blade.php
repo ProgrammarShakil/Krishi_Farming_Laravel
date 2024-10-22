@@ -3,7 +3,7 @@
 @section('title', 'Blogs Details')
 
 @section('content')
-    <div class="py-10 px-5">
+    <div class="py-5 px-5">
         <div class="md:max-w-1xl mt-20 mx-auto bg-white shadow-2xl rounded-lg p-8">
             <h1 class="text-3xl font-bold text-left">{{ $details->title }}</h1>
 
