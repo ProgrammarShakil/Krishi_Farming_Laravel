@@ -16,7 +16,7 @@
                     <div class=" text-center  md:p-8">
                         <div class="typing-container text-2xl md:text-4xl pt-2 md:pt-5 pb-0 font-bold text-white text-left">
                             <div><div>BDKrishi Offers:</div>
-                                <sup class="text-lg">"</sup><p class="typing-text font-bold text-lg md:text-4xl text-white"></p><sup  class="text-lg">"</sup>
+                                <sup class="text-lg">"</sup><p class="typing-text font-bold text-lg md:text-4xl text-white notranslate"></p><sup  class="text-lg">"</sup>
                             </div>
 
                         </div>

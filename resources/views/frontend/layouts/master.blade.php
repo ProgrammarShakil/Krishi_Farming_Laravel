@@ -119,6 +119,10 @@
         .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
             display: none;
         }
+
+        .notranslate {
+            translate: no;
+        }
     </style>
     {{-- /*********** GOOGLE TRANSLATE STYLE  **************/ --}}
 </head>

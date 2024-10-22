@@ -28,7 +28,7 @@ class PageController extends Controller
             // Create a new Page instance and save the data
             $page = new Page();
             $page->title = $request->input('title');
-            $page->url = $this->generateUrl($request->input('title')); // Ensure URL is always generated
+            $page->url = $request->input('url'); // Ensure URL is always generated
             $page->content = $request->input('content');
 
             // Save the page
@@ -64,7 +64,7 @@ class PageController extends Controller
             $page = Page::where('url', $slug)->firstOrFail();
             $page->update([
                 'title' => $request->input('title'),
-                'url' => $this->generateUrl($request->input('title')), // Ensure URL is always generated
+                'url' => $request->input('url'), // Ensure URL is always generated
                 'content' => $request->input('content'),
             ]);
 
@@ -110,11 +110,11 @@ class PageController extends Controller
      * @return string
      */
 
-    protected function generateUrl($title)
-    {
-        // Convert title to a slug, replacing spaces with slashes
-        return Str::slug($title, '-'); // Generates a URL with slashes
-    }    
+    // protected function generateUrl($title)
+    // {
+    //     // Convert title to a slug, replacing spaces with slashes
+    //     return Str::slug($title, '-'); // Generates a URL with slashes
+    // }    
 
 
 
