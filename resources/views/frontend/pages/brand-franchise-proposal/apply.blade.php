@@ -122,17 +122,37 @@
 </div>
 
 <script>
-    document.getElementById('add-more-files').addEventListener('click', function() {
+ document.getElementById('add-more-files').addEventListener('click', function() {
+        // Create a new div to hold the file input and remove button
+        const fileInputWrapper = document.createElement('div');
+        fileInputWrapper.className = 'file-input-wrapper mb-4';
+
         // Create a new input element for file upload
         const newFileInput = document.createElement('input');
         newFileInput.type = 'file';
         newFileInput.name = 'attachments[]';
         newFileInput.accept = '.pdf,.docx,.xlsx,.zip,.jpg,.jpeg,.png,.gif';
-        newFileInput.className = 'block w-full border border-gray-300 rounded-lg py-3 px-4 text-white bg-transparent leading-tight focus:outline-none focus:border-green-500 transition duration-300 mb-4';
+        newFileInput.className = 'block w-full border border-gray-300 rounded-lg py-3 px-4 text-white bg-transparent leading-tight focus:outline-none focus:border-green-500 transition duration-300';
 
-        // Append the new file input to the container
-        document.getElementById('file-input-container').appendChild(newFileInput);
+        // Create a remove button
+        const removeButton = document.createElement('button');
+        removeButton.type = 'button';
+        removeButton.textContent = 'Remove';
+        removeButton.className = 'bg-red-500 hover:bg-red-400 text-white font-bold mt-2 py-2 px-4 rounded-lg shadow-lg focus:outline-none focus:ring-4 focus:ring-red-300 transition duration-300';
+
+        // When the remove button is clicked, remove the entire wrapper (file input + button)
+        removeButton.addEventListener('click', function() {
+            fileInputWrapper.remove();
+        });
+
+        // Append the file input and remove button to the wrapper
+        fileInputWrapper.appendChild(newFileInput);
+        fileInputWrapper.appendChild(removeButton);
+
+        // Append the wrapper to the file input container
+        document.getElementById('file-input-container').appendChild(fileInputWrapper);
     });
+
 
     $(document).ready(function() {
         @if (session('success'))
