@@ -15,8 +15,11 @@
                     <!-- Left Section -->
                     <div class=" text-center  md:p-8">
                         <div class="typing-container text-2xl md:text-4xl pt-2 md:pt-5 pb-0 font-bold text-white text-left">
-                            <div><div>BDKrishi Offers:</div>
-                                <sup class="text-lg">"</sup><p class="typing-text font-bold text-lg md:text-4xl text-white notranslate"></p><sup  class="text-lg">"</sup>
+                            <div>
+                                <div>BDKrishi Offers:</div>
+                                <sup class="text-lg">"</sup>
+                                <p class="typing-text font-bold text-lg md:text-4xl text-white notranslate"></p><sup
+                                    class="text-lg">"</sup>
                             </div>
 
                         </div>
@@ -26,10 +29,12 @@
                             business forward together for the <b>SMART</b> Development of Agriculture!
                         </div>
                         <div class="my-10 md:mt-10 mt-4 text-left">
-                            <button
-                                class="bg-green-600 hover:bg-red-600 text-white font-semibold py-1 px-2 md:py-2 md:px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
-                                Contact Us
-                            </button>
+                            <a href="{{ route('frontend.contact.form') }}">
+                                <button
+                                    class="bg-green-600 hover:bg-red-600 text-white font-semibold py-1 px-2 md:py-2 md:px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
+                                    Contact Us
+                                </button>
+                            </a>
                         </div>
                     </div>
 
