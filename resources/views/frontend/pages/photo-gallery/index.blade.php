@@ -15,7 +15,7 @@
                         <div class="relative group">
                             <img src="{{ asset('storage/' . $gallery->photo) }}" alt="{{ $gallery->title }}"
                                 class="object-cover w-full h-full rounded-lg shadow-lg cursor-pointer"
-                                onclick="showImageModal('{{ asset('storage/' . $gallery->photo) }}', '{{ $gallery->title }}', '{{ $gallery->description }}')">
+                                onclick="showImageModal({{ json_encode(asset('storage/' . $gallery->photo)) }}, {{ json_encode($gallery->title) }}, {{ json_encode($gallery->description) }})">
                         </div>
                     @endforeach
                 </div>
@@ -30,7 +30,7 @@
 
     <!-- Modal to display image -->
     <div id="imageModal" class="z-30 fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
-        <div class="relative bg-white p-5 rounded-lg shadow-2xl max-w-3xl w-full">
+        <div class="relative bg-white p-5 rounded-lg shadow-2xl max-w-3xl w-full max-h-[80vh] overflow-y-auto">
             <span id="closeModal" class="absolute top-1 right-2 text-black text-3xl cursor-pointer">&times;</span>
             <div class="border-b pb-3 mb-4">
                 <p id="modalTitle" class="text-black text-lg font-semibold"></p>
