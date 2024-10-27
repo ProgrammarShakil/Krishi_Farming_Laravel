@@ -15,7 +15,7 @@
                         <div class="relative group">
                             <img src="{{ asset('storage/' . $gallery->photo) }}" alt="{{ $gallery->title }}"
                                 class="object-cover w-full h-full rounded-lg shadow-lg cursor-pointer"
-                                onclick="showImageModal('{{ asset('storage/' . $gallery->photo) }}')">
+                                onclick="showImageModal('{{ asset('storage/' . $gallery->photo) }}', '{{ $gallery->title }}', '{{ $gallery->description }}')">
                         </div>
                     @endforeach
                 </div>
@@ -33,21 +33,23 @@
         <div class="relative bg-white p-5 rounded-lg shadow-2xl max-w-3xl w-full">
             <span id="closeModal" class="absolute top-1 right-2 text-black text-3xl cursor-pointer">&times;</span>
             <div class="border-b pb-3 mb-4">
-                <p class="text-black text-lg font-semibold">{{ $gallery->title }}</p>
+                <p id="modalTitle" class="text-black text-lg font-semibold"></p>
             </div>
             <div class="relative">
                 <img id="modalImage" src="" class="w-full max-h-96 rounded-lg shadow-lg object-cover" alt="Selected Image">
             </div>
             <div class="mt-4 text-gray-700">
-                <p>{{ $gallery->description }}</p>
+                <p id="modalDescription"></p>
             </div>
         </div>
     </div>
 
     <!-- Custom JavaScript -->
     <script>
-        function showImageModal(imageSrc) {
+        function showImageModal(imageSrc, title, description) {
             document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalDescription').textContent = description;
             document.getElementById('imageModal').classList.remove('hidden');
         }
 
